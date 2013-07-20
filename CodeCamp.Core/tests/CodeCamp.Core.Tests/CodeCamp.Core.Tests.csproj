@@ -71,10 +71,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryTests\TemporarySQLiteConnectionFactory.cs" />
     <Compile Include="ServiceTests\CodeCampServiceTests.cs" />
+    <Compile Include="ViewModelTests\MenuViewModelTests.cs" />
     <Compile Include="ViewModelTests\SessionsViewModelTests.cs" />
     <Compile Include="ViewModelTests\SessionViewModelTests.cs" />
     <Compile Include="ViewModelTests\SpeakersViewModelTests.cs" />
     <Compile Include="ViewModelTests\SpeakerViewModelTests.cs" />
+    <Compile Include="ViewModelTests\ViewModelTests.cs" />
     <Compile Include="ViewModelTests\ViewModelTestsBase.cs" />
   </ItemGroup>
   <ItemGroup>
