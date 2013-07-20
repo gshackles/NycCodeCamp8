@@ -1,9 +1,12 @@
 ﻿using Cirrious.CrossCore;
 using Cirrious.CrossCore.IoC;
+using Cirrious.CrossCore.Platform;
 using Cirrious.MvvmCross.Plugins.Messenger;
 using Cirrious.MvvmCross.ViewModels;
+using CodeCamp.Core.Data;
 using CodeCamp.Core.Messaging;
 using CodeCamp.Core.Messaging.Messages;
+using CodeCamp.Core.Network;
 using CodeCamp.Core.ViewModels;
 
 namespace CodeCamp.Core
@@ -20,6 +23,9 @@ namespace CodeCamp.Core
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
+
+            Mvx.RegisterSingleton<IFileManager>(() => new IsolatedStorageFileManager());
+            Mvx.RegisterSingleton<ICampDataClient>(() => new CampDataClient(Mvx.Resolve<IMvxJsonConverter>()));
 
             var messenger = Mvx.Resolve<IMvxMessenger>();
             var errorReporter = Mvx.Resolve<IErrorReporter>();

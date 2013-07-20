@@ -134,5 +134,8 @@
       <Link>ViewModels\Annotations\DoesNotRequireLoadingAttribute.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\CodeCamp.Core\App.cs">
+      <Link>App.cs</Link>
+    </Compile>
   </ItemGroup>
 </Project>

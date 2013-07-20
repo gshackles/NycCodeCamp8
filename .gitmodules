@@ -1,3 +1,6 @@
 [submodule "external/MvvmCross-Binaries"]
 	path = external/MvvmCross-Binaries
 	url = https://github.com/slodge/MvvmCross-Binaries.git
+[submodule "external/BTProgressHUD"]
+	path = external/BTProgressHUD
+	url = https://github.com/gshackles/BTProgressHUD.git
