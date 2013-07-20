@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E2FC9A13-9947-420A-BB09-95BF9980787F}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CodeCamp.Core.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>CodeCamp.Core.iOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="Cirrious.CrossCore.Touch">
+      <HintPath>..\..\..\external\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Touch\Cirrious.CrossCore.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.CrossCore">
+      <HintPath>..\..\..\external\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Touch\Cirrious.CrossCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Sqlite.Touch">
+      <HintPath>..\..\..\external\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Touch\Cirrious.MvvmCross.Plugins.Sqlite.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Sqlite">
+      <HintPath>..\..\..\external\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Touch\Cirrious.MvvmCross.Plugins.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Touch">
+      <HintPath>..\..\..\external\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Touch\Cirrious.MvvmCross.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross">
+      <HintPath>..\..\..\external\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Touch\Cirrious.MvvmCross.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows">
+      <HintPath>..\..\..\external\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Touch\System.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Messenger">
+      <HintPath>..\..\..\external\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Portable\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Data\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Messaging\" />
+    <Folder Include="Network\" />
+    <Folder Include="Services\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="..\CodeCamp.Core\Data\IFileManager.cs">
+      <Link>Data\IFileManager.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\Data\IsolatedStorageFileManager.cs">
+      <Link>Data\IsolatedStorageFileManager.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\Data\Entities\CampData.cs">
+      <Link>Data\Entities\CampData.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\Data\Entities\Session.cs">
+      <Link>Data\Entities\Session.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\Data\Entities\Speaker.cs">
+      <Link>Data\Entities\Speaker.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\Data\Entities\Sponsor.cs">
+      <Link>Data\Entities\Sponsor.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\Data\Repositories\RepositoryBase.cs">
+      <Link>Data\Repositories\RepositoryBase.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\Extensions\ObjectExtensions.cs">
+      <Link>Extensions\ObjectExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\Messaging\IErrorReporter.cs">
+      <Link>Messaging\IErrorReporter.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\Messaging\Messages\ErrorMessage.cs">
+      <Link>Messaging\Messages\ErrorMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\Network\CampDataClient.cs">
+      <Link>Network\CampDataClient.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\Services\CodeCampService.cs">
+      <Link>Services\CodeCampService.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\ViewModels\MapViewModel.cs">
+      <Link>ViewModels\MapViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\ViewModels\MenuViewModel.cs">
+      <Link>ViewModels\MenuViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\ViewModels\SessionViewModel.cs">
+      <Link>ViewModels\SessionViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\ViewModels\SessionsViewModel.cs">
+      <Link>ViewModels\SessionsViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\ViewModels\SpeakerViewModel.cs">
+      <Link>ViewModels\SpeakerViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\ViewModels\SpeakersViewModel.cs">
+      <Link>ViewModels\SpeakersViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\ViewModels\ViewModelBase.cs">
+      <Link>ViewModels\ViewModelBase.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\ViewModels\Annotations\DoesNotRequireLoadingAttribute.cs">
+      <Link>ViewModels\Annotations\DoesNotRequireLoadingAttribute.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+</Project>

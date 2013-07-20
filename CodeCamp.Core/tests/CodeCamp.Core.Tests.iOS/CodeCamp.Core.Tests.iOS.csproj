@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{212AE40C-2B05-4163-BF44-13CD706DB9F2}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CodeCamp.Core.Tests.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>CodeCampCoreTestsiOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <ConsolePause>false</ConsolePause>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchDebug>true</MtouchDebug>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <BuildIpa>true</BuildIpa>
+    <ConsolePause>false</ConsolePause>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <ConsolePause>false</ConsolePause>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="MonoTouch.NUnitLite" />
+    <Reference Include="Cirrious.CrossCore.Touch">
+      <HintPath>..\..\..\external\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Touch\Cirrious.CrossCore.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.CrossCore">
+      <HintPath>..\..\..\external\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Touch\Cirrious.CrossCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Sqlite.Touch">
+      <HintPath>..\..\..\external\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Touch\Cirrious.MvvmCross.Plugins.Sqlite.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Sqlite">
+      <HintPath>..\..\..\external\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Touch\Cirrious.MvvmCross.Plugins.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Touch">
+      <HintPath>..\..\..\external\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Touch\Cirrious.MvvmCross.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross">
+      <HintPath>..\..\..\external\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Touch\Cirrious.MvvmCross.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows">
+      <HintPath>..\..\..\external\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Touch\System.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Messenger">
+      <HintPath>..\..\..\external\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Portable\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Json">
+      <HintPath>..\..\..\external\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Portable\Cirrious.MvvmCross.Plugins.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Test.Core">
+      <HintPath>..\..\..\external\MvvmCross-Binaries\VS2012\bin\Release\Mvx\Console\Cirrious.MvvmCross.Test.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Mocks\" />
+    <Folder Include="RepositoryTests\" />
+    <Folder Include="ServiceTests\" />
+    <Folder Include="ViewModelTests\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="UnitTestAppDelegate.cs" />
+    <Compile Include="..\CodeCamp.Core.Tests\Mocks\InMemoryFileManager.cs">
+      <Link>Mocks\InMemoryFileManager.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core.Tests\Mocks\MockCampDataClient.cs">
+      <Link>Mocks\MockCampDataClient.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core.Tests\Mocks\MockMvxViewDispatcher.cs">
+      <Link>Mocks\MockMvxViewDispatcher.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core.Tests\RepositoryTests\TemporarySQLiteConnectionFactory.cs">
+      <Link>RepositoryTests\TemporarySQLiteConnectionFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core.Tests\ServiceTests\CodeCampServiceTests.cs">
+      <Link>ServiceTests\CodeCampServiceTests.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core.Tests\ViewModelTests\MenuViewModelTests.cs">
+      <Link>ViewModelTests\MenuViewModelTests.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core.Tests\ViewModelTests\SessionViewModelTests.cs">
+      <Link>ViewModelTests\SessionViewModelTests.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core.Tests\ViewModelTests\SessionsViewModelTests.cs">
+      <Link>ViewModelTests\SessionsViewModelTests.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core.Tests\ViewModelTests\SpeakerViewModelTests.cs">
+      <Link>ViewModelTests\SpeakerViewModelTests.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core.Tests\ViewModelTests\SpeakersViewModelTests.cs">
+      <Link>ViewModelTests\SpeakersViewModelTests.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core.Tests\ViewModelTests\ViewModelTests.cs">
+      <Link>ViewModelTests\ViewModelTests.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core.Tests\ViewModelTests\ViewModelTestsBase.cs">
+      <Link>ViewModelTests\ViewModelTestsBase.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\CodeCamp.Core.iOS\CodeCamp.Core.iOS.csproj">
+      <Project>{E2FC9A13-9947-420A-BB09-95BF9980787F}</Project>
+      <Name>CodeCamp.Core.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

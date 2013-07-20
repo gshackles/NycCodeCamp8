@@ -11,6 +11,8 @@
     <AssemblyName>CodeCamp.Core.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,10 +42,6 @@
     <Reference Include="Cirrious.MvvmCross.Plugins.Json">
       <HintPath>..\..\..\external\MvvmCross-Binaries\VS2012\bin\Release\Mvx\Portable\Cirrious.MvvmCross.Plugins.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.Messenger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\external\MvvmCross-Binaries\VS2012\bin\Release\Mvx\Portable\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
-    </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.Sqlite">
       <HintPath>..\..\..\external\MvvmCross-Binaries\VS2012\bin\Release\Mvx\Portable\Cirrious.MvvmCross.Plugins.Sqlite.dll</HintPath>
     </Reference>
@@ -63,6 +61,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Cirrious.MvvmCross.Plugins.Messenger">
+      <HintPath>..\..\..\external\MvvmCross-Binaries\VS2012\bin\Release\Mvx\Portable\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Mocks\InMemoryFileManager.cs" />
@@ -84,7 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\CodeCamp.Core\CodeCamp.Core.csproj">
-      <Project>{5cc09be4-ab6c-476d-9a9f-96a3b452c1c4}</Project>
+      <Project>{5CC09BE4-AB6C-476D-9A9F-96A3B452C1C4}</Project>
       <Name>CodeCamp.Core</Name>
     </ProjectReference>
   </ItemGroup>
