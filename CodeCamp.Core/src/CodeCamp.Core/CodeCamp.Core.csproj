@@ -79,6 +79,8 @@
     <Compile Include="ViewModels\SessionViewModel.cs" />
     <Compile Include="ViewModels\SpeakersViewModel.cs" />
     <Compile Include="ViewModels\SpeakerViewModel.cs" />
+    <Compile Include="ViewModels\SponsorsViewModel.cs" />
+    <Compile Include="ViewModels\SponsorViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
   </ItemGroup>
   <ItemGroup />

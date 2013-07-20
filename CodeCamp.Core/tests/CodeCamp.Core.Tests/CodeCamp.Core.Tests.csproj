@@ -77,6 +77,8 @@
     <Compile Include="ViewModelTests\SessionViewModelTests.cs" />
     <Compile Include="ViewModelTests\SpeakersViewModelTests.cs" />
     <Compile Include="ViewModelTests\SpeakerViewModelTests.cs" />
+    <Compile Include="ViewModelTests\SponsorsViewModelTests.cs" />
+    <Compile Include="ViewModelTests\SponsorViewModelTests.cs" />
     <Compile Include="ViewModelTests\ViewModelTests.cs" />
     <Compile Include="ViewModelTests\ViewModelTestsBase.cs" />
   </ItemGroup>

@@ -7,20 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeCamp.Core.Tests", "Code
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeCamp.Core", "CodeCamp.Core\src\CodeCamp.Core\CodeCamp.Core.csproj", "{5CC09BE4-AB6C-476D-9A9F-96A3B452C1C4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iOS", "iOS", "{EDE9B745-A094-4AEA-942F-DB6E135AE3CF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeCamp.Core.iOS", "CodeCamp.Core\src\CodeCamp.Core.iOS\CodeCamp.Core.iOS.csproj", "{E2FC9A13-9947-420A-BB09-95BF9980787F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeCamp.Core.Tests.iOS", "CodeCamp.Core\tests\CodeCamp.Core.Tests.iOS\CodeCamp.Core.Tests.iOS.csproj", "{212AE40C-2B05-4163-BF44-13CD706DB9F2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeCamp.App.iOS", "Apps\CodeCamp.App.iOS\CodeCamp.App.iOS.csproj", "{46A09922-902C-4A71-8641-E7C26F2332B5}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThirdParty", "ThirdParty", "{E548A864-C478-48E7-91D1-7F9ADB9F3443}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BTProgressHUD", "external\BTProgressHUD\BTProgressHUD\BTProgressHUD.csproj", "{173ADCB0-C964-48D2-99C1-E928469F7C53}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlidingPanels.Touch", "external\SlidingPanels.Touch\SlidingPanels\SlidingPanels.Lib\SlidingPanels.Touch.csproj", "{2FD1999D-45B1-4485-BF96-EAB061481945}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -38,6 +38,14 @@ namespace CodeCamp.Core.ViewModels
             }
         }
 
+        public ICommand ShowSponsorsCommand
+        {
+            get
+            {
+                return new MvxCommand(clearStackAndShow<SponsorsViewModel>);
+            }
+        }
+
         private void clearStackAndShow<TViewModel>()
             where TViewModel : ViewModelBase
         {
