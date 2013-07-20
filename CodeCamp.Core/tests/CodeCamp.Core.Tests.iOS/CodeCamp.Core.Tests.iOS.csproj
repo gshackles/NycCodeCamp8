@@ -161,6 +161,12 @@
     <Compile Include="..\CodeCamp.Core.Tests\ViewModelTests\ViewModelTestsBase.cs">
       <Link>ViewModelTests\ViewModelTestsBase.cs</Link>
     </Compile>
+    <Compile Include="..\CodeCamp.Core.Tests\ViewModelTests\SponsorsViewModelTests.cs">
+      <Link>ViewModelTests\SponsorsViewModelTests.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core.Tests\ViewModelTests\SponsorViewModelTests.cs">
+      <Link>ViewModelTests\SponsorViewModelTests.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

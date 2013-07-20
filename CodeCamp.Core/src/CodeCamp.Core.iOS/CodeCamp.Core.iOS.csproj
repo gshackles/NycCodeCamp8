@@ -137,5 +137,14 @@
     <Compile Include="..\CodeCamp.Core\App.cs">
       <Link>App.cs</Link>
     </Compile>
+    <Compile Include="..\CodeCamp.Core\Data\Entities\TimeSlot.cs">
+      <Link>Data\Entities\TimeSlot.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\ViewModels\SponsorsViewModel.cs">
+      <Link>ViewModels\SponsorsViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\ViewModels\SponsorViewModel.cs">
+      <Link>ViewModels\SponsorViewModel.cs</Link>
+    </Compile>
   </ItemGroup>
 </Project>
