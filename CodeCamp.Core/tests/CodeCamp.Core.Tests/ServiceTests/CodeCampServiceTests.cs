@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Cirrious.MvvmCross.Plugins.Json;
 using CodeCamp.Core.Data.Entities;
@@ -87,6 +88,23 @@ namespace CodeCamp.Core.Tests.ServiceTests
             var sessions = await service.ListSessions();
 
             Assert.AreEqual(campData.Sessions, sessions);
+        }
+
+        [Test]
+        public async void ListSessionsBySpeaker_ValidSpeakerId_ReturnsSessionsForSpeaker()
+        {
+            int speakerId = 1;
+            var correctSession = new Session {Id = 2, SpeakerId = speakerId};
+            var wrongSession = new Session {Id = 3, SpeakerId = speakerId + 1};
+            var campData = new CampData {Sessions = new List<Session> {correctSession, wrongSession}};
+            _mockDataClient.GetDataBody = () => Task.FromResult(campData);
+
+            var service = new CodeCampService(_fileManager, _jsonConverter, _mockDataClient);
+
+            var sessions = await service.ListSessionsBySpeaker(speakerId);
+
+            Assert.AreEqual(1, sessions.Count);
+            Assert.AreEqual(correctSession, sessions.First());
         }
 
         [Test]

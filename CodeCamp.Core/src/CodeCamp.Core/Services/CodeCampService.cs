@@ -13,6 +13,7 @@ namespace CodeCamp.Core.Services
     {
         Task<bool> RefreshData();
         Task<IList<Session>> ListSessions();
+        Task<IList<Session>> ListSessionsBySpeaker(int speakerId); 
         Task<Session> GetSession(int sessionId);
         Task<IList<Speaker>> ListSpeakers();
         Task<Speaker> GetSpeaker(int speakerId);
@@ -56,6 +57,11 @@ namespace CodeCamp.Core.Services
         public async Task<IList<Session>> ListSessions()
         {
             return (await GetData()).Sessions;
+        }
+
+        public async Task<IList<Session>> ListSessionsBySpeaker(int speakerId)
+        {
+            return (await ListSessions()).Where(session => session.SpeakerId == speakerId).ToList();
         }
 
         public async Task<Session> GetSession(int sessionId)

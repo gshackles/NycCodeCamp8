@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Cirrious.MvvmCross.Plugins.Messenger;
 using CodeCamp.Core.Data.Entities;
 using CodeCamp.Core.Services;

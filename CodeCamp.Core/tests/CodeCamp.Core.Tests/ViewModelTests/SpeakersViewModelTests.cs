@@ -10,20 +10,20 @@ using NUnit.Framework;
 
 namespace CodeCamp.Core.Tests.ViewModelTests
 {
-    public class SessionsViewModelTests : ViewModelTestsBase
+    public class SpeakersViewModelTests : ViewModelTestsBase
     {
         [Test]
-        public async void Init_DataLoadsSuccessfully_LoadsSessionList()
+        public async void Init_DataLoadsSuccessfully_LoadsSpeakerList()
         {
-            var data = new CampData { Sessions = new List<Session>()};
+            var data = new CampData { Speakers = new List<Speaker>() };
             DataClient.GetDataBody = () => Task.FromResult(data);
-            var viewModel = new SessionsViewModel(Messenger, CodeCampService);
+            var viewModel = new SpeakersViewModel(Messenger, CodeCampService);
 
             Assert.True(viewModel.IsLoading);
 
             await viewModel.Init();
 
-            Assert.AreEqual(data.Sessions, viewModel.Sessions);
+            Assert.AreEqual(data.Speakers, viewModel.Speakers);
             Assert.False(viewModel.IsLoading);
         }
 
@@ -34,28 +34,28 @@ namespace CodeCamp.Core.Tests.ViewModelTests
             string errorMessage = null;
             Messenger.Subscribe<ErrorMessage>(msg => errorMessage = msg.Message);
 
-            var viewModel = new SessionsViewModel(Messenger, CodeCampService);
+            var viewModel = new SpeakersViewModel(Messenger, CodeCampService);
             await viewModel.Init();
 
             Assert.NotNull(errorMessage);
             Assert.False(viewModel.IsLoading);
-            Assert.Null(viewModel.Sessions);
+            Assert.Null(viewModel.Speakers);
         }
 
         [Test]
-        public void ViewSessionCommand_NavigatesToSession()
+        public void ViewSpeakerCommand_NavigatesToSpeaker()
         {
-            var session = new Session {Id = 42};
-            var viewModel = new SessionsViewModel(Messenger, CodeCampService);
+            var speaker = new Speaker { Id = 42 };
+            var viewModel = new SpeakersViewModel(Messenger, CodeCampService);
 
-            viewModel.ViewSessionCommand.Execute(session);
+            viewModel.ViewSpeakerCommand.Execute(speaker);
 
             Assert.AreEqual(1, Dispatcher.ShowViewModelRequests.Count);
 
             var request = Dispatcher.ShowViewModelRequests.Single();
-            var navParameters = request.ParameterValues.Read(typeof(SessionViewModel.NavigationParameters)) as SessionViewModel.NavigationParameters;
+            var navParameters = request.ParameterValues.Read(typeof(SpeakerViewModel.NavigationParameters)) as SpeakerViewModel.NavigationParameters;
             Assert.NotNull(navParameters);
-            Assert.AreEqual(session.Id, navParameters.Id);
+            Assert.AreEqual(speaker.Id, navParameters.Id);
         }
     }
 }

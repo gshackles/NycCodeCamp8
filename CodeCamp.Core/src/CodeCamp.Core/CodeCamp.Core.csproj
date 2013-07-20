@@ -73,6 +73,8 @@
     <Compile Include="ViewModels\Annotations\DoesNotRequireLoadingAttribute.cs" />
     <Compile Include="ViewModels\SessionsViewModel.cs" />
     <Compile Include="ViewModels\SessionViewModel.cs" />
+    <Compile Include="ViewModels\SpeakersViewModel.cs" />
+    <Compile Include="ViewModels\SpeakerViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
   </ItemGroup>
   <ItemGroup />
