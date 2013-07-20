@@ -63,6 +63,7 @@
     <Compile Include="Data\Entities\Session.cs" />
     <Compile Include="Data\Entities\Speaker.cs" />
     <Compile Include="Data\Entities\Sponsor.cs" />
+    <Compile Include="Data\Entities\TimeSlot.cs" />
     <Compile Include="Data\IFileManager.cs" />
     <Compile Include="Data\IsolatedStorageFileManager.cs" />
     <Compile Include="Data\Repositories\RepositoryBase.cs" />

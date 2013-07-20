@@ -13,9 +13,10 @@ namespace CodeCamp.Core.Tests.ViewModelTests
     public class SessionsViewModelTests : ViewModelTestsBase
     {
         [Test]
-        public async void Init_DataLoadsSuccessfully_LoadsSessionList()
+        public async void Init_DataLoadsSuccessfully_LoadsTimeSlots()
         {
-            var data = new CampData { Sessions = new List<Session>()};
+            var session = new Session {StartTime = DateTime.Now, EndTime = DateTime.Now, Id = 42};
+            var data = new CampData { Sessions = new List<Session> { session }};
             DataClient.GetDataBody = () => Task.FromResult(data);
             var viewModel = new SessionsViewModel(Messenger, CodeCampService);
 
@@ -23,7 +24,14 @@ namespace CodeCamp.Core.Tests.ViewModelTests
 
             await viewModel.Init();
 
-            Assert.AreEqual(data.Sessions, viewModel.Sessions);
+            Assert.AreEqual(1, viewModel.TimeSlots.Count);
+
+            var slot = viewModel.TimeSlots.First();
+
+            Assert.AreEqual(session.StartTime, slot.StartTime);
+            Assert.AreEqual(session.EndTime, slot.EndTime);
+            Assert.AreEqual(1, slot.Sessions.Count);
+            Assert.AreEqual(session, slot.Sessions.First());
             Assert.False(viewModel.IsLoading);
         }
 
@@ -39,7 +47,7 @@ namespace CodeCamp.Core.Tests.ViewModelTests
 
             Assert.NotNull(errorMessage);
             Assert.False(viewModel.IsLoading);
-            Assert.Null(viewModel.Sessions);
+            Assert.Null(viewModel.TimeSlots);
         }
 
         [Test]

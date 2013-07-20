@@ -78,16 +78,31 @@ namespace CodeCamp.Core.Tests.ServiceTests
         [Test]
         public async void ListSessions_FetchesDataAndReturnsSessions()
         {
+            var session = new Session
+                              {
+                                  Title = "Best Session Ever",
+                                  Id = 42,
+                                  StartTime = DateTime.UtcNow,
+                                  EndTime = DateTime.UtcNow
+                              };
             var campData = new CampData
             {
-                Sessions = new List<Session> { new Session { Title = "Best Session Ever", Id = 42 } }
+                Sessions = new List<Session> { session }
             };
             _mockDataClient.GetDataBody = () => Task.FromResult(campData);
 
             var service = new CodeCampService(_fileManager, _jsonConverter, _mockDataClient);
-            var sessions = await service.ListSessions();
 
-            Assert.AreEqual(campData.Sessions, sessions);
+            var timeSlots = await service.ListSessions();
+
+            Assert.AreEqual(1, timeSlots.Count);
+
+            var slot = timeSlots.First();
+
+            Assert.AreEqual(session.StartTime, slot.StartTime);
+            Assert.AreEqual(session.EndTime, slot.EndTime);
+            Assert.AreEqual(1, slot.Sessions.Count);
+            Assert.AreEqual(session, slot.Sessions.First());
         }
 
         [Test]

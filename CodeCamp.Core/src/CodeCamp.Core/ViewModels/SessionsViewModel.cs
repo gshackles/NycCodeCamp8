@@ -18,17 +18,17 @@ namespace CodeCamp.Core.ViewModels
             _campService = campService;
         }
 
-        private IList<Session> _sessions;
-        public IList<Session> Sessions
+        private IList<TimeSlot> _timeSlots;
+        public IList<TimeSlot> TimeSlots
         {
-            get { return _sessions; }
-            set { _sessions = value; RaisePropertyChanged(() => Sessions); }
+            get { return _timeSlots; }
+            set { _timeSlots = value; RaisePropertyChanged(() => TimeSlots); }
         } 
         
         public async Task Init()
         {
             bool successful = await SafeOperation(
-                Task.Run(async () => Sessions = await _campService.ListSessions()));
+                Task.Run(async () => TimeSlots = await _campService.ListSessions()));
 
             FinishedLoading(successful);
         }

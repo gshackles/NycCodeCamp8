@@ -12,7 +12,7 @@ namespace CodeCamp.Core.Services
     public interface ICodeCampService
     {
         Task<bool> RefreshData();
-        Task<IList<Session>> ListSessions();
+        Task<IList<TimeSlot>> ListSessions();
         Task<IList<Session>> ListSessionsBySpeaker(int speakerId); 
         Task<Session> GetSession(int sessionId);
         Task<IList<Speaker>> ListSpeakers();
@@ -54,14 +54,24 @@ namespace CodeCamp.Core.Services
             }
         }
 
-        public async Task<IList<Session>> ListSessions()
+        public async Task<IList<TimeSlot>> ListSessions()
         {
-            return (await GetData()).Sessions;
+            return (from session in (await GetData()).Sessions
+                    group session by new {session.StartTime, session.EndTime}
+                    into slot
+                    select new TimeSlot
+                               {
+                                   StartTime = slot.Key.StartTime,
+                                   EndTime = slot.Key.EndTime,
+                                   Sessions = slot.ToList()
+                               }).ToList();
         }
 
         public async Task<IList<Session>> ListSessionsBySpeaker(int speakerId)
         {
-            return (await ListSessions()).Where(session => session.SpeakerId == speakerId).ToList();
+            return (await GetData()).Sessions
+                                    .Where(session => session.SpeakerId == speakerId)
+                                    .ToList();
         }
 
         public async Task<Session> GetSession(int sessionId)
