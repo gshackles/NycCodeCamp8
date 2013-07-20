@@ -4,9 +4,9 @@ using MonoTouch.UIKit;
 
 namespace CodeCamp.App.iOS.Views
 {
-    public class SessionsView : DialogViewControllerBase
+    public class SpeakersView : DialogViewControllerBase
     {
-        public SessionsView()
+        public SpeakersView()
             : base(UITableViewStyle.Plain)
         {
         }
@@ -15,19 +15,19 @@ namespace CodeCamp.App.iOS.Views
         {
             base.ViewDidLoad();
 
-            Title = "Sessions";
+            Title = "Speakers";
         }
 
         protected override void OnLoadingComplete()
         {
-            Root = new RootElement("Sessions")
+            Root = new RootElement("Speakers")
             {
             };
         }
 
-        private new SessionsViewModel ViewModel
+        private new SpeakersViewModel ViewModel
         {
-            get { return (SessionsViewModel)base.ViewModel; }
+            get { return (SpeakersViewModel)base.ViewModel; }
         }
     }
 }

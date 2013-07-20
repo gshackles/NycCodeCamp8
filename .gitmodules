@@ -4,3 +4,6 @@
 [submodule "external/BTProgressHUD"]
 	path = external/BTProgressHUD
 	url = https://github.com/gshackles/BTProgressHUD.git
+[submodule "external/SlidingPanels.Touch"]
+	path = external/SlidingPanels.Touch
+	url = https://github.com/patbonecrusher/SlidingPanels.Touch.git

@@ -143,6 +143,10 @@
     <Compile Include="Extensions\ViewModelExtensions.cs" />
     <Compile Include="Extensions\ViewControllerExtensions.cs" />
     <Compile Include="Views\DialogViewControllerBase.cs" />
+    <Compile Include="CampViewPresenter.cs" />
+    <Compile Include="Views\MenuView.cs" />
+    <Compile Include="Views\SpeakersView.cs" />
+    <Compile Include="Views\MapView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -154,6 +158,10 @@
       <Project>{173ADCB0-C964-48D2-99C1-E928469F7C53}</Project>
       <Name>BTProgressHUD</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\external\SlidingPanels.Touch\SlidingPanels\SlidingPanels.Lib\SlidingPanels.Touch.csproj">
+      <Project>{2FD1999D-45B1-4485-BF96-EAB061481945}</Project>
+      <Name>SlidingPanels.Touch</Name>
+    </ProjectReference>
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
@@ -164,4 +172,7 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
+  <ItemGroup>
+    <BundleResource Include="Resources\menu.png" />
+  </ItemGroup>
 </Project>
