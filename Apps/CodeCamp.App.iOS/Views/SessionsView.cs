@@ -2,6 +2,8 @@ using System.Linq;
 using CodeCamp.Core.ViewModels;
 using CrossUI.Touch.Dialog.Elements;
 using MonoTouch.UIKit;
+using CodeCamp.App.iOS.Extensions;
+using CodeCamp.App.iOS.Views.Elements;
 
 namespace CodeCamp.App.iOS.Views
 {
@@ -19,18 +21,21 @@ namespace CodeCamp.App.iOS.Views
             Title = "Sessions";
         }
 
-        protected override void OnLoadingComplete()
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+
+            this.OnViewWillAppear(ViewModel, onLoadingComplete);
+        }
+
+        private void onLoadingComplete()
         {
             Root = new RootElement("Sessions")
             {
                 from slot in ViewModel.TimeSlots
-                select new Section(slot.StartTime.TimeOfDay.ToString())
+                select new CommandBindableSection<SessionElement>(string.Format("{0:t} - {1:t}", slot.StartTime, slot.EndTime), ViewModel.ViewSessionCommand)
                 {
-                    from session in slot.Sessions
-                    select new StyledStringElement(session.Title, () => ViewModel.ViewSessionCommand.Execute(session))
-                    {
-                        Accessory = UITableViewCellAccessory.DisclosureIndicator
-                    }
+                    ItemsSource = slot.Sessions
                 }
             };
         }

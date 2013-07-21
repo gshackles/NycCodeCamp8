@@ -101,6 +101,30 @@ namespace CodeCamp.Core.Services
 
         internal async Task<CampData> GetData()
         {
+            return new CampData
+            {
+                Sessions = new List<Session>
+                {
+                    new Session
+                    {
+                        StartTime = DateTime.Now,
+                        EndTime = DateTime.Now,
+                        Id = 24,
+                        Title = "Test Session 2",
+                        SpeakerName = "Not Greg Shackles",
+
+                    },
+                    new Session
+                    {
+                        Id = 42,
+                        Title = "Test Session",
+                        SpeakerName = "Greg Shackles",
+                        StartTime = DateTime.UtcNow,
+                        EndTime = DateTime.UtcNow
+                    }
+                }
+            };
+
             // TODO: lock around the body of this method?
             _campData = _campData ?? LoadCachedCampData();
 
