@@ -83,6 +83,7 @@
     <Compile Include="ViewModels\SponsorsViewModel.cs" />
     <Compile Include="ViewModels\SponsorViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

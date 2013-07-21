@@ -14,6 +14,14 @@ namespace CodeCamp.Core.ViewModels
         {
         }
 
+        public ICommand ShowOverviewCommand
+        {
+            get
+            {
+                return new MvxCommand(clearStackAndShow<OverviewViewModel>);
+            }
+        }
+
         public ICommand ShowSessionsCommand
         {
             get

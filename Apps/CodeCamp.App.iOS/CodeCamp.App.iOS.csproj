@@ -151,8 +151,11 @@
     <Compile Include="Views\Elements\IBindableElement.cs" />
     <Compile Include="Views\Elements\BindableSection.cs" />
     <Compile Include="Views\Elements\SessionElement.cs" />
-    <Compile Include="Views\Elements\SessionListSection.cs" />
     <Compile Include="Views\SessionView.cs" />
+    <Compile Include="Views\Elements\CommandBindableSection.cs" />
+    <Compile Include="Views\OverviewView.cs" />
+    <Compile Include="Views\Elements\SpeakerElement.cs" />
+    <Compile Include="Views\SpeakerView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

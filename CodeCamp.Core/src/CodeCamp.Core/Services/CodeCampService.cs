@@ -112,6 +112,7 @@ namespace CodeCamp.Core.Services
                         Id = 24,
                         Title = "Test Session 2",
                         SpeakerName = "Not Greg Shackles",
+                        SpeakerId = 4
 
                     },
                     new Session
@@ -120,7 +121,42 @@ namespace CodeCamp.Core.Services
                         Title = "Test Session",
                         SpeakerName = "Greg Shackles",
                         StartTime = DateTime.UtcNow,
-                        EndTime = DateTime.UtcNow
+                        EndTime = DateTime.UtcNow,
+                        SpeakerId = 3
+                    }
+                },
+                Speakers = new List<Speaker>
+                {
+                    new Speaker
+                    {
+                        Name = "Greg Shackles",
+                        Id = 3, 
+                        EmailAddress = "greg@gregshackles.com",
+                        Bio = "This is a bio"
+                    },
+                    new Speaker
+                    {
+                        Name = "Not Greg Shackles",
+                        Id = 4,
+                        EmailAddress = "notgreg@gregshackles.com",
+                        Bio = "This is another bio"
+                    }
+                },
+                Sponsors = new List<Sponsor>
+                {
+                    new Sponsor
+                    {
+                        Name = "OLO",
+                        Tier = "Gold",
+                        Website = "http://olo.com",
+                        Description = "This is a description"
+                    },
+                    new Sponsor
+                    {
+                        Name = "Google",
+                        Tier = "Silver",
+                        Website = "http://google.com",
+                        Description = "It's Google. Enough Said."
                     }
                 }
             };

@@ -18,7 +18,7 @@ namespace CodeCamp.App.iOS.Views
         {
             base.ViewDidLoad();
 
-            Title = "Sessions";
+            Title = "Schedule";
         }
 
         public override void ViewWillAppear(bool animated)
@@ -30,7 +30,7 @@ namespace CodeCamp.App.iOS.Views
 
         private void onLoadingComplete()
         {
-            Root = new RootElement("Sessions")
+            Root = new RootElement("Schedule")
             {
                 from slot in ViewModel.TimeSlots
                 select new CommandBindableSection<SessionElement>(string.Format("{0:t} - {1:t}", slot.StartTime, slot.EndTime), ViewModel.ViewSessionCommand)

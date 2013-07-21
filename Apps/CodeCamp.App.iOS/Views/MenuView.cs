@@ -1,8 +1,8 @@
-using CodeCamp.Core.ViewModels;
-using MonoTouch.UIKit;
-using CrossUI.Touch.Dialog.Elements;
-using Cirrious.MvvmCross.Binding.BindingContext;
 using System;
+using Cirrious.MvvmCross.Binding.BindingContext;
+using CodeCamp.Core.ViewModels;
+using CrossUI.Touch.Dialog.Elements;
+using MonoTouch.UIKit;
 
 namespace CodeCamp.App.iOS.Views
 {
@@ -30,11 +30,15 @@ namespace CodeCamp.App.iOS.Views
                     ShouldDeselectAfterTouch = true
                 };
 
-            StyledStringElement sessionsElement = createElement("Sessions"),
+            StyledStringElement overviewElement = createElement("Overview"),
+                                sessionsElement = createElement("Full Schedule"),
                                 speakersElement = createElement("Speakers"),
                                 mapElement = createElement("Map");
 
             var binder = this.CreateBindingSet<MenuView, MenuViewModel>();
+            binder.Bind(overviewElement)
+                  .For(el => el.SelectedCommand)
+                  .To(vm => vm.ShowOverviewCommand);
             binder.Bind(sessionsElement)
                   .For(el => el.SelectedCommand)
                   .To(vm => vm.ShowSessionsCommand);
@@ -50,7 +54,7 @@ namespace CodeCamp.App.iOS.Views
             {
                 new Section
                 {
-                    sessionsElement, speakersElement, mapElement
+                    overviewElement, sessionsElement, speakersElement, mapElement
                 }
             };
         }

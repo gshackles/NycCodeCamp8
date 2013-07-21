@@ -32,7 +32,7 @@ namespace CodeCamp.Core
 
             _errorToken = messenger.Subscribe<ErrorMessage>(error => errorReporter.ReportError(error.Message));
 
-            RegisterAppStart<SessionsViewModel>();
+            RegisterAppStart<OverviewViewModel>();
         }
     }
 }

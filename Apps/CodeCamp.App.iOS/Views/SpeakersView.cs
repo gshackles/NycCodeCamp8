@@ -1,6 +1,8 @@
+using Cirrious.MvvmCross.Binding.BindingContext;
 using CodeCamp.Core.ViewModels;
 using CrossUI.Touch.Dialog.Elements;
 using MonoTouch.UIKit;
+using CodeCamp.App.iOS.Views.Elements;
 
 namespace CodeCamp.App.iOS.Views
 {
@@ -20,8 +22,12 @@ namespace CodeCamp.App.iOS.Views
 
         protected override void OnLoadingComplete()
         {
+            var bindings = this.CreateInlineBindingTarget<SpeakersViewModel>();
+
             Root = new RootElement("Speakers")
             {
+                new CommandBindableSection<SpeakerElement>(null, ViewModel.ViewSpeakerCommand)
+                    .Bind(bindings, element => element.ItemsSource, vm => vm.Speakers)
             };
         }
 
