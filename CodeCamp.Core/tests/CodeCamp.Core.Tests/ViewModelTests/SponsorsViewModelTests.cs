@@ -15,7 +15,8 @@ namespace CodeCamp.Core.Tests.ViewModelTests
         [Test]
         public async void Init_DataLoadsSuccessfully_LoadsSponsorList()
         {
-            var data = new CampData { Sponsors = new List<Sponsor>() };
+            var sponsor = new Sponsor {Name = "Sponsor", Tier = "Gold"};
+            var data = new CampData { Sponsors = new List<Sponsor> { sponsor } };
             DataClient.GetDataBody = () => Task.FromResult(data);
             var viewModel = new SponsorsViewModel(Messenger, CodeCampService);
 
@@ -23,7 +24,10 @@ namespace CodeCamp.Core.Tests.ViewModelTests
 
             await viewModel.Init();
 
-            Assert.AreEqual(data.Sponsors, viewModel.Sponsors);
+            //Assert.AreEqual(data.Sponsors, viewModel.Sponsors);
+            Assert.AreEqual(1, viewModel.SponsorTiers.Count);
+            Assert.AreEqual(1, viewModel.SponsorTiers.First().Sponsors.Count);
+            Assert.AreEqual(sponsor, viewModel.SponsorTiers.First().Sponsors.First());
             Assert.False(viewModel.IsLoading);
         }
 
@@ -39,7 +43,7 @@ namespace CodeCamp.Core.Tests.ViewModelTests
 
             Assert.NotNull(errorMessage);
             Assert.False(viewModel.IsLoading);
-            Assert.Null(viewModel.Sponsors);
+            Assert.Null(viewModel.SponsorTiers);
         }
 
         [Test]

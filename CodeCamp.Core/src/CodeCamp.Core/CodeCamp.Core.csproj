@@ -63,6 +63,7 @@
     <Compile Include="Data\Entities\Session.cs" />
     <Compile Include="Data\Entities\Speaker.cs" />
     <Compile Include="Data\Entities\Sponsor.cs" />
+    <Compile Include="Data\Entities\SponsorTier.cs" />
     <Compile Include="Data\Entities\TimeSlot.cs" />
     <Compile Include="Data\IFileManager.cs" />
     <Compile Include="Data\IsolatedStorageFileManager.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="ViewModels\Annotations\DoesNotRequireLoadingAttribute.cs" />
     <Compile Include="ViewModels\MapViewModel.cs" />
     <Compile Include="ViewModels\MenuViewModel.cs" />
+    <Compile Include="ViewModels\OverviewViewModel.cs" />
     <Compile Include="ViewModels\SessionsViewModel.cs" />
     <Compile Include="ViewModels\SessionViewModel.cs" />
     <Compile Include="ViewModels\SpeakersViewModel.cs" />
@@ -83,7 +85,6 @@
     <Compile Include="ViewModels\SponsorsViewModel.cs" />
     <Compile Include="ViewModels\SponsorViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
-    <Compile Include="ViewModels\HomeViewModel.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

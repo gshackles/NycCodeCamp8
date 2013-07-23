@@ -18,17 +18,17 @@ namespace CodeCamp.Core.ViewModels
             _campService = campService;
         }
 
-        private IList<Sponsor> _sponsors;
-        public IList<Sponsor> Sponsors
+        private IList<SponsorTier> _sponsorTiers;
+        public IList<SponsorTier> SponsorTiers
         {
-            get { return _sponsors; }
-            set { _sponsors = value; RaisePropertyChanged(() => Sponsors); }
+            get { return _sponsorTiers; }
+            set { _sponsorTiers = value; RaisePropertyChanged(() => SponsorTiers); }
         } 
 
         public async Task Init()
         {
             bool successful = await SafeOperation(
-                Task.Run(async () => Sponsors = await _campService.ListSponsors()));
+                Task.Run(async () => SponsorTiers = await _campService.ListSponsors()));
 
             FinishedLoading(successful);
         }

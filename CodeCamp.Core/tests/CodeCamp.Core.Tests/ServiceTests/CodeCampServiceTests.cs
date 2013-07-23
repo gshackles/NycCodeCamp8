@@ -174,16 +174,19 @@ namespace CodeCamp.Core.Tests.ServiceTests
         [Test]
         public async void ListSponsors_FetchesDataAndReturnsSponsors()
         {
+            var sponsor = new Sponsor {Id = 42, Tier = "Gold" };
             var campData = new CampData
             {
-                Sponsors = new List<Sponsor> { new Sponsor { Id = 42 } }
+                Sponsors = new List<Sponsor> { sponsor }
             };
             _mockDataClient.GetDataBody = () => Task.FromResult(campData);
 
             var service = new CodeCampService(_fileManager, _jsonConverter, _mockDataClient);
-            var sponsors = await service.ListSponsors();
+            var tiers = await service.ListSponsors();
 
-            Assert.AreEqual(campData.Sponsors, sponsors);
+            Assert.AreEqual(1, tiers.Count);
+            Assert.AreEqual(1, tiers.First().Sponsors.Count);
+            Assert.AreEqual(sponsor, tiers.First().Sponsors.First());
         }
 
         [Test]

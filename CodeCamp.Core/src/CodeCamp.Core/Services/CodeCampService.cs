@@ -17,7 +17,7 @@ namespace CodeCamp.Core.Services
         Task<Session> GetSession(int sessionId);
         Task<IList<Speaker>> ListSpeakers();
         Task<Speaker> GetSpeaker(int speakerId);
-        Task<IList<Sponsor>> ListSponsors();
+        Task<IList<SponsorTier>> ListSponsors();
         Task<Sponsor> GetSponsor(int sponsorId);
     }
 
@@ -63,7 +63,7 @@ namespace CodeCamp.Core.Services
                                {
                                    StartTime = slot.Key.StartTime,
                                    EndTime = slot.Key.EndTime,
-                                   Sessions = slot.ToList()
+                                   Sessions = slot.OrderBy(session => session.Title).ToList()
                                }).ToList();
         }
 
@@ -71,6 +71,7 @@ namespace CodeCamp.Core.Services
         {
             return (await GetData()).Sessions
                                     .Where(session => session.SpeakerId == speakerId)
+                                    .OrderBy(session => session.Title)
                                     .ToList();
         }
 
@@ -81,7 +82,7 @@ namespace CodeCamp.Core.Services
 
         public async Task<IList<Speaker>> ListSpeakers()
         {
-            return (await GetData()).Speakers;
+            return (await GetData()).Speakers.OrderBy(speaker => speaker.Name).ToList();
         }
 
         public async Task<Speaker> GetSpeaker(int speakerId)
@@ -89,9 +90,19 @@ namespace CodeCamp.Core.Services
             return (await GetData()).Speakers.First(speaker => speaker.Id == speakerId);
         }
 
-        public async Task<IList<Sponsor>> ListSponsors()
+        static IList<string> SponsorTierSortOrder = new List<string> { "Marquee", "Platinum", "Gold", "Silver" }; 
+
+        public async Task<IList<SponsorTier>> ListSponsors()
         {
-            return (await GetData()).Sponsors;
+            return (from sponsor in (await GetData()).Sponsors
+                    group sponsor by sponsor.Tier
+                    into tier
+                    orderby SponsorTierSortOrder.Contains(tier.Key) ? SponsorTierSortOrder.IndexOf(tier.Key) : 99
+                    select new SponsorTier
+                               {
+                                   Name = tier.Key,
+                                   Sponsors = tier.OrderBy(sponsor => sponsor.Name).ToList()
+                               }).ToList();
         }
 
         public async Task<Sponsor> GetSponsor(int sponsorId)
