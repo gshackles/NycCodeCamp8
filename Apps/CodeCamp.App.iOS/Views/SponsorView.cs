@@ -24,7 +24,14 @@ namespace CodeCamp.App.iOS.Views
                 {
                     new StringElement().Bind(bindings, el => el.Caption, vm => vm.Sponsor.Name)
                 },
-
+                new Section
+                {
+                    new StyledStringElement("View Website") 
+                    { 
+                        Accessory = UITableViewCellAccessory.DisclosureIndicator,
+                        ShouldDeselectAfterTouch = true
+                    }.Bind(bindings, el => el.SelectedCommand, vm => vm.ViewWebsiteCommand)
+                },
                 new Section
                 {
                     new MultilineElement().Bind(bindings, el => el.Caption, vm => vm.Sponsor.Description)

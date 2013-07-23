@@ -29,6 +29,13 @@ namespace CodeCamp.App.iOS.Views
                 {
                     new MultilineElement().Bind(bindings, el => el.Caption, vm => vm.Speaker.Bio)
                 },
+                new Section
+                {
+                    new StyledStringElement("Send Email") { 
+                        Accessory = UITableViewCellAccessory.DisclosureIndicator,
+                        ShouldDeselectAfterTouch = true
+                    }.Bind(bindings, el => el.SelectedCommand, vm => vm.EmailSpeakerCommand)
+                },
                 new CommandBindableSection<SessionElement>("Sessions", ViewModel.ViewSessionCommand)
                     .Bind(bindings, element => element.ItemsSource, vm => vm.Sessions)
             };
