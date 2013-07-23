@@ -1,5 +1,8 @@
 ﻿using System.Threading.Tasks;
+using System.Windows.Input;
 using Cirrious.MvvmCross.Plugins.Messenger;
+using Cirrious.MvvmCross.Plugins.WebBrowser;
+using Cirrious.MvvmCross.ViewModels;
 using CodeCamp.Core.Data.Entities;
 using CodeCamp.Core.Services;
 
@@ -8,11 +11,13 @@ namespace CodeCamp.Core.ViewModels
     public class SponsorViewModel : ViewModelBase
     {
         private readonly ICodeCampService _campService;
+        private readonly IMvxWebBrowserTask _webBrowserTask;
 
-        public SponsorViewModel(IMvxMessenger messenger, ICodeCampService campService) 
+        public SponsorViewModel(IMvxMessenger messenger, ICodeCampService campService, IMvxWebBrowserTask webBrowserTask) 
             : base(messenger)
         {
             _campService = campService;
+            _webBrowserTask = webBrowserTask;
         }
 
         private Sponsor _sponsor;
@@ -28,6 +33,11 @@ namespace CodeCamp.Core.ViewModels
                 Task.Run(async () => Sponsor = await _campService.GetSponsor(parameters.Id)));
 
             FinishedLoading(successful);
+        }
+
+        public ICommand ViewWebsiteCommand
+        {
+            get { return new MvxCommand(() => _webBrowserTask.ShowWebPage(Sponsor.Website)); }
         }
 
         public class NavigationParameters

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using CodeCamp.Core.Data.Entities;
 using CodeCamp.Core.Messaging.Messages;
@@ -16,7 +17,7 @@ namespace CodeCamp.Core.Tests.ViewModelTests
             var sponsor = new Sponsor { Id = 42 };
             var data = new CampData { Sponsors = new List<Sponsor> { sponsor } };
             DataClient.GetDataBody = () => Task.FromResult(data);
-            var viewModel = new SponsorViewModel(Messenger, CodeCampService);
+            var viewModel = new SponsorViewModel(Messenger, CodeCampService, WebBrowserTask);
 
             Assert.True(viewModel.IsLoading);
 
@@ -33,13 +34,28 @@ namespace CodeCamp.Core.Tests.ViewModelTests
             string errorMessage = null;
             Messenger.Subscribe<ErrorMessage>(msg => errorMessage = msg.Message);
 
-            var viewModel = new SponsorViewModel(Messenger, CodeCampService);
+            var viewModel = new SponsorViewModel(Messenger, CodeCampService, WebBrowserTask);
 
             await viewModel.Init(new SponsorViewModel.NavigationParameters(42));
 
             Assert.NotNull(errorMessage);
             Assert.False(viewModel.IsLoading);
             Assert.Null(viewModel.Sponsor);
+        }
+
+        [Test]
+        public async void ViewWebsiteCommand_Executed_GoesToSponsorWebsite()
+        {
+            var sponsor = new Sponsor { Id = 42, Website = "http://codecampnyc.org" };
+            var data = new CampData { Sponsors = new List<Sponsor> { sponsor } };
+            DataClient.GetDataBody = () => Task.FromResult(data);
+            var viewModel = new SponsorViewModel(Messenger, CodeCampService, WebBrowserTask);
+            await viewModel.Init(new SponsorViewModel.NavigationParameters(sponsor.Id));
+
+            viewModel.ViewWebsiteCommand.Execute(null);
+
+            Assert.AreEqual(1, WebBrowserTask.UrlRequests.Count);
+            Assert.AreEqual(sponsor.Website, WebBrowserTask.UrlRequests.First());
         }
     }
 }

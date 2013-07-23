@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Cirrious.MvvmCross.Plugins.Email;
 using Cirrious.MvvmCross.Plugins.Messenger;
 using Cirrious.MvvmCross.ViewModels;
 using CodeCamp.Core.Data.Entities;
@@ -11,11 +12,13 @@ namespace CodeCamp.Core.ViewModels
     public class SpeakerViewModel : ViewModelBase
     {
         private readonly ICodeCampService _campService;
+        private readonly IMvxComposeEmailTask _composeEmailTask;
 
-        public SpeakerViewModel(IMvxMessenger messenger, ICodeCampService campService) 
+        public SpeakerViewModel(IMvxMessenger messenger, ICodeCampService campService, IMvxComposeEmailTask composeEmailTask) 
             : base(messenger)
         {
             _campService = campService;
+            _composeEmailTask = composeEmailTask;
         }
 
         private Speaker _speaker;
@@ -38,6 +41,15 @@ namespace CodeCamp.Core.ViewModels
             {
                 return new MvxCommand<Session>(
                     session => ShowViewModel<SessionViewModel>(new SessionViewModel.NavigationParameters(session.Id)));
+            }
+        }
+
+        public ICommand EmailSpeakerCommand
+        {
+            get
+            {
+                return new MvxCommand(() =>
+                    _composeEmailTask.ComposeEmail(Speaker.EmailAddress, null, "NYC Code Camp 8", null, false));
             }
         }
 

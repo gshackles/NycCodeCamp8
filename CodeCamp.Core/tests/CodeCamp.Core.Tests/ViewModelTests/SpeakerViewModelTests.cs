@@ -19,7 +19,7 @@ namespace CodeCamp.Core.Tests.ViewModelTests
             var session = new Session { Id = 42, SpeakerId = speaker.Id };
             var data = new CampData {Sessions = new List<Session> {session}, Speakers = new List<Speaker> {speaker}};
             DataClient.GetDataBody = () => Task.FromResult(data);
-            var viewModel = new SpeakerViewModel(Messenger, CodeCampService);
+            var viewModel = new SpeakerViewModel(Messenger, CodeCampService, ComposeEmailTask);
 
             Assert.True(viewModel.IsLoading);
 
@@ -38,7 +38,7 @@ namespace CodeCamp.Core.Tests.ViewModelTests
             string errorMessage = null;
             Messenger.Subscribe<ErrorMessage>(msg => errorMessage = msg.Message);
 
-            var viewModel = new SpeakerViewModel(Messenger, CodeCampService);
+            var viewModel = new SpeakerViewModel(Messenger, CodeCampService, ComposeEmailTask);
 
             await viewModel.Init(new SpeakerViewModel.NavigationParameters(42));
 
@@ -49,10 +49,10 @@ namespace CodeCamp.Core.Tests.ViewModelTests
         }
 
         [Test]
-        public void ViewSessionCommand_NavigatesToSession()
+        public void ViewSessionCommand_Executed_NavigatesToSession()
         {
             var session = new Session { Id = 42 };
-            var viewModel = new SpeakerViewModel(Messenger, CodeCampService);
+            var viewModel = new SpeakerViewModel(Messenger, CodeCampService, ComposeEmailTask);
 
             viewModel.ViewSessionCommand.Execute(session);
 
@@ -62,6 +62,21 @@ namespace CodeCamp.Core.Tests.ViewModelTests
             var navParameters = request.ParameterValues.Read(typeof(SessionViewModel.NavigationParameters)) as SessionViewModel.NavigationParameters;
             Assert.NotNull(navParameters);
             Assert.AreEqual(session.Id, navParameters.Id);
+        }
+
+        [Test]
+        public async void EmailSpeakerCommand_Executed_StartsComposingEmailToSpeaker()
+        {
+            var speaker = new Speaker { Id = 314, EmailAddress = "code@camp.com" };
+            var data = new CampData { Speakers = new List<Speaker> { speaker } };
+            DataClient.GetDataBody = () => Task.FromResult(data);
+            var viewModel = new SpeakerViewModel(Messenger, CodeCampService, ComposeEmailTask);
+            await viewModel.Init(new SpeakerViewModel.NavigationParameters(speaker.Id));
+
+            viewModel.EmailSpeakerCommand.Execute(null);
+
+            Assert.AreEqual(1, ComposeEmailTask.ComposedEmailAddresses.Count);
+            Assert.AreEqual(speaker.EmailAddress, ComposeEmailTask.ComposedEmailAddresses.First());
         }
     }
 }
