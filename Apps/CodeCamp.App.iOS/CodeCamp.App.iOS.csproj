@@ -129,6 +129,7 @@
     <Folder Include="Views\" />
     <Folder Include="Extensions\" />
     <Folder Include="Views\Elements\" />
+    <Folder Include="Converters\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -156,6 +157,12 @@
     <Compile Include="Views\OverviewView.cs" />
     <Compile Include="Views\Elements\SpeakerElement.cs" />
     <Compile Include="Views\SpeakerView.cs" />
+    <Compile Include="Views\Elements\SponsorElement.cs" />
+    <Compile Include="Views\SponsorsView.cs" />
+    <Compile Include="Views\SponsorView.cs" />
+    <Compile Include="..\..\CodeCamp.Core\src\CodeCamp.Core\Converters\StringFormatValueConverter.cs">
+      <Link>Converters\StringFormatValueConverter.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -170,6 +177,10 @@
     <ProjectReference Include="..\..\external\SlidingPanels.Touch\SlidingPanels\SlidingPanels.Lib\SlidingPanels.Touch.csproj">
       <Project>{2FD1999D-45B1-4485-BF96-EAB061481945}</Project>
       <Name>SlidingPanels.Touch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CodeCamp.Core\src\CodeCamp.Core\CodeCamp.Core.csproj">
+      <Project>{5CC09BE4-AB6C-476D-9A9F-96A3B452C1C4}</Project>
+      <Name>CodeCamp.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ProjectExtensions>

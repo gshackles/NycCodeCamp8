@@ -1,4 +1,5 @@
 using System;
+using System.Linq.Expressions;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using CodeCamp.Core.ViewModels;
 using CrossUI.Touch.Dialog.Elements;
@@ -23,40 +24,36 @@ namespace CodeCamp.App.iOS.Views
 
             TableView.ScrollEnabled = false;
 
-            Func<string, StyledStringElement> createElement = text =>
-                new StyledStringElement(text) 
+            var binder = this.CreateBindingSet<MenuView, MenuViewModel>();
+
+            Func<string, Expression<Func<MenuViewModel, object>>, StyledStringElement> createElement = (text, property) =>
+            {
+                var element = new StyledStringElement(text) 
                 { 
                     Accessory = UITableViewCellAccessory.DisclosureIndicator,
                     ShouldDeselectAfterTouch = true
                 };
 
-            StyledStringElement overviewElement = createElement("Overview"),
-                                sessionsElement = createElement("Full Schedule"),
-                                speakersElement = createElement("Speakers"),
-                                mapElement = createElement("Map");
+                binder.Bind(element)
+                      .For(el => el.SelectedCommand)
+                      .To(property);
 
-            var binder = this.CreateBindingSet<MenuView, MenuViewModel>();
-            binder.Bind(overviewElement)
-                  .For(el => el.SelectedCommand)
-                  .To(vm => vm.ShowOverviewCommand);
-            binder.Bind(sessionsElement)
-                  .For(el => el.SelectedCommand)
-                  .To(vm => vm.ShowSessionsCommand);
-            binder.Bind(speakersElement)
-                  .For(el => el.SelectedCommand)
-                  .To(vm => vm.ShowSpeakersCommand);
-            binder.Bind(mapElement)
-                  .For(el => el.SelectedCommand)
-                  .To(vm => vm.ShowMapCommand);
-            binder.Apply();
-
+                return element;
+            };
+              
             Root = new RootElement("")
             {
                 new Section
                 {
-                    overviewElement, sessionsElement, speakersElement, mapElement
+                    createElement("Overview", vm => vm.ShowOverviewCommand),
+                    createElement("Full Schedule", vm => vm.ShowSessionsCommand),
+                    createElement("Speakers", vm => vm.ShowSpeakersCommand),
+                    createElement("Sponsors", vm => vm.ShowSponsorsCommand),
+                    createElement("Map", vm => vm.ShowMapCommand)
                 }
             };
+
+            binder.Apply();
         }
 
         private new MenuViewModel ViewModel

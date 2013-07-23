@@ -149,5 +149,8 @@
     <Compile Include="..\CodeCamp.Core\ViewModels\OverviewViewModel.cs">
       <Link>ViewModels\OverviewViewModel.cs</Link>
     </Compile>
+    <Compile Include="..\CodeCamp.Core\Data\Entities\SponsorTier.cs">
+      <Link>Data\Entities\SponsorTier.cs</Link>
+    </Compile>
   </ItemGroup>
 </Project>

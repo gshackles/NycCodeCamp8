@@ -2,14 +2,13 @@ using System.Linq;
 using CodeCamp.Core.ViewModels;
 using CrossUI.Touch.Dialog.Elements;
 using MonoTouch.UIKit;
-using CodeCamp.App.iOS.Extensions;
 using CodeCamp.App.iOS.Views.Elements;
 
 namespace CodeCamp.App.iOS.Views
 {
-    public class SessionsView : DialogViewControllerBase
+    public class SponsorsView : DialogViewControllerBase
     {
-        public SessionsView()
+        public SponsorsView()
             : base(UITableViewStyle.Plain)
         {
         }
@@ -18,7 +17,7 @@ namespace CodeCamp.App.iOS.Views
         {
             base.ViewDidLoad();
 
-            Title = "Schedule";
+            Title = "Sponsors";
         }
 
         protected override void OnLoadingComplete()
@@ -27,17 +26,17 @@ namespace CodeCamp.App.iOS.Views
 
             Root = new RootElement("Schedule")
             {
-                from slot in ViewModel.TimeSlots
-                select new CommandBindableSection<SessionElement>(string.Format("{0:t} - {1:t}", slot.StartTime, slot.EndTime), ViewModel.ViewSessionCommand)
+                from tier in ViewModel.SponsorTiers
+                select new CommandBindableSection<SponsorElement>(tier.Name, ViewModel.ViewSponsorCommand)
                 {
-                    ItemsSource = slot.Sessions
+                    ItemsSource = tier.Sponsors
                 }
             };
         }
 
-        private new SessionsViewModel ViewModel
+        private new SponsorsViewModel ViewModel
         {
-            get { return (SessionsViewModel)base.ViewModel; }
+            get { return (SponsorsViewModel)base.ViewModel; }
         }
     }
 }

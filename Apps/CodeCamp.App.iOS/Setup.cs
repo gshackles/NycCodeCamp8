@@ -2,6 +2,7 @@ using Cirrious.CrossCore;
 using Cirrious.MvvmCross.Touch.Platform;
 using Cirrious.MvvmCross.Touch.Views.Presenters;
 using Cirrious.MvvmCross.ViewModels;
+using CodeCamp.Core;
 using CodeCamp.Core.Messaging;
 
 namespace CodeCamp.App.iOS
@@ -23,6 +24,13 @@ namespace CodeCamp.App.iOS
             base.InitializeIoC();
 
             Mvx.ConstructAndRegisterSingleton<IErrorReporter, ErrorReporter>();
+        }
+
+        protected override void FillValueConverters(Cirrious.CrossCore.Converters.IMvxValueConverterRegistry registry)
+        {
+            base.FillValueConverters(registry);
+
+            registry.AddOrOverwrite("StringFormat", new StringFormatValueConverter());
         }
     }
 }

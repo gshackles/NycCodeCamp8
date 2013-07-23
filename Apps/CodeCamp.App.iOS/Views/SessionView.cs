@@ -23,7 +23,14 @@ namespace CodeCamp.App.iOS.Views
                 new Section
                 {
                     new StringElement().Bind(bindings, el => el.Caption, vm => vm.Session.Title),
-                    new StringElement().Bind(bindings, el => el.Caption, vm => vm.Session.SpeakerName)
+                    new StringElement().Bind(bindings, el => el.Caption, vm => vm.Session.SpeakerName),
+                    new StringElement().Bind(bindings, el => el.Caption, vm => vm.Session.StartTime, "StringFormat", "t"),
+                    new StringElement().Bind(bindings, el => el.Caption, vm => vm.Session.RoomName)
+                },
+
+                new Section
+                {
+                    new MultilineElement().Bind(bindings, el => el.Value, vm => vm.Session.Abstract)
                 }
             };
         }

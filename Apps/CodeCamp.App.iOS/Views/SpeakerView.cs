@@ -23,7 +23,10 @@ namespace CodeCamp.App.iOS.Views
             {
                 new Section
                 {
-                    new StringElement().Bind(bindings, el => el.Caption, vm => vm.Speaker.Name),
+                    new StringElement().Bind(bindings, el => el.Caption, vm => vm.Speaker.Name)
+                },
+                new Section
+                {
                     new MultilineElement().Bind(bindings, el => el.Caption, vm => vm.Speaker.Bio)
                 },
                 new CommandBindableSection<SessionElement>("Sessions", ViewModel.ViewSessionCommand)
