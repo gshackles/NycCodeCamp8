@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Cirrious.MvvmCross.Plugins.Messenger;
@@ -39,6 +40,33 @@ namespace CodeCamp.Core.ViewModels
             {
                 return new MvxCommand<Speaker>(
                     speaker => ShowViewModel<SpeakerViewModel>(new SpeakerViewModel.NavigationParameters(speaker.Id)));
+            }
+        }
+
+        public event EventHandler<bool> DataRefreshComplete;
+
+        private bool _isRefreshing;
+        public bool IsRefreshing
+        {
+            get { return _isRefreshing; }
+            set { _isRefreshing = value; RaisePropertyChanged(() => IsRefreshing); }
+        }
+
+        public ICommand RefreshDataCommand
+        {
+            get
+            {
+                return new MvxCommand(async () =>
+                {
+                    bool successful = await SafeOperation(Task.Run(async () => 
+                    {
+                        await _campService.RefreshData();
+                        Speakers = await _campService.ListSpeakers();
+                    }), () => IsRefreshing);
+
+                    if (DataRefreshComplete != null)
+                        DataRefreshComplete.Invoke(this, successful);
+                });
             }
         }
     }

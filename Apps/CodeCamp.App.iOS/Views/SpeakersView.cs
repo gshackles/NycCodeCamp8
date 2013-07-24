@@ -2,6 +2,7 @@ using Cirrious.MvvmCross.Binding.BindingContext;
 using CodeCamp.Core.ViewModels;
 using CrossUI.Touch.Dialog.Elements;
 using MonoTouch.UIKit;
+using CodeCamp.App.iOS.Extensions;
 using CodeCamp.App.iOS.Views.Elements;
 
 namespace CodeCamp.App.iOS.Views
@@ -11,24 +12,42 @@ namespace CodeCamp.App.iOS.Views
         public SpeakersView()
             : base(UITableViewStyle.Plain)
         {
+            Root = new RootElement("Speakers");
+
+            RefreshRequested += (s, e) => ViewModel.RefreshDataCommand.Execute(null);
         }
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
 
-            Title = "Speakers";
+            ViewModel.BindLoadingMessage(View, model => model.IsRefreshing, "Refreshing...");
+            ViewModel.DataRefreshComplete += (s, successful) => 
+            {
+                if (successful)
+                    loadSpeakers();
+
+                ReloadComplete();
+            };
         }
 
         protected override void OnLoadingComplete()
         {
+            base.OnLoadingComplete();
+
+            loadSpeakers();
+        }
+
+        private void loadSpeakers()
+        {
             var bindings = this.CreateInlineBindingTarget<SpeakersViewModel>();
 
-            Root = new RootElement("Speakers")
-            {
+            Root.Clear();
+            Root.Add(
                 new CommandBindableSection<SpeakerElement>(null, ViewModel.ViewSpeakerCommand)
                     .Bind(bindings, element => element.ItemsSource, vm => vm.Speakers)
-            };
+            );
+            Root.TableView.ReloadData();
         }
 
         private new SpeakersViewModel ViewModel
