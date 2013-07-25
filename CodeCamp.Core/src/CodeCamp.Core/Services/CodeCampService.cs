@@ -42,6 +42,17 @@ namespace CodeCamp.Core.Services
             {
                 var data = await _client.GetData();
 
+                foreach (var session in data.Sessions)
+                {
+                    var speaker = data.Speakers.FirstOrDefault(s => s.Id == session.SpeakerId);
+
+                    // shouldn't happen, but just in case...
+                    if (speaker == null)
+                        continue;
+
+                    session.SpeakerName = speaker.Name;
+                }
+
                 _fileManager.WriteFile(DataFileName, _jsonConverter.SerializeObject(data));
 
                 _campData = data;

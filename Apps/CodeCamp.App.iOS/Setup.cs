@@ -31,6 +31,7 @@ namespace CodeCamp.App.iOS
             base.FillValueConverters(registry);
 
             registry.AddOrOverwrite("StringFormat", new StringFormatValueConverter());
+            registry.AddOrOverwrite("Time", new TimeValueConverter());
         }
     }
 }

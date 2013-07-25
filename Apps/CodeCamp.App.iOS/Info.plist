@@ -22,5 +22,11 @@
 	</array>
 	<key>MinimumOSVersion</key>
 	<string>6.0</string>
+	<key>CFBundleDisplayName</key>
+	<string>Code Camp</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.gregshackles.nyccodecamp8</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
 </dict>
 </plist>

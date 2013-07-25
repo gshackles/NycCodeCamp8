@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using System.Windows.Input;
 using Cirrious.MvvmCross.Plugins.Messenger;
+using Cirrious.MvvmCross.ViewModels;
 using CodeCamp.Core.Data.Entities;
 using CodeCamp.Core.Services;
 
@@ -29,6 +30,14 @@ namespace CodeCamp.Core.ViewModels
                 Task.Run(async () => Session = await _campService.GetSession(parameters.Id)));
 
             FinishedLoading(successful);
+        }
+
+        public ICommand ViewSpeakerCommand
+        {
+            get
+            {
+                return new MvxCommand(() => ShowViewModel<SpeakerViewModel>(new SpeakerViewModel.NavigationParameters(Session.SpeakerId)));
+            }
         }
 
         public class NavigationParameters

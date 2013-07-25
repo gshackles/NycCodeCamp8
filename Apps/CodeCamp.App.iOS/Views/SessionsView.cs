@@ -4,6 +4,7 @@ using CrossUI.Touch.Dialog.Elements;
 using MonoTouch.UIKit;
 using CodeCamp.App.iOS.Extensions;
 using CodeCamp.App.iOS.Views.Elements;
+using CodeCamp.Core.Extensions;
 
 namespace CodeCamp.App.iOS.Views
 {
@@ -43,7 +44,7 @@ namespace CodeCamp.App.iOS.Views
             Root.Clear();
             Root.Add(
                 from slot in ViewModel.TimeSlots
-                select new CommandBindableSection<SessionElement>(string.Format("{0:t} - {1:t}", slot.StartTime, slot.EndTime), ViewModel.ViewSessionCommand)
+                select new CommandBindableSection<SessionElement>(string.Format("{0} - {1}", slot.StartTime.FormatTime(), slot.EndTime.FormatTime()), ViewModel.ViewSessionCommand)
                 {
                     ItemsSource = slot.Sessions
                 }

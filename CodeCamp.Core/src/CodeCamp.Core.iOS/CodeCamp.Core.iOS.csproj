@@ -164,5 +164,8 @@
     <Compile Include="..\CodeCamp.Core\Data\Entities\SponsorTier.cs">
       <Link>Data\Entities\SponsorTier.cs</Link>
     </Compile>
+    <Compile Include="..\CodeCamp.Core\Extensions\DateTimeExtensions.cs">
+      <Link>Extensions\DateTimeExtensions.cs</Link>
+    </Compile>
   </ItemGroup>
 </Project>
