@@ -5,6 +5,7 @@ using MonoTouch.UIKit;
 using CodeCamp.App.iOS.Extensions;
 using CodeCamp.App.iOS.Views.Elements;
 using CodeCamp.Core.Extensions;
+using System.Drawing;
 
 namespace CodeCamp.App.iOS.Views
 {
@@ -44,12 +45,13 @@ namespace CodeCamp.App.iOS.Views
             Root.Clear();
             Root.Add(
                 from slot in ViewModel.TimeSlots
-                select new CommandBindableSection<SessionElement>(string.Format("{0} - {1}", slot.StartTime.FormatTime(), slot.EndTime.FormatTime()), ViewModel.ViewSessionCommand)
+                select new CommandBindableSection<SessionElement>("", ViewModel.ViewSessionCommand)
                 {
-                    ItemsSource = slot.Sessions
+                    ItemsSource = slot.Sessions,
+                    HeaderView = AppStyles.CreateListHeader(string.Format("{0} - {1}", slot.StartTime.FormatTime(), slot.EndTime.FormatTime()))
                 }
             );
-            Root.TableView.ReloadData();
+            ReloadData();
         }
 
         private new SessionsViewModel ViewModel

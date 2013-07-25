@@ -33,11 +33,14 @@ namespace CodeCamp.App.iOS.Views
                 {
                     new StyledStringElement("Send Email") { 
                         Accessory = UITableViewCellAccessory.DisclosureIndicator,
-                        ShouldDeselectAfterTouch = true
+                        ShouldDeselectAfterTouch = true,
+                        Image = UIImage.FromFile("compose.png")
                     }.Bind(bindings, el => el.SelectedCommand, vm => vm.EmailSpeakerCommand)
                 },
-                new CommandBindableSection<SessionElement>("Sessions", ViewModel.ViewSessionCommand)
-                    .Bind(bindings, element => element.ItemsSource, vm => vm.Sessions)
+                new CommandBindableSection<SessionElement>("", ViewModel.ViewSessionCommand)
+                {
+                    HeaderView = AppStyles.CreateListHeader("Sessions")
+                }.Bind(bindings, element => element.ItemsSource, vm => vm.Sessions)
             };
         }
 

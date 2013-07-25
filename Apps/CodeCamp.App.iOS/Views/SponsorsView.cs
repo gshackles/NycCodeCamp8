@@ -4,6 +4,7 @@ using CrossUI.Touch.Dialog.Elements;
 using MonoTouch.UIKit;
 using CodeCamp.App.iOS.Extensions;
 using CodeCamp.App.iOS.Views.Elements;
+using System.Drawing;
 
 namespace CodeCamp.App.iOS.Views
 {
@@ -12,7 +13,7 @@ namespace CodeCamp.App.iOS.Views
         public SponsorsView()
             : base(UITableViewStyle.Plain)
         {
-            Root = new RootElement("Schedule");
+            Root = new RootElement("Sponsors");
 
             RefreshRequested += (s, e) => ViewModel.RefreshDataCommand.Execute(null);
         }
@@ -43,12 +44,13 @@ namespace CodeCamp.App.iOS.Views
             Root.Clear();
             Root.Add(
                 from tier in ViewModel.SponsorTiers
-                select new CommandBindableSection<SponsorElement>(tier.Name, ViewModel.ViewSponsorCommand)
+                select new CommandBindableSection<SponsorElement>("", ViewModel.ViewSponsorCommand)
                 {
-                    ItemsSource = tier.Sponsors
+                    ItemsSource = tier.Sponsors,
+                    HeaderView = AppStyles.CreateListHeader(tier.Name)
                 }
             );
-            Root.TableView.ReloadData();
+            ReloadData();
         }
 
         private new SponsorsViewModel ViewModel

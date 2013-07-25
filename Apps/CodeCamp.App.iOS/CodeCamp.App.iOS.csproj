@@ -180,6 +180,7 @@
     <Compile Include="..\..\CodeCamp.Core\src\CodeCamp.Core\Converters\TimeValueConverter.cs">
       <Link>Converters\TimeValueConverter.cs</Link>
     </Compile>
+    <Compile Include="AppStyles.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -211,5 +212,27 @@
   </ProjectExtensions>
   <ItemGroup>
     <BundleResource Include="Resources\menu.png" />
+    <BundleResource Include="Resources\linen.png" />
+    <BundleResource Include="Resources\linen%402x.png" />
+    <BundleResource Include="Resources\dots.png" />
+    <BundleResource Include="Resources\dots%402x.png" />
+    <BundleResource Include="Resources\concrete.png" />
+    <BundleResource Include="Resources\concrete%402x.png" />
+    <BundleResource Include="Resources\compose.png" />
+    <BundleResource Include="Resources\compose%402x.png" />
+    <BundleResource Include="Resources\globe.png" />
+    <BundleResource Include="Resources\globe%402x.png" />
+    <BundleResource Include="Resources\clock.png" />
+    <BundleResource Include="Resources\clock%402x.png" />
+    <BundleResource Include="Resources\sponsors%402x.png" />
+    <BundleResource Include="Resources\home.png" />
+    <BundleResource Include="Resources\home%402x.png" />
+    <BundleResource Include="Resources\signpost.png" />
+    <BundleResource Include="Resources\signpost%402x.png" />
+    <BundleResource Include="Resources\map.png" />
+    <BundleResource Include="Resources\map%402x.png" />
+    <BundleResource Include="Resources\sponsors.png" />
+    <BundleResource Include="Resources\users.png" />
+    <BundleResource Include="Resources\users%402x.png" />
   </ItemGroup>
 </Project>

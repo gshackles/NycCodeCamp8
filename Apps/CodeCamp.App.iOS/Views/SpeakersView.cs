@@ -47,7 +47,7 @@ namespace CodeCamp.App.iOS.Views
                 new CommandBindableSection<SpeakerElement>(null, ViewModel.ViewSpeakerCommand)
                     .Bind(bindings, element => element.ItemsSource, vm => vm.Speakers)
             );
-            Root.TableView.ReloadData();
+            ReloadData();
         }
 
         private new SpeakersViewModel ViewModel

@@ -29,7 +29,8 @@ namespace CodeCamp.App.iOS.Views
                     new StyledStringElement("View Website") 
                     { 
                         Accessory = UITableViewCellAccessory.DisclosureIndicator,
-                        ShouldDeselectAfterTouch = true
+                        ShouldDeselectAfterTouch = true,
+                        Image = UIImage.FromFile("globe.png")
                     }.Bind(bindings, el => el.SelectedCommand, vm => vm.ViewWebsiteCommand)
                 },
                 new Section

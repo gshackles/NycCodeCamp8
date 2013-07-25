@@ -16,6 +16,8 @@ namespace CodeCamp.App.iOS.Views
             base.ViewDidLoad();
 
             TableView.TableFooterView = GetFooterView();
+            TableView.BackgroundView = null;
+            TableView.BackgroundColor = BackgroundColor;
         }
 
         public override void ViewWillAppear(bool animated)
@@ -30,6 +32,11 @@ namespace CodeCamp.App.iOS.Views
         protected virtual UIView GetFooterView()
         {
             return new UIView();
+        }
+
+        protected virtual UIColor BackgroundColor
+        {
+            get { return AppStyles.DefaultBackgroundImage; }
         }
     }   
 }

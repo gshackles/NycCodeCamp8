@@ -23,7 +23,9 @@ namespace CodeCamp.App.iOS
             startup.Start();
 
             _window.MakeKeyAndVisible();
-			
+
+            UINavigationBar.Appearance.TintColor = AppStyles.NavigationBarTintColor;
+
             return true;
         }
     }

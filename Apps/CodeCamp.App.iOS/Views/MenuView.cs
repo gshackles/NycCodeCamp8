@@ -4,6 +4,7 @@ using Cirrious.MvvmCross.Binding.BindingContext;
 using CodeCamp.Core.ViewModels;
 using CrossUI.Touch.Dialog.Elements;
 using MonoTouch.UIKit;
+using System.Drawing;
 
 namespace CodeCamp.App.iOS.Views
 {
@@ -26,12 +27,13 @@ namespace CodeCamp.App.iOS.Views
 
             var binder = this.CreateBindingSet<MenuView, MenuViewModel>();
 
-            Func<string, Expression<Func<MenuViewModel, object>>, StyledStringElement> createElement = (text, property) =>
+            Func<string, string, Expression<Func<MenuViewModel, object>>, StyledStringElement> createElement = (text, imageFileName, property) =>
             {
                 var element = new StyledStringElement(text) 
                 { 
                     Accessory = UITableViewCellAccessory.DisclosureIndicator,
-                    ShouldDeselectAfterTouch = true
+                    ShouldDeselectAfterTouch = true,
+                    Image = UIImage.FromFile(imageFileName)
                 };
 
                 binder.Bind(element)
@@ -45,12 +47,20 @@ namespace CodeCamp.App.iOS.Views
             {
                 new Section
                 {
-                    createElement("Overview", vm => vm.ShowOverviewCommand),
-                    createElement("Full Schedule", vm => vm.ShowSessionsCommand),
-                    createElement("Speakers", vm => vm.ShowSpeakersCommand),
-                    createElement("Sponsors", vm => vm.ShowSponsorsCommand),
-                    createElement("Map", vm => vm.ShowMapCommand)
+                    createElement("Overview", "home.png", vm => vm.ShowOverviewCommand),
+                    createElement("Full Schedule", "clock.png", vm => vm.ShowSessionsCommand),
+                    createElement("Speakers", "users.png", vm => vm.ShowSpeakersCommand),
+                    createElement("Sponsors", "sponsors.png", vm => vm.ShowSponsorsCommand),
+                    createElement("Map", "map.png", vm => vm.ShowMapCommand)
                 }
+            };
+
+            TableView.TableHeaderView = new UILabel(new RectangleF(0, 0, View.Frame.Width, 60))
+            {
+                Text = "NYC Code Camp 8",
+                Font = UIFont.FromName("HelveticaNeue-Bold", 18),
+                BackgroundColor = UIColor.White,
+                TextColor = UIColor.Black
             };
 
             binder.Apply();
@@ -59,6 +69,12 @@ namespace CodeCamp.App.iOS.Views
         private new MenuViewModel ViewModel
         {
             get { return (MenuViewModel)base.ViewModel; }
+        }
+
+        protected override UIColor BackgroundColor
+        {
+//            get { return UIColor.FromPatternImage(UIImage.FromFile("dots.png")); }
+            get { return UIColor.White; }
         }
     }
 }
