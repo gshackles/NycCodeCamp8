@@ -112,66 +112,6 @@ namespace CodeCamp.Core.Services
 
         internal async Task<CampData> GetData()
         {
-            return new CampData
-            {
-                Sessions = new List<Session>
-                {
-                    new Session
-                    {
-                        StartTime = DateTime.Now,
-                        EndTime = DateTime.Now,
-                        Id = 24,
-                        Title = "Test Session 2",
-                        SpeakerName = "Not Greg Shackles",
-                        SpeakerId = 4
-
-                    },
-                    new Session
-                    {
-                        Id = 42,
-                        Title = "Test Session",
-                        SpeakerName = "Greg Shackles",
-                        StartTime = DateTime.UtcNow,
-                        EndTime = DateTime.UtcNow,
-                        SpeakerId = 3
-                    }
-                },
-                Speakers = new List<Speaker>
-                {
-                    new Speaker
-                    {
-                        Name = "Greg Shackles",
-                        Id = 3, 
-                        EmailAddress = "greg@gregshackles.com",
-                        Bio = "This is a bio"
-                    },
-                    new Speaker
-                    {
-                        Name = "Not Greg Shackles",
-                        Id = 4,
-                        EmailAddress = "notgreg@gregshackles.com",
-                        Bio = "This is another bio"
-                    }
-                },
-                Sponsors = new List<Sponsor>
-                {
-                    new Sponsor
-                    {
-                        Name = "OLO",
-                        Tier = "Gold",
-                        Website = "http://olo.com",
-                        Description = "This is a description"
-                    },
-                    new Sponsor
-                    {
-                        Name = "Google",
-                        Tier = "Silver",
-                        Website = "http://google.com",
-                        Description = "It's Google. Enough Said."
-                    }
-                }
-            };
-
             // TODO: lock around the body of this method?
             _campData = _campData ?? LoadCachedCampData();
 
