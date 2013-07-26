@@ -33,7 +33,8 @@ namespace CodeCamp.App.iOS.Views
                 { 
                     Accessory = UITableViewCellAccessory.DisclosureIndicator,
                     ShouldDeselectAfterTouch = true,
-                    Image = UIImage.FromFile(imageFileName)
+                    Image = UIImage.FromFile(imageFileName),
+                    BackgroundColor = AppStyles.MenuCellBackgroundColor
                 };
 
                 binder.Bind(element)
@@ -59,8 +60,8 @@ namespace CodeCamp.App.iOS.Views
             {
                 Text = "NYC Code Camp 8",
                 Font = UIFont.FromName("HelveticaNeue-Bold", 18),
-                BackgroundColor = UIColor.White,
-                TextColor = UIColor.Black
+                BackgroundColor = UIColor.Clear,
+                TextColor = AppStyles.StandardTextColor
             };
 
             binder.Apply();
@@ -74,7 +75,7 @@ namespace CodeCamp.App.iOS.Views
         protected override UIColor BackgroundColor
         {
 //            get { return UIColor.FromPatternImage(UIImage.FromFile("dots.png")); }
-            get { return UIColor.White; }
+            get { return UIColor.FromRGB(20, 20, 20); }
         }
     }
 }

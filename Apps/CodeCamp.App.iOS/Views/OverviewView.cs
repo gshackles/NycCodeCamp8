@@ -10,7 +10,7 @@ namespace CodeCamp.App.iOS.Views
         public OverviewView()
             : base(UITableViewStyle.Grouped)
         {
-            Root = new RootElement("Code Camp");
+            Root = new RootElement("NYC Code Camp");
 
             RefreshRequested += (s, e) => ViewModel.RefreshDataCommand.Execute(null);
         }
@@ -30,10 +30,12 @@ namespace CodeCamp.App.iOS.Views
         {
             base.OnLoadingComplete();
 
+            Root.Clear();
             Root.Add(
                 new Section
                 {
-                    new StringElement("Welcome!")
+                    new StringElement("Welcome!"),
+                    new StringElement("Useful stuff will eventually be here...")
                 }
             );
         }

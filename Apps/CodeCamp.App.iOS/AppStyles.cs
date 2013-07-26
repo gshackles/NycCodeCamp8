@@ -11,17 +11,32 @@ namespace CodeCamp.App.iOS
         public static float ListHeaderHeight = 50;
         public static UIColor ListHeaderColor = UIColor.White;
         public static UIColor ListHeaderBackgroundColor = UIColor.Clear;
-        public static UIFont ListHeaderFont = UIFont.FromName("Copperplate", 18);
+        public static UIFont ListHeaderFont = UIFont.FromName("Avenir-Book", 18);
 
-        public static UILabel CreateListHeader(string text)
+        public static UIColor MenuCellBackgroundColor = UIColor.FromRGBA(200, 200, 200, 0.8f);
+        public static UIColor SemiTransparentCellBackgroundColor = UIColor.FromRGBA(255, 255, 255, 0.2f);
+        public static UIFont ListTitleFont = UIFont.FromName("Avenir-Medium", 18);
+        public static UIColor ListTitleColor = UIColor.White;
+        public static UIFont ListSubtitleFont = UIFont.FromName("Avenir-Medium", 14);
+
+        public static UIColor StandardTextColor = UIColor.White;
+        public static UIFont StandardFont = UIFont.FromName("Avenir-Roman", 16);
+        public static UIFont EntityTitleFont = UIFont.FromName("Avenir-Heavy", 22);
+
+        public static UIView CreateListHeader(string text)
         {
-            return new UILabel(new RectangleF(0, 0, UIScreen.MainScreen.Bounds.Width, ListHeaderHeight))
+            var headerView = new UIView(new RectangleF(0, 0, UIScreen.MainScreen.Bounds.Width, ListHeaderHeight));
+            var label = new UILabel(new RectangleF(15, 0, UIScreen.MainScreen.Bounds.Width - 15, ListHeaderHeight))
             {
                 BackgroundColor = AppStyles.ListHeaderBackgroundColor,
                 TextColor = AppStyles.ListHeaderColor,
                 Font = AppStyles.ListHeaderFont,
                 Text = text
             };
+
+            headerView.AddSubview(label);
+
+            return headerView;
         }
     }
 }

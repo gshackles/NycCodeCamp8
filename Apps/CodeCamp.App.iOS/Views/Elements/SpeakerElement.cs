@@ -5,7 +5,7 @@ using MonoTouch.UIKit;
 
 namespace CodeCamp.App.iOS.Views.Elements
 {
-    public class SpeakerElement : StyledStringElement, IBindableElement
+    public class SpeakerElement : StyledStringElement, IBindableElement, IElementSizing
     {       
         public IMvxBindingContext BindingContext { get; set; }
 
@@ -13,6 +13,9 @@ namespace CodeCamp.App.iOS.Views.Elements
         {
             ShouldDeselectAfterTouch = true;
             Accessory = UITableViewCellAccessory.DisclosureIndicator;
+            BackgroundColor = AppStyles.SemiTransparentCellBackgroundColor;
+            TextColor = AppStyles.ListTitleColor;
+            Font = AppStyles.ListTitleFont;
 
             this.CreateBindingContext();
             this.DelayBind(() =>
@@ -36,6 +39,11 @@ namespace CodeCamp.App.iOS.Views.Elements
         {
             get { return BindingContext.DataContext; }
             set { BindingContext.DataContext = value; }
+        }
+
+        public float GetHeight(UITableView tableView, MonoTouch.Foundation.NSIndexPath indexPath)
+        {
+            return 54;
         }
     }
 }

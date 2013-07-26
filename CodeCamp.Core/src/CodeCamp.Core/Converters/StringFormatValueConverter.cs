@@ -2,7 +2,7 @@ using System;
 using System.Globalization;
 using Cirrious.CrossCore.Converters;
 
-namespace CodeCamp.Core
+namespace CodeCamp.Core.Converters
 {
     public class StringFormatValueConverter : MvxValueConverter
     {

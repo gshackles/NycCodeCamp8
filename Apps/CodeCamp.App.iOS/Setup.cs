@@ -2,8 +2,8 @@ using Cirrious.CrossCore;
 using Cirrious.MvvmCross.Touch.Platform;
 using Cirrious.MvvmCross.Touch.Views.Presenters;
 using Cirrious.MvvmCross.ViewModels;
-using CodeCamp.Core;
 using CodeCamp.Core.Messaging;
+using CodeCamp.Core.Converters;
 
 namespace CodeCamp.App.iOS
 {
@@ -32,6 +32,7 @@ namespace CodeCamp.App.iOS
 
             registry.AddOrOverwrite("StringFormat", new StringFormatValueConverter());
             registry.AddOrOverwrite("Time", new TimeValueConverter());
+            registry.AddOrOverwrite("SessionDetails", new SessionDetailsConverter());
         }
     }
 }

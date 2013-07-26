@@ -3,7 +3,7 @@ using System.Globalization;
 using Cirrious.CrossCore.Converters;
 using CodeCamp.Core.Extensions;
 
-namespace CodeCamp.Core
+namespace CodeCamp.Core.Converters
 {
     public class TimeValueConverter : MvxValueConverter
     {

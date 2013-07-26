@@ -94,6 +94,7 @@
     <Compile Include="Converters\StringFormatValueConverter.cs" />
     <Compile Include="Converters\TimeValueConverter.cs" />
     <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Converters\SessionDetailsConverter.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

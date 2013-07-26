@@ -23,18 +23,24 @@ namespace CodeCamp.App.iOS.Views
             {
                 new Section
                 {
-                    new StringElement().Bind(bindings, el => el.Caption, vm => vm.Speaker.Name)
+                    new TransparentStringElement
+                    {
+                        Font = AppStyles.EntityTitleFont
+                    }.Bind(bindings, el => el.Caption, vm => vm.Speaker.Name)
                 },
                 new Section
                 {
-                    new MultilineElement().Bind(bindings, el => el.Caption, vm => vm.Speaker.Bio)
+                    new TransparentMultilineElement().Bind(bindings, el => el.Caption, vm => vm.Speaker.Bio)
                 },
                 new Section
                 {
                     new StyledStringElement("Send Email") { 
                         Accessory = UITableViewCellAccessory.DisclosureIndicator,
                         ShouldDeselectAfterTouch = true,
-                        Image = UIImage.FromFile("compose.png")
+                        Image = UIImage.FromFile("compose.png"),
+                        BackgroundColor = AppStyles.SemiTransparentCellBackgroundColor,
+                        TextColor = AppStyles.ListTitleColor,
+                        Font = AppStyles.ListTitleFont
                     }.Bind(bindings, el => el.SelectedCommand, vm => vm.EmailSpeakerCommand)
                 },
                 new CommandBindableSection<SessionElement>("", ViewModel.ViewSessionCommand)

@@ -3,6 +3,7 @@ using CodeCamp.Core.Extensions;
 using CodeCamp.Core.ViewModels;
 using CrossUI.Touch.Dialog.Elements;
 using MonoTouch.UIKit;
+using CodeCamp.App.iOS.Views.Elements;
 
 namespace CodeCamp.App.iOS.Views
 {
@@ -23,17 +24,30 @@ namespace CodeCamp.App.iOS.Views
             {
                 new Section
                 {
-                    new StringElement().Bind(bindings, el => el.Caption, vm => vm.Session.Title),
-                    new StyledStringElement { Accessory = UITableViewCellAccessory.DisclosureIndicator }
-                        .Bind(bindings, el => el.Caption, vm => vm.Session.SpeakerName)
-                        .Bind(bindings, el => el.SelectedCommand, vm => vm.ViewSpeakerCommand),
-                    new StringElement(ViewModel.Session.StartTime.FormatTime() + " - " + ViewModel.Session.EndTime.FormatTime()),
-                    new StringElement().Bind(bindings, el => el.Caption, vm => vm.Session.RoomName)
+                    new TransparentStringElement
+                    {
+                        Font = AppStyles.EntityTitleFont
+                    }.Bind(bindings, el => el.Caption, vm => vm.Session.Title),
+                    new TransparentStringElement(ViewModel.Session.StartTime.FormatTime() + " - " + ViewModel.Session.EndTime.FormatTime()),
+                    new TransparentStringElement().Bind(bindings, el => el.Caption, vm => vm.Session.RoomName)
                 },
 
                 new Section
                 {
-                    new MultilineElement().Bind(bindings, el => el.Caption, vm => vm.Session.Abstract)
+                    new StyledStringElement 
+                    { 
+                        Accessory = UITableViewCellAccessory.DisclosureIndicator,
+                        BackgroundColor = AppStyles.SemiTransparentCellBackgroundColor,
+                        TextColor = AppStyles.ListTitleColor,
+                        Font = AppStyles.ListTitleFont
+                    }
+                        .Bind(bindings, el => el.Caption, vm => vm.Session.SpeakerName)
+                        .Bind(bindings, el => el.SelectedCommand, vm => vm.ViewSpeakerCommand),
+                },
+
+                new Section
+                {
+                    new TransparentMultilineElement().Bind(bindings, el => el.Caption, vm => vm.Session.Abstract)
                 }
             };
         }
