@@ -30,10 +30,6 @@ namespace CodeCamp.App.iOS.Views
                 },
                 new Section
                 {
-                    new TransparentMultilineElement().Bind(bindings, el => el.Caption, vm => vm.Speaker.Bio)
-                },
-                new Section
-                {
                     new StyledStringElement("Send Email") { 
                         Accessory = UITableViewCellAccessory.DisclosureIndicator,
                         ShouldDeselectAfterTouch = true,
@@ -45,8 +41,13 @@ namespace CodeCamp.App.iOS.Views
                 },
                 new CommandBindableSection<SessionElement>("", ViewModel.ViewSessionCommand)
                 {
-                    HeaderView = AppStyles.CreateListHeader("Sessions")
-                }.Bind(bindings, element => element.ItemsSource, vm => vm.Sessions)
+                    HeaderView = AppStyles.CreateListHeader("Sessions", UITableViewStyle.Grouped)
+                }.Bind(bindings, element => element.ItemsSource, vm => vm.Sessions),
+
+                new Section
+                {
+                    new TransparentMultilineElement().Bind(bindings, el => el.Caption, vm => vm.Speaker.Bio)
+                }
             };
         }
 

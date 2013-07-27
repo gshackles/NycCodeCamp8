@@ -4,7 +4,6 @@ using CrossUI.Touch.Dialog.Elements;
 using MonoTouch.UIKit;
 using CodeCamp.App.iOS.Extensions;
 using CodeCamp.App.iOS.Views.Elements;
-using System.Drawing;
 
 namespace CodeCamp.App.iOS.Views
 {
@@ -47,7 +46,7 @@ namespace CodeCamp.App.iOS.Views
                 select new CommandBindableSection<SponsorElement>("", ViewModel.ViewSponsorCommand)
                 {
                     ItemsSource = tier.Sponsors,
-                    HeaderView = AppStyles.CreateListHeader(tier.Name)
+                    HeaderView = AppStyles.CreateListHeader(tier.Name, UITableViewStyle.Plain)
                 }
             );
             ReloadData();

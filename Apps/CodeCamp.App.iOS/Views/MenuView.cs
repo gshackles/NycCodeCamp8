@@ -52,7 +52,7 @@ namespace CodeCamp.App.iOS.Views
                     createElement("Full Schedule", "clock.png", vm => vm.ShowSessionsCommand),
                     createElement("Speakers", "users.png", vm => vm.ShowSpeakersCommand),
                     createElement("Sponsors", "sponsors.png", vm => vm.ShowSponsorsCommand),
-                    createElement("Map", "map.png", vm => vm.ShowMapCommand)
+                    createElement("Facility Map", "map.png", vm => vm.ShowMapCommand)
                 }
             };
 

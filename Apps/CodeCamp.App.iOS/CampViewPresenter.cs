@@ -2,10 +2,12 @@ using Cirrious.CrossCore;
 using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.Touch.Views.Presenters;
 using Cirrious.MvvmCross.ViewModels;
+using CodeCamp.Core.Extensions;
 using CodeCamp.Core.ViewModels;
 using MonoTouch.UIKit;
 using SlidingPanels.Lib;
 using SlidingPanels.Lib.PanelContainers;
+using CodeCamp.App.iOS.Annotations;
 
 namespace CodeCamp.App.iOS
 {
@@ -46,6 +48,8 @@ namespace CodeCamp.App.iOS
         protected override UINavigationController CreateNavigationController(UIViewController viewController)
         {
             var navController = new SlidingPanelsNavigationViewController(viewController);
+            navController.CanSwipeToShowPanel =
+                _ => !navController.TopViewController.HasAttribute<DisableMenuGestureAttribute>();
             _rootViewController = new UIViewController();
 
             return navController;

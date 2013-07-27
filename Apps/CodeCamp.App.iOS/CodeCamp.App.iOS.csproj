@@ -145,6 +145,7 @@
     <Folder Include="Extensions\" />
     <Folder Include="Views\Elements\" />
     <Folder Include="Converters\" />
+    <Folder Include="Annotations\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -186,6 +187,7 @@
     <Compile Include="..\..\CodeCamp.Core\src\CodeCamp.Core\Converters\SessionDetailsConverter.cs">
       <Link>Converters\SessionDetailsConverter.cs</Link>
     </Compile>
+    <Compile Include="Annotations\DisableMenuGestureAttribute.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -239,5 +241,6 @@
     <BundleResource Include="Resources\compose%402x.png" />
     <BundleResource Include="Resources\globe.png" />
     <BundleResource Include="Resources\globe%402x.png" />
+    <BundleResource Include="Resources\microsoftmap.jpg" />
   </ItemGroup>
 </Project>
