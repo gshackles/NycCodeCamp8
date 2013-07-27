@@ -62,6 +62,15 @@ namespace CodeCamp.Core.ViewModels
             }
         }
 
+        public ICommand ViewSessionCommand
+        {
+            get
+            {
+                return new MvxCommand<Session>(
+                    session => ShowViewModel<SessionViewModel>(new SessionViewModel.NavigationParameters(session.Id)));
+            }
+        }
+
         public ICommand ViewFullScheduleCommand
         {
             get { return new MvxCommand(() => ShowViewModel<SessionsViewModel>()); }

@@ -1,14 +1,20 @@
+using System.Linq;
 using CodeCamp.Core.ViewModels;
 using CrossUI.Touch.Dialog.Elements;
 using MonoTouch.UIKit;
 using CodeCamp.App.iOS.Extensions;
+using CodeCamp.App.iOS.Views.Elements;
+using CodeCamp.Core.Extensions;
+using System.Collections.Generic;
+using CodeCamp.Core.Data.Entities;
+using System.Drawing;
 
 namespace CodeCamp.App.iOS.Views
 {
     public class OverviewView : DialogViewControllerBase
     {
         public OverviewView()
-            : base(UITableViewStyle.Grouped)
+            : base(UITableViewStyle.Plain)
         {
             Root = new RootElement("NYC Code Camp");
 
@@ -32,12 +38,33 @@ namespace CodeCamp.App.iOS.Views
 
             Root.Clear();
             Root.Add(
-                new Section
+                from slot in (ViewModel.TimeSlots ?? new List<TimeSlot>())
+                select new CommandBindableSection<SessionElement>("", ViewModel.ViewSessionCommand)
                 {
-                    new StringElement("Welcome!"),
-                    new StringElement("Useful stuff will eventually be here...")
+                    ItemsSource = slot.Sessions,
+                    HeaderView = AppStyles.CreateListHeader(string.Format("{0} - {1}", slot.StartTime.FormatTime(), slot.EndTime.FormatTime()), UITableViewStyle.Plain)
                 }
             );
+
+            var fullScheduleSection = new Section
+            {
+                HeaderView = new UIView(new RectangleF(0, 0, UIScreen.MainScreen.Bounds.Width, 33))
+                {
+                    BackgroundColor = UIColor.Clear
+                }
+            };
+            fullScheduleSection.Add(
+                new StyledStringElement("See full schedule") 
+                { 
+                    Accessory = UITableViewCellAccessory.DisclosureIndicator,
+                    SelectedCommand = ViewModel.ViewFullScheduleCommand,
+                    BackgroundColor = AppStyles.SemiTransparentCellBackgroundColor,
+                    TextColor = AppStyles.ListTitleColor,
+                    Font = AppStyles.ListTitleFont
+                }
+            );
+            Root.Add(fullScheduleSection);
+            ReloadData();
         }
 
         private new OverviewViewModel ViewModel
