@@ -81,6 +81,7 @@
     <Compile Include="RepositoryTests\TemporarySQLiteConnectionFactory.cs" />
     <Compile Include="ServiceTests\CodeCampServiceTests.cs" />
     <Compile Include="ViewModelTests\MenuViewModelTests.cs" />
+    <Compile Include="ViewModelTests\OverviewViewModelTests.cs" />
     <Compile Include="ViewModelTests\SessionsViewModelTests.cs" />
     <Compile Include="ViewModelTests\SessionViewModelTests.cs" />
     <Compile Include="ViewModelTests\SpeakersViewModelTests.cs" />

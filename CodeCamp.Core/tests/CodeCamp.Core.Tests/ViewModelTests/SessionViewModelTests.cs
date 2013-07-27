@@ -14,8 +14,12 @@ namespace CodeCamp.Core.Tests.ViewModelTests
         [Test]
         public async void Init_DataLoadsSuccessfully_LoadsSession()
         {
-            var session = new Session { Id = 42 };
-            var data = new CampData {Sessions = new List<Session> {session}};
+            var session = new Session { Id = 42, SpeakerId = 1 };
+            var data = new CampData
+                           {
+                               Sessions = new List<Session> {session},
+                               Speakers = new List<Speaker> {new Speaker {Id = 1}},
+                           };
             DataClient.GetDataBody = () => Task.FromResult(data);
             var viewModel = new SessionViewModel(Messenger, CodeCampService);
 

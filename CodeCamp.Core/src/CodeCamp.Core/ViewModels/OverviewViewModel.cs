@@ -1,8 +1,11 @@
-using System.Threading.Tasks;
-using Cirrious.MvvmCross.Plugins.Messenger;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Input;
+using Cirrious.MvvmCross.Plugins.Messenger;
 using Cirrious.MvvmCross.ViewModels;
+using CodeCamp.Core.Data.Entities;
 using CodeCamp.Core.Services;
 
 namespace CodeCamp.Core.ViewModels
@@ -17,9 +20,19 @@ namespace CodeCamp.Core.ViewModels
             _campService = campService;
         }
 
+        private IList<TimeSlot> _timeSlots;
+        public IList<TimeSlot> TimeSlots
+        {
+            get { return _timeSlots; }
+            set { _timeSlots = value; RaisePropertyChanged(() => TimeSlots); }
+        } 
+
         public async Task Init()
         {
-            FinishedLoading(true);
+            bool successful = await SafeOperation(
+                Task.Run(async () => TimeSlots = await getNextTwoSlotsAsync()));
+
+            FinishedLoading(successful);
         }
 
         public event EventHandler<bool> DataRefreshComplete;
@@ -40,6 +53,7 @@ namespace CodeCamp.Core.ViewModels
                     bool successful = await SafeOperation(Task.Run(async () => 
                     {
                         await _campService.RefreshData();
+                        TimeSlots = await getNextTwoSlotsAsync();
                     }), () => IsRefreshing);
 
                     if (DataRefreshComplete != null)
@@ -47,5 +61,18 @@ namespace CodeCamp.Core.ViewModels
                 });
             }
         }
+
+        public ICommand ViewFullScheduleCommand
+        {
+            get { return new MvxCommand(() => ShowViewModel<SessionsViewModel>()); }
+        }
+
+        private async Task<IList<TimeSlot>> getNextTwoSlotsAsync()
+        {
+            return (from slot in await _campService.ListSessions()
+                    where slot.EndTime >= DateTime.UtcNow
+                    orderby slot.StartTime
+                    select slot).Take(2).ToList();
+        } 
     }
 }

@@ -42,7 +42,7 @@ namespace CodeCamp.Core.Services
             {
                 var data = await _client.GetData();
 
-                foreach (var session in data.Sessions)
+                foreach (var session in data.Sessions ?? new List<Session>())
                 {
                     var speaker = data.Speakers.FirstOrDefault(s => s.Id == session.SpeakerId);
 

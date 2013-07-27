@@ -30,7 +30,8 @@ namespace CodeCamp.Core.Tests.ServiceTests
         {
             var campData = new CampData
                                {
-                                   Sessions = new List<Session> { new Session { Title = "Best Session Ever", Id = 42 } }
+                                   Speakers = new List<Speaker> { new Speaker { Id = 1 } },
+                                   Sessions = new List<Session> { new Session { Title = "Best Session Ever", Id = 42, SpeakerId = 1 } }
                                };
             bool clientCalled = false;
             _mockDataClient.GetDataBody = () =>
@@ -52,7 +53,8 @@ namespace CodeCamp.Core.Tests.ServiceTests
         {
             var campData = new CampData
             {
-                Sessions = new List<Session> { new Session { Title = "Best Session Ever", Id = 42 } }
+                Speakers = new List<Speaker> { new Speaker { Id = 1 }},
+                Sessions = new List<Session> { new Session { Title = "Best Session Ever", Id = 42, SpeakerId = 1} }
             };
             bool clientCalled = false;
             _mockDataClient.GetDataBody = () =>
@@ -83,10 +85,12 @@ namespace CodeCamp.Core.Tests.ServiceTests
                                   Title = "Best Session Ever",
                                   Id = 42,
                                   StartTime = DateTime.UtcNow,
-                                  EndTime = DateTime.UtcNow
+                                  EndTime = DateTime.UtcNow,
+                                  SpeakerId = 1
                               };
             var campData = new CampData
             {
+                Speakers = new List<Speaker> { new Speaker { Id = session.SpeakerId } },
                 Sessions = new List<Session> { session }
             };
             _mockDataClient.GetDataBody = () => Task.FromResult(campData);
@@ -111,7 +115,11 @@ namespace CodeCamp.Core.Tests.ServiceTests
             int speakerId = 1;
             var correctSession = new Session {Id = 2, SpeakerId = speakerId};
             var wrongSession = new Session {Id = 3, SpeakerId = speakerId + 1};
-            var campData = new CampData {Sessions = new List<Session> {correctSession, wrongSession}};
+            var campData = new CampData
+                               {
+                                   Sessions = new List<Session> {correctSession, wrongSession},
+                                   Speakers = new List<Speaker> {new Speaker {Id = speakerId}}
+                               };
             _mockDataClient.GetDataBody = () => Task.FromResult(campData);
 
             var service = new CodeCampService(_fileManager, _jsonConverter, _mockDataClient);
@@ -125,10 +133,11 @@ namespace CodeCamp.Core.Tests.ServiceTests
         [Test]
         public async void GetSession_ValidSessionId_ReturnsSession()
         {
-            var awesomeSession = new Session {Title = "Best Session Ever", Id = 42};
+            var awesomeSession = new Session {Title = "Best Session Ever", Id = 42, SpeakerId = 1};
             var campData = new CampData
             {
-                Sessions = new List<Session> { awesomeSession }
+                Sessions = new List<Session> { awesomeSession },
+                Speakers = new List<Speaker> { new Speaker { Id = 1 } }
             };
             _mockDataClient.GetDataBody = () => Task.FromResult(campData);
 
