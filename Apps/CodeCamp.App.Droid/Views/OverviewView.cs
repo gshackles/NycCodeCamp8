@@ -1,5 +1,7 @@
 using System;
 using Android.App;
+using Cirrious.MvvmCross.Binding.Droid.BindingContext;
+using Cirrious.MvvmCross.Binding.Droid.Views;
 using Cirrious.MvvmCross.Droid.Views;
 
 namespace CodeCamp.App.Droid.Views
@@ -11,7 +13,9 @@ namespace CodeCamp.App.Droid.Views
         {
             base.OnViewModelSet();
 
-            Console.WriteLine("Overview: view model set");
+            SetContentView(Resource.Layout.Overview);
+            var list = FindViewById<MvxListView>(Resource.Id.SessionList);
+            list.Adapter = new SessionListAdapter(this, (IMvxAndroidBindingContext)BindingContext);
         }
     }
 }

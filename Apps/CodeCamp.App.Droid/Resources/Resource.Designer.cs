@@ -74,11 +74,17 @@ namespace CodeCamp.App.Droid
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f050002
+			public const int HeaderText = 2131034114;
+			
 			// aapt resource value: 0x7f050000
 			public const int MvxBindingTagUnique = 2131034112;
 			
 			// aapt resource value: 0x7f050001
-			public const int MyButton = 2131034113;
+			public const int SessionList = 2131034113;
+			
+			// aapt resource value: 0x7f050003
+			public const int Title = 2131034115;
 			
 			static Id()
 			{
@@ -94,7 +100,13 @@ namespace CodeCamp.App.Droid
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int Overview = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int SessionListHeader = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int SessionListItem = 2130903042;
 			
 			static Layout()
 			{
