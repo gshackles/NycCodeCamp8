@@ -121,8 +121,10 @@
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
+    <Compile Include="Views\ActivityBase.cs" />
     <Compile Include="Views\OverviewView.cs" />
-    <Compile Include="Views\SessionListAdapter.cs" />
+    <Compile Include="Views\Adapters\SessionListAdapter.cs" />
+    <Compile Include="Views\SessionView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -131,6 +133,9 @@
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\Layout\SessionListItem.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\Session.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>
