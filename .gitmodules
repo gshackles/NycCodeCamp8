@@ -7,3 +7,6 @@
 [submodule "external/SlidingPanels.Touch"]
 	path = external/SlidingPanels.Touch
 	url = https://github.com/patbonecrusher/SlidingPanels.Touch.git
+[submodule "external/LegacyBar"]
+	path = external/LegacyBar
+	url = https://github.com/Cheesebaron/LegacyBar.git

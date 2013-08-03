@@ -123,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrap\Plugins.cs" />
+    <Compile Include="CodeCampApplication.cs" />
     <Compile Include="ErrorReporter.cs" />
     <Compile Include="Extensions\ViewModelExtensions.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -160,11 +161,18 @@
     <AndroidResource Include="Resources\Values\MvxBindingAttributes.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\Menu\RefreshMenu.xml" />
+    <AndroidResource Include="Resources\Drawable\Refresh.png" />
+    <AndroidResource Include="Resources\Drawable\Menu.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\CodeCamp.Core\src\CodeCamp.Core.Droid\CodeCamp.Core.Droid.csproj">
       <Project>{be5392ee-dc1c-4ba3-becd-6629533702bf}</Project>
       <Name>CodeCamp.Core.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\external\LegacyBar\LegacyBar.Library\LegacyBar.Library.csproj">
+      <Project>{371657b5-2c38-4d23-b7c1-6c053eb55fb8}</Project>
+      <Name>LegacyBar.Library</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

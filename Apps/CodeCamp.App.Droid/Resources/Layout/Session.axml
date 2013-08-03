@@ -4,6 +4,10 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
+    <legacybar.library.bar.LegacyBar
+        android:id="@+id/ActionBar"
+        style="@style/actionbar"
+        local:theme="holo_black" />
     <TextView
         android:text="Title"
         android:textAppearance="?android:attr/textAppearanceLarge"

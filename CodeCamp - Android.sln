@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeCamp.Core.Droid", "Code
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeCamp.App.Droid", "Apps\CodeCamp.App.Droid\CodeCamp.App.Droid.csproj", "{57F596B7-C3C8-432F-BC7F-77C8D2C62F2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyBar.Library", "external\LegacyBar\LegacyBar.Library\LegacyBar.Library.csproj", "{371657B5-2C38-4D23-B7C1-6C053EB55FB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{57F596B7-C3C8-432F-BC7F-77C8D2C62F2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57F596B7-C3C8-432F-BC7F-77C8D2C62F2F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{57F596B7-C3C8-432F-BC7F-77C8D2C62F2F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{371657B5-2C38-4D23-B7C1-6C053EB55FB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{371657B5-2C38-4D23-B7C1-6C053EB55FB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{371657B5-2C38-4D23-B7C1-6C053EB55FB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{371657B5-2C38-4D23-B7C1-6C053EB55FB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,5 +52,6 @@ Global
 		{5CC09BE4-AB6C-476D-9A9F-96A3B452C1C4} = {10840194-A92B-4736-B4C1-1A6539C54231}
 		{BE5392EE-DC1C-4BA3-BECD-6629533702BF} = {8738F33E-4D32-47E6-9991-CE6993183072}
 		{57F596B7-C3C8-432F-BC7F-77C8D2C62F2F} = {8738F33E-4D32-47E6-9991-CE6993183072}
+		{371657B5-2C38-4D23-B7C1-6C053EB55FB8} = {8738F33E-4D32-47E6-9991-CE6993183072}
 	EndGlobalSection
 EndGlobal

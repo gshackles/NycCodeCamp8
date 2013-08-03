@@ -53,13 +53,18 @@ namespace CodeCamp.Core.Services
                     session.SpeakerName = speaker.Name;
                 }
 
-                _fileManager.WriteFile(DataFileName, _jsonConverter.SerializeObject(data));
+                // TODO: this is throwing inside of JSON.NET on my N4
+                try
+                {
+                    _fileManager.WriteFile(DataFileName, _jsonConverter.SerializeObject(data));
+                }
+                catch {}
 
                 _campData = data;
 
                 return true;
             }
-            catch
+            catch(Exception ex)
             {
                 return false;
             }
