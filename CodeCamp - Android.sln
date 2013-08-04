@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeCamp.App.Droid", "Apps\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyBar.Library", "external\LegacyBar\LegacyBar.Library\LegacyBar.Library.csproj", "{371657B5-2C38-4D23-B7C1-6C053EB55FB8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlidingMenuSharp", "external\SlidingMenuSharp\SlidingMenuSharp\SlidingMenuSharp.csproj", "{555937D8-1533-4D19-A346-55C192C35A5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{371657B5-2C38-4D23-B7C1-6C053EB55FB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{371657B5-2C38-4D23-B7C1-6C053EB55FB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{371657B5-2C38-4D23-B7C1-6C053EB55FB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{555937D8-1533-4D19-A346-55C192C35A5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{555937D8-1533-4D19-A346-55C192C35A5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{555937D8-1533-4D19-A346-55C192C35A5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{555937D8-1533-4D19-A346-55C192C35A5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,5 +59,6 @@ Global
 		{BE5392EE-DC1C-4BA3-BECD-6629533702BF} = {8738F33E-4D32-47E6-9991-CE6993183072}
 		{57F596B7-C3C8-432F-BC7F-77C8D2C62F2F} = {8738F33E-4D32-47E6-9991-CE6993183072}
 		{371657B5-2C38-4D23-B7C1-6C053EB55FB8} = {8738F33E-4D32-47E6-9991-CE6993183072}
+		{555937D8-1533-4D19-A346-55C192C35A5D} = {8738F33E-4D32-47E6-9991-CE6993183072}
 	EndGlobalSection
 EndGlobal

@@ -10,3 +10,6 @@
 [submodule "external/LegacyBar"]
 	path = external/LegacyBar
 	url = https://github.com/Cheesebaron/LegacyBar.git
+[submodule "external/SlidingMenuSharp"]
+	path = external/SlidingMenuSharp
+	url = https://github.com/Cheesebaron/SlidingMenuSharp.git

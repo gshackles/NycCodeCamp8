@@ -182,46 +182,124 @@ namespace CodeCamp.App.Droid
 			LegacyBar.Library.Resource.Styleable.actionbar_theme = CodeCamp.App.Droid.Resource.Styleable.actionbar_theme;
 			LegacyBar.Library.Resource.Styleable.actionbar_title = CodeCamp.App.Droid.Resource.Styleable.actionbar_title;
 			LegacyBar.Library.Resource.Styleable.actionbar_title_color = CodeCamp.App.Droid.Resource.Styleable.actionbar_title_color;
+			SlidingMenuSharp.Resource.Attribute.behindOffset = CodeCamp.App.Droid.Resource.Attribute.behindOffset;
+			SlidingMenuSharp.Resource.Attribute.behindScrollScale = CodeCamp.App.Droid.Resource.Attribute.behindScrollScale;
+			SlidingMenuSharp.Resource.Attribute.behindWidth = CodeCamp.App.Droid.Resource.Attribute.behindWidth;
+			SlidingMenuSharp.Resource.Attribute.fadeDegree = CodeCamp.App.Droid.Resource.Attribute.fadeDegree;
+			SlidingMenuSharp.Resource.Attribute.fadeEnabled = CodeCamp.App.Droid.Resource.Attribute.fadeEnabled;
+			SlidingMenuSharp.Resource.Attribute.mode = CodeCamp.App.Droid.Resource.Attribute.mode;
+			SlidingMenuSharp.Resource.Attribute.selectorDrawable = CodeCamp.App.Droid.Resource.Attribute.selectorDrawable;
+			SlidingMenuSharp.Resource.Attribute.selectorEnabled = CodeCamp.App.Droid.Resource.Attribute.selectorEnabled;
+			SlidingMenuSharp.Resource.Attribute.shadowDrawable = CodeCamp.App.Droid.Resource.Attribute.shadowDrawable;
+			SlidingMenuSharp.Resource.Attribute.shadowWidth = CodeCamp.App.Droid.Resource.Attribute.shadowWidth;
+			SlidingMenuSharp.Resource.Attribute.touchModeAbove = CodeCamp.App.Droid.Resource.Attribute.touchModeAbove;
+			SlidingMenuSharp.Resource.Attribute.touchModeBehind = CodeCamp.App.Droid.Resource.Attribute.touchModeBehind;
+			SlidingMenuSharp.Resource.Attribute.viewAbove = CodeCamp.App.Droid.Resource.Attribute.viewAbove;
+			SlidingMenuSharp.Resource.Attribute.viewBehind = CodeCamp.App.Droid.Resource.Attribute.viewBehind;
+			SlidingMenuSharp.Resource.Id.fullscreen = CodeCamp.App.Droid.Resource.Id.fullscreen;
+			SlidingMenuSharp.Resource.Id.left = CodeCamp.App.Droid.Resource.Id.left;
+			SlidingMenuSharp.Resource.Id.margin = CodeCamp.App.Droid.Resource.Id.margin;
+			SlidingMenuSharp.Resource.Id.right = CodeCamp.App.Droid.Resource.Id.right;
+			SlidingMenuSharp.Resource.Id.selected_view = CodeCamp.App.Droid.Resource.Id.selected_view;
+			SlidingMenuSharp.Resource.Id.slidingmenumain = CodeCamp.App.Droid.Resource.Id.slidingmenumain;
+			SlidingMenuSharp.Resource.Layout.slidingmenumain = CodeCamp.App.Droid.Resource.Layout.slidingmenumain;
+			SlidingMenuSharp.Resource.Styleable.SlidingMenu = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu;
+			SlidingMenuSharp.Resource.Styleable.SlidingMenu_behindOffset = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_behindOffset;
+			SlidingMenuSharp.Resource.Styleable.SlidingMenu_behindScrollScale = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_behindScrollScale;
+			SlidingMenuSharp.Resource.Styleable.SlidingMenu_behindWidth = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_behindWidth;
+			SlidingMenuSharp.Resource.Styleable.SlidingMenu_fadeDegree = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_fadeDegree;
+			SlidingMenuSharp.Resource.Styleable.SlidingMenu_fadeEnabled = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_fadeEnabled;
+			SlidingMenuSharp.Resource.Styleable.SlidingMenu_mode = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_mode;
+			SlidingMenuSharp.Resource.Styleable.SlidingMenu_selectorDrawable = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_selectorDrawable;
+			SlidingMenuSharp.Resource.Styleable.SlidingMenu_selectorEnabled = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_selectorEnabled;
+			SlidingMenuSharp.Resource.Styleable.SlidingMenu_shadowDrawable = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_shadowDrawable;
+			SlidingMenuSharp.Resource.Styleable.SlidingMenu_shadowWidth = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_shadowWidth;
+			SlidingMenuSharp.Resource.Styleable.SlidingMenu_touchModeAbove = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_touchModeAbove;
+			SlidingMenuSharp.Resource.Styleable.SlidingMenu_touchModeBehind = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_touchModeBehind;
+			SlidingMenuSharp.Resource.Styleable.SlidingMenu_viewAbove = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_viewAbove;
+			SlidingMenuSharp.Resource.Styleable.SlidingMenu_viewBehind = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_viewBehind;
 		}
 		
 		public partial class Attribute
 		{
 			
-			// aapt resource value: 0x7f010008
-			public const int MvxBind = 2130771976;
+			// aapt resource value: 0x7f010016
+			public const int MvxBind = 2130771990;
 			
-			// aapt resource value: 0x7f01000a
-			public const int MvxDropDownItemTemplate = 2130771978;
+			// aapt resource value: 0x7f010018
+			public const int MvxDropDownItemTemplate = 2130771992;
 			
-			// aapt resource value: 0x7f010009
-			public const int MvxItemTemplate = 2130771977;
+			// aapt resource value: 0x7f010017
+			public const int MvxItemTemplate = 2130771991;
 			
-			// aapt resource value: 0x7f01000b
-			public const int MvxSource = 2130771979;
+			// aapt resource value: 0x7f010019
+			public const int MvxSource = 2130771993;
+			
+			// aapt resource value: 0x7f010011
+			public const int background = 2130771985;
+			
+			// aapt resource value: 0x7f010012
+			public const int background_item = 2130771986;
 			
 			// aapt resource value: 0x7f010003
-			public const int background = 2130771971;
-			
-			// aapt resource value: 0x7f010004
-			public const int background_item = 2130771972;
-			
-			// aapt resource value: 0x7f010006
-			public const int is_bottom = 2130771974;
-			
-			// aapt resource value: 0x7f010007
-			public const int light_icons = 2130771975;
-			
-			// aapt resource value: 0x7f010002
-			public const int separator = 2130771970;
+			public const int behindOffset = 2130771971;
 			
 			// aapt resource value: 0x7f010005
-			public const int theme = 2130771973;
+			public const int behindScrollScale = 2130771973;
+			
+			// aapt resource value: 0x7f010004
+			public const int behindWidth = 2130771972;
+			
+			// aapt resource value: 0x7f01000b
+			public const int fadeDegree = 2130771979;
+			
+			// aapt resource value: 0x7f01000a
+			public const int fadeEnabled = 2130771978;
+			
+			// aapt resource value: 0x7f010014
+			public const int is_bottom = 2130771988;
+			
+			// aapt resource value: 0x7f010015
+			public const int light_icons = 2130771989;
 			
 			// aapt resource value: 0x7f010000
-			public const int title = 2130771968;
+			public const int mode = 2130771968;
+			
+			// aapt resource value: 0x7f01000d
+			public const int selectorDrawable = 2130771981;
+			
+			// aapt resource value: 0x7f01000c
+			public const int selectorEnabled = 2130771980;
+			
+			// aapt resource value: 0x7f010010
+			public const int separator = 2130771984;
+			
+			// aapt resource value: 0x7f010008
+			public const int shadowDrawable = 2130771976;
+			
+			// aapt resource value: 0x7f010009
+			public const int shadowWidth = 2130771977;
+			
+			// aapt resource value: 0x7f010013
+			public const int theme = 2130771987;
+			
+			// aapt resource value: 0x7f01000e
+			public const int title = 2130771982;
+			
+			// aapt resource value: 0x7f01000f
+			public const int title_color = 2130771983;
+			
+			// aapt resource value: 0x7f010006
+			public const int touchModeAbove = 2130771974;
+			
+			// aapt resource value: 0x7f010007
+			public const int touchModeBehind = 2130771975;
 			
 			// aapt resource value: 0x7f010001
-			public const int title_color = 2130771969;
+			public const int viewAbove = 2130771969;
+			
+			// aapt resource value: 0x7f010002
+			public const int viewBehind = 2130771970;
 			
 			static Attribute()
 			{
@@ -593,10 +671,19 @@ namespace CodeCamp.App.Droid
 			public const int Icon = 2130837548;
 			
 			// aapt resource value: 0x7f02002d
-			public const int Menu = 2130837549;
+			public const int Link = 2130837549;
 			
 			// aapt resource value: 0x7f02002e
-			public const int Refresh = 2130837550;
+			public const int Menu = 2130837550;
+			
+			// aapt resource value: 0x7f02002f
+			public const int Refresh = 2130837551;
+			
+			// aapt resource value: 0x7f020030
+			public const int SlidingMenuShadow = 2130837552;
+			
+			// aapt resource value: 0x7f020031
+			public const int SlidingMenuShadowRight = 2130837553;
 			
 			static Drawable()
 			{
@@ -611,95 +698,125 @@ namespace CodeCamp.App.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f040019
-			public const int Abstract = 2130968601;
-			
-			// aapt resource value: 0x7f040013
-			public const int ActionBar = 2130968595;
-			
-			// aapt resource value: 0x7f04001c
-			public const int Bio = 2130968604;
-			
-			// aapt resource value: 0x7f04001a
-			public const int HeaderText = 2130968602;
-			
-			// aapt resource value: 0x7f040005
-			public const int MvxBindingTagUnique = 2130968581;
-			
-			// aapt resource value: 0x7f04001b
-			public const int Name = 2130968603;
-			
-			// aapt resource value: 0x7f04001d
-			public const int Refresh = 2130968605;
+			// aapt resource value: 0x7f040020
+			public const int Abstract = 2130968608;
 			
 			// aapt resource value: 0x7f040017
-			public const int Room = 2130968599;
+			public const int ActionBar = 2130968599;
 			
-			// aapt resource value: 0x7f040014
-			public const int SessionList = 2130968596;
+			// aapt resource value: 0x7f040024
+			public const int Bio = 2130968612;
+			
+			// aapt resource value: 0x7f040025
+			public const int Description = 2130968613;
+			
+			// aapt resource value: 0x7f040021
+			public const int HeaderText = 2130968609;
 			
 			// aapt resource value: 0x7f040018
-			public const int Speaker = 2130968600;
+			public const int Map = 2130968600;
 			
-			// aapt resource value: 0x7f040016
-			public const int Time = 2130968598;
-			
-			// aapt resource value: 0x7f040015
-			public const int Title = 2130968597;
-			
-			// aapt resource value: 0x7f04000c
-			public const int actionbar_actions = 2130968588;
-			
-			// aapt resource value: 0x7f040007
-			public const int actionbar_home = 2130968583;
-			
-			// aapt resource value: 0x7f040009
-			public const int actionbar_home_bg = 2130968585;
+			// aapt resource value: 0x7f040019
+			public const int MenuFrame = 2130968601;
 			
 			// aapt resource value: 0x7f04000a
-			public const int actionbar_home_btn = 2130968586;
+			public const int MvxBindingTagUnique = 2130968586;
 			
-			// aapt resource value: 0x7f04000b
-			public const int actionbar_home_is_back = 2130968587;
+			// aapt resource value: 0x7f040023
+			public const int Name = 2130968611;
 			
-			// aapt resource value: 0x7f040008
-			public const int actionbar_home_logo = 2130968584;
+			// aapt resource value: 0x7f040027
+			public const int Refresh = 2130968615;
+			
+			// aapt resource value: 0x7f04001e
+			public const int Room = 2130968606;
+			
+			// aapt resource value: 0x7f04001b
+			public const int SessionList = 2130968603;
+			
+			// aapt resource value: 0x7f04001f
+			public const int Speaker = 2130968607;
+			
+			// aapt resource value: 0x7f040026
+			public const int SponsorList = 2130968614;
+			
+			// aapt resource value: 0x7f04001d
+			public const int Time = 2130968605;
+			
+			// aapt resource value: 0x7f04001c
+			public const int Title = 2130968604;
 			
 			// aapt resource value: 0x7f040011
-			public const int actionbar_item = 2130968593;
+			public const int actionbar_actions = 2130968593;
+			
+			// aapt resource value: 0x7f04000c
+			public const int actionbar_home = 2130968588;
 			
 			// aapt resource value: 0x7f04000e
-			public const int actionbar_progress = 2130968590;
-			
-			// aapt resource value: 0x7f040010
-			public const int actionbar_spinner = 2130968592;
+			public const int actionbar_home_bg = 2130968590;
 			
 			// aapt resource value: 0x7f04000f
-			public const int actionbar_title = 2130968591;
+			public const int actionbar_home_btn = 2130968591;
+			
+			// aapt resource value: 0x7f040010
+			public const int actionbar_home_is_back = 2130968592;
 			
 			// aapt resource value: 0x7f04000d
-			public const int actionbar_title_layout = 2130968589;
+			public const int actionbar_home_logo = 2130968589;
 			
-			// aapt resource value: 0x7f040000
-			public const int custom = 2130968576;
+			// aapt resource value: 0x7f040016
+			public const int actionbar_item = 2130968598;
 			
-			// aapt resource value: 0x7f040003
-			public const int holo_black = 2130968579;
+			// aapt resource value: 0x7f040013
+			public const int actionbar_progress = 2130968595;
 			
-			// aapt resource value: 0x7f040004
-			public const int holo_blue = 2130968580;
+			// aapt resource value: 0x7f040015
+			public const int actionbar_spinner = 2130968597;
 			
-			// aapt resource value: 0x7f040002
-			public const int holo_gray = 2130968578;
-			
-			// aapt resource value: 0x7f040001
-			public const int holo_light = 2130968577;
+			// aapt resource value: 0x7f040014
+			public const int actionbar_title = 2130968596;
 			
 			// aapt resource value: 0x7f040012
-			public const int overflow_spinner = 2130968594;
+			public const int actionbar_title_layout = 2130968594;
+			
+			// aapt resource value: 0x7f040005
+			public const int custom = 2130968581;
+			
+			// aapt resource value: 0x7f040003
+			public const int fullscreen = 2130968579;
+			
+			// aapt resource value: 0x7f040008
+			public const int holo_black = 2130968584;
+			
+			// aapt resource value: 0x7f040009
+			public const int holo_blue = 2130968585;
+			
+			// aapt resource value: 0x7f040007
+			public const int holo_gray = 2130968583;
 			
 			// aapt resource value: 0x7f040006
-			public const int screen = 2130968582;
+			public const int holo_light = 2130968582;
+			
+			// aapt resource value: 0x7f040000
+			public const int left = 2130968576;
+			
+			// aapt resource value: 0x7f040002
+			public const int margin = 2130968578;
+			
+			// aapt resource value: 0x7f04001a
+			public const int overflow_spinner = 2130968602;
+			
+			// aapt resource value: 0x7f040001
+			public const int right = 2130968577;
+			
+			// aapt resource value: 0x7f04000b
+			public const int screen = 2130968587;
+			
+			// aapt resource value: 0x7f040004
+			public const int selected_view = 2130968580;
+			
+			// aapt resource value: 0x7f040022
+			public const int slidingmenumain = 2130968610;
 			
 			static Id()
 			{
@@ -724,28 +841,58 @@ namespace CodeCamp.App.Droid
 			public const int blankspinner = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int overflowactionbar_item = 2130903043;
+			public const int Map = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int Overview = 2130903044;
+			public const int Menu = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int Session = 2130903045;
+			public const int MenuFrame = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int SessionListHeader = 2130903046;
+			public const int overflowactionbar_item = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int SessionListItem = 2130903047;
+			public const int Overview = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int Sessions = 2130903048;
+			public const int Session = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int Speaker = 2130903049;
+			public const int SessionListHeader = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int spinneritem = 2130903050;
+			public const int SessionListItem = 2130903050;
+			
+			// aapt resource value: 0x7f03000b
+			public const int Sessions = 2130903051;
+			
+			// aapt resource value: 0x7f03000c
+			public const int slidingmenumain = 2130903052;
+			
+			// aapt resource value: 0x7f03000d
+			public const int Speaker = 2130903053;
+			
+			// aapt resource value: 0x7f03000e
+			public const int SpeakerListItem = 2130903054;
+			
+			// aapt resource value: 0x7f03000f
+			public const int Speakers = 2130903055;
+			
+			// aapt resource value: 0x7f030010
+			public const int spinneritem = 2130903056;
+			
+			// aapt resource value: 0x7f030011
+			public const int Sponsor = 2130903057;
+			
+			// aapt resource value: 0x7f030012
+			public const int SponsorListHeader = 2130903058;
+			
+			// aapt resource value: 0x7f030013
+			public const int SponsorListItem = 2130903059;
+			
+			// aapt resource value: 0x7f030014
+			public const int Sponsors = 2130903060;
 			
 			static Layout()
 			{
@@ -830,20 +977,20 @@ namespace CodeCamp.App.Droid
 		{
 			
 			public static int[] MvxBinding = new int[] {
-					2130771976};
+					2130771990};
 			
 			// aapt resource value: 0
 			public const int MvxBinding_MvxBind = 0;
 			
 			public static int[] MvxImageView = new int[] {
-					2130771979};
+					2130771993};
 			
 			// aapt resource value: 0
 			public const int MvxImageView_MvxSource = 0;
 			
 			public static int[] MvxListView = new int[] {
-					2130771977,
-					2130771978};
+					2130771991,
+					2130771992};
 			
 			// aapt resource value: 1
 			public const int MvxListView_MvxDropDownItemTemplate = 1;
@@ -851,7 +998,7 @@ namespace CodeCamp.App.Droid
 			// aapt resource value: 0
 			public const int MvxListView_MvxItemTemplate = 0;
 			
-			public static int[] actionbar = new int[] {
+			public static int[] SlidingMenu = new int[] {
 					2130771968,
 					2130771969,
 					2130771970,
@@ -859,7 +1006,65 @@ namespace CodeCamp.App.Droid
 					2130771972,
 					2130771973,
 					2130771974,
-					2130771975};
+					2130771975,
+					2130771976,
+					2130771977,
+					2130771978,
+					2130771979,
+					2130771980,
+					2130771981};
+			
+			// aapt resource value: 3
+			public const int SlidingMenu_behindOffset = 3;
+			
+			// aapt resource value: 5
+			public const int SlidingMenu_behindScrollScale = 5;
+			
+			// aapt resource value: 4
+			public const int SlidingMenu_behindWidth = 4;
+			
+			// aapt resource value: 11
+			public const int SlidingMenu_fadeDegree = 11;
+			
+			// aapt resource value: 10
+			public const int SlidingMenu_fadeEnabled = 10;
+			
+			// aapt resource value: 0
+			public const int SlidingMenu_mode = 0;
+			
+			// aapt resource value: 13
+			public const int SlidingMenu_selectorDrawable = 13;
+			
+			// aapt resource value: 12
+			public const int SlidingMenu_selectorEnabled = 12;
+			
+			// aapt resource value: 8
+			public const int SlidingMenu_shadowDrawable = 8;
+			
+			// aapt resource value: 9
+			public const int SlidingMenu_shadowWidth = 9;
+			
+			// aapt resource value: 6
+			public const int SlidingMenu_touchModeAbove = 6;
+			
+			// aapt resource value: 7
+			public const int SlidingMenu_touchModeBehind = 7;
+			
+			// aapt resource value: 1
+			public const int SlidingMenu_viewAbove = 1;
+			
+			// aapt resource value: 2
+			public const int SlidingMenu_viewBehind = 2;
+			
+			public static int[] actionbar = new int[] {
+					2130771982,
+					2130771983,
+					2130771984,
+					2130771985,
+					2130771986,
+					2130771987,
+					2130771988,
+					2130771989};
 			
 			// aapt resource value: 3
 			public const int actionbar_background = 3;

@@ -24,7 +24,7 @@ namespace CodeCamp.Core.ViewModels
             IsLoading = !this.HasAttribute<DoesNotRequireLoadingAttribute>();
         }
 
-        protected IMvxMessenger Messenger { get; private set; }
+        public IMvxMessenger Messenger { get; private set; }
         public event EventHandler<bool> LoadingComplete;
 
         private bool _isLoading;

@@ -109,6 +109,7 @@
       <HintPath>..\..\external\MvvmCross-Binaries\VS2012\bin\Release\Mvx\Droid\CrossUI.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
     <Reference Include="Mono.Android.Support.v4" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
@@ -123,6 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrap\Plugins.cs" />
+    <Compile Include="CampViewPresenter.cs" />
     <Compile Include="CodeCampApplication.cs" />
     <Compile Include="ErrorReporter.cs" />
     <Compile Include="Extensions\ViewModelExtensions.cs" />
@@ -130,6 +132,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Views\ActivityBase.cs" />
+    <Compile Include="Views\Adapters\SponsorListAdapter.cs" />
+    <Compile Include="Views\MapView.cs" />
+    <Compile Include="Views\SponsorView.cs" />
+    <Compile Include="Views\SponsorsView.cs" />
+    <Compile Include="Views\Fragments\MenuFragment.cs" />
+    <Compile Include="Views\SpeakersView.cs" />
     <Compile Include="Views\SpeakerView.cs" />
     <Compile Include="Views\SessionsView.cs" />
     <Compile Include="Views\OverviewView.cs" />
@@ -152,6 +160,31 @@
     <AndroidResource Include="Resources\Layout\Speaker.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\Layout\Menu.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\MenuFrame.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\Speakers.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\SpeakerListItem.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\SponsorListItem.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\SponsorListHeader.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\Sponsors.axml" />
+    <AndroidResource Include="Resources\Layout\Sponsor.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\Map.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Layout\Overview.axml" />
@@ -163,6 +196,25 @@
     <AndroidResource Include="Resources\Drawable\Icon.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\Map\map.html" />
+    <AndroidAsset Include="Assets\Map\tile000.png" />
+    <AndroidAsset Include="Assets\Map\tile001.png" />
+    <AndroidAsset Include="Assets\Map\tile002.png" />
+    <AndroidAsset Include="Assets\Map\tile003.png" />
+    <AndroidAsset Include="Assets\Map\tile004.png" />
+    <AndroidAsset Include="Assets\Map\tile005.png" />
+    <AndroidAsset Include="Assets\Map\tile006.png" />
+    <AndroidAsset Include="Assets\Map\tile007.png" />
+    <AndroidAsset Include="Assets\Map\tile008.png" />
+    <AndroidAsset Include="Assets\Map\tile009.png" />
+    <AndroidAsset Include="Assets\Map\tile010.png" />
+    <AndroidAsset Include="Assets\Map\tile011.png" />
+    <AndroidAsset Include="Assets\Map\tile012.png" />
+    <AndroidAsset Include="Assets\Map\tile013.png" />
+    <AndroidAsset Include="Assets\Map\tile014.png" />
+    <AndroidAsset Include="Assets\Map\tile015.png" />
+    <AndroidAsset Include="Assets\Map\tile016.png" />
+    <AndroidAsset Include="Assets\Map\tile017.png" />
     <Content Include="Properties\AndroidManifest.xml" />
     <AndroidResource Include="Resources\Values\MvxBindingAttributes.xml">
       <SubType>Designer</SubType>
@@ -172,6 +224,9 @@
     <AndroidResource Include="Resources\Drawable\Menu.png" />
     <AndroidResource Include="Resources\Drawable\Calendar.png" />
     <AndroidResource Include="Resources\Drawable\Email.png" />
+    <AndroidResource Include="Resources\Drawable\SlidingMenuShadow.xml" />
+    <AndroidResource Include="Resources\Drawable\SlidingMenuShadowRight.xml" />
+    <AndroidResource Include="Resources\Drawable\Link.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\CodeCamp.Core\src\CodeCamp.Core.Droid\CodeCamp.Core.Droid.csproj">
@@ -181,6 +236,10 @@
     <ProjectReference Include="..\..\external\LegacyBar\LegacyBar.Library\LegacyBar.Library.csproj">
       <Project>{371657b5-2c38-4d23-b7c1-6c053eb55fb8}</Project>
       <Name>LegacyBar.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\external\SlidingMenuSharp\SlidingMenuSharp\SlidingMenuSharp.csproj">
+      <Project>{555937d8-1533-4d19-a346-55c192c35a5d}</Project>
+      <Name>SlidingMenuSharp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

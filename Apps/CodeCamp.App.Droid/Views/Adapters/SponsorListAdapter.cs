@@ -12,11 +12,11 @@ using CodeCamp.Core.Extensions;
 
 namespace CodeCamp.App.Droid.Views.Adapters
 {
-    public class SessionListAdapter : MvxAdapter
+    public class SponsorListAdapter : MvxAdapter
     {
         private readonly ICommand _itemClickCommand;
 
-        public SessionListAdapter(Context context, IMvxAndroidBindingContext bindingContext, ICommand itemClickCommand)
+        public SponsorListAdapter(Context context, IMvxAndroidBindingContext bindingContext, ICommand itemClickCommand)
             : base(context, bindingContext)
         {
             _itemClickCommand = itemClickCommand;
@@ -24,13 +24,13 @@ namespace CodeCamp.App.Droid.Views.Adapters
 
         protected override void SetItemsSource(IEnumerable value)
         {
-            var timeSlots = (IEnumerable<TimeSlot>) value;
+            var tiers = (IEnumerable<SponsorTier>) value;
             var flattenedList = new List<object>();
 
-            foreach (var timeSlot in timeSlots ?? new List<TimeSlot>())
+            foreach (var tier in tiers ?? new List<SponsorTier>())
             {
-                flattenedList.Add(string.Format("{0} - {1}", timeSlot.StartTime.FormatTime(), timeSlot.EndTime.FormatTime()));
-                flattenedList.AddRange(timeSlot.Sessions);
+                flattenedList.Add(tier.Name);
+                flattenedList.AddRange(tier.Sponsors);
             }
 
             base.SetItemsSource(flattenedList);
@@ -38,13 +38,13 @@ namespace CodeCamp.App.Droid.Views.Adapters
 
         protected override View GetBindableView(View convertView, object source, int templateId)
         {
-            templateId = source is Session
-                             ? Resource.Layout.SessionListItem
-                             : Resource.Layout.SessionListHeader;
+            templateId = source is Sponsor
+                             ? Resource.Layout.SponsorListItem
+                             : Resource.Layout.SponsorListHeader;
 
             var view = base.GetBindableView(convertView, source, templateId);
 
-            if (source is Session && convertView == null)
+            if (source is Sponsor && convertView == null)
                 view.Click += (sender, args) => _itemClickCommand.Execute(source);
 
             return view;

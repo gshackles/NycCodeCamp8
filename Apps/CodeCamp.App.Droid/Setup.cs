@@ -1,6 +1,7 @@
 using Android.Content;
 using Cirrious.CrossCore;
 using Cirrious.MvvmCross.Droid.Platform;
+using Cirrious.MvvmCross.Droid.Views;
 using Cirrious.MvvmCross.ViewModels;
 using CodeCamp.Core.Messaging;
 
@@ -23,6 +24,11 @@ namespace CodeCamp.App.Droid
             base.InitializeIoC();
 
             Mvx.RegisterSingleton<IErrorReporter>(new ErrorReporter(ApplicationContext));
+        }
+
+        protected override IMvxAndroidViewPresenter CreateViewPresenter()
+        {
+            return new CampViewPresenter();
         }
     }
 }
