@@ -5,29 +5,26 @@ using Cirrious.MvvmCross.Binding.Droid.Views;
 using CodeCamp.App.Droid.Extensions;
 using CodeCamp.App.Droid.Views.Adapters;
 using CodeCamp.Core.ViewModels;
-using LegacyBar.Library.BarActions;
 
 namespace CodeCamp.App.Droid.Views
 {
-    [Activity(Label = "NYC Code Camp 8", MainLauncher = true)]
-    public class OverviewView : ActivityBase
+    [Activity(Label = "Sessions")]
+    public class SessionsView : ActivityBase
     {
         protected override void OnViewModelSet()
         {
             base.OnViewModelSet();
 
-            SetContentView(Resource.Layout.Overview);
+            SetContentView(Resource.Layout.Sessions);
             var list = FindViewById<MvxListView>(Resource.Id.SessionList);
             list.Adapter = new SessionListAdapter(this, (IMvxAndroidBindingContext)BindingContext, ViewModel.ViewSessionCommand);
 
             ViewModel.BindLoadingMessage(this, vm => vm.IsRefreshing, "Refreshing...");
-
-            LegacyBar.AddAction(new ActionLegacyBarAction(this, () => ViewModel.ViewFullScheduleCommand.Execute(null), Resource.Drawable.Calendar));
         }
 
-        private new OverviewViewModel ViewModel
+        private new SessionsViewModel ViewModel
         {
-            get { return (OverviewViewModel) base.ViewModel; }
+            get { return (SessionsViewModel)base.ViewModel; }
         }
 
         protected override ICommand RefreshCommand

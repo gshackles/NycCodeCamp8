@@ -548,49 +548,55 @@ namespace CodeCamp.App.Droid
 			public const int bottomactionbar_btn_pressed = 2130837533;
 			
 			// aapt resource value: 0x7f02001e
-			public const int dropdown_btn_holo_dark = 2130837534;
+			public const int Calendar = 2130837534;
 			
 			// aapt resource value: 0x7f02001f
-			public const int dropdown_btn_holo_light = 2130837535;
+			public const int dropdown_btn_holo_dark = 2130837535;
 			
 			// aapt resource value: 0x7f020020
-			public const int dropdown_disabled_holo_dark = 2130837536;
+			public const int dropdown_btn_holo_light = 2130837536;
 			
 			// aapt resource value: 0x7f020021
-			public const int dropdown_disabled_holo_light = 2130837537;
+			public const int dropdown_disabled_holo_dark = 2130837537;
 			
 			// aapt resource value: 0x7f020022
-			public const int dropdown_focused_holo_dark = 2130837538;
+			public const int dropdown_disabled_holo_light = 2130837538;
 			
 			// aapt resource value: 0x7f020023
-			public const int dropdown_focused_holo_light = 2130837539;
+			public const int dropdown_focused_holo_dark = 2130837539;
 			
 			// aapt resource value: 0x7f020024
-			public const int dropdown_normal_holo_dark = 2130837540;
+			public const int dropdown_focused_holo_light = 2130837540;
 			
 			// aapt resource value: 0x7f020025
-			public const int dropdown_normal_holo_light = 2130837541;
+			public const int dropdown_normal_holo_dark = 2130837541;
 			
 			// aapt resource value: 0x7f020026
-			public const int dropdown_pressed_holo_dark = 2130837542;
+			public const int dropdown_normal_holo_light = 2130837542;
 			
 			// aapt resource value: 0x7f020027
-			public const int dropdown_pressed_holo_light = 2130837543;
+			public const int dropdown_pressed_holo_dark = 2130837543;
 			
 			// aapt resource value: 0x7f020028
-			public const int ic_action_overflow = 2130837544;
+			public const int dropdown_pressed_holo_light = 2130837544;
 			
 			// aapt resource value: 0x7f020029
-			public const int ic_action_overflow_dark = 2130837545;
+			public const int Email = 2130837545;
 			
 			// aapt resource value: 0x7f02002a
-			public const int Icon = 2130837546;
+			public const int ic_action_overflow = 2130837546;
 			
 			// aapt resource value: 0x7f02002b
-			public const int Menu = 2130837547;
+			public const int ic_action_overflow_dark = 2130837547;
 			
 			// aapt resource value: 0x7f02002c
-			public const int Refresh = 2130837548;
+			public const int Icon = 2130837548;
+			
+			// aapt resource value: 0x7f02002d
+			public const int Menu = 2130837549;
+			
+			// aapt resource value: 0x7f02002e
+			public const int Refresh = 2130837550;
 			
 			static Drawable()
 			{
@@ -611,6 +617,9 @@ namespace CodeCamp.App.Droid
 			// aapt resource value: 0x7f040013
 			public const int ActionBar = 2130968595;
 			
+			// aapt resource value: 0x7f04001c
+			public const int Bio = 2130968604;
+			
 			// aapt resource value: 0x7f04001a
 			public const int HeaderText = 2130968602;
 			
@@ -618,7 +627,10 @@ namespace CodeCamp.App.Droid
 			public const int MvxBindingTagUnique = 2130968581;
 			
 			// aapt resource value: 0x7f04001b
-			public const int Refresh = 2130968603;
+			public const int Name = 2130968603;
+			
+			// aapt resource value: 0x7f04001d
+			public const int Refresh = 2130968605;
 			
 			// aapt resource value: 0x7f040017
 			public const int Room = 2130968599;
@@ -727,7 +739,13 @@ namespace CodeCamp.App.Droid
 			public const int SessionListItem = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int spinneritem = 2130903048;
+			public const int Sessions = 2130903048;
+			
+			// aapt resource value: 0x7f030009
+			public const int Speaker = 2130903049;
+			
+			// aapt resource value: 0x7f03000a
+			public const int spinneritem = 2130903050;
 			
 			static Layout()
 			{

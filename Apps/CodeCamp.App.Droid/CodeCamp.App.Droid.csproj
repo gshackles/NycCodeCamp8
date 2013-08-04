@@ -130,6 +130,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Views\ActivityBase.cs" />
+    <Compile Include="Views\SpeakerView.cs" />
+    <Compile Include="Views\SessionsView.cs" />
     <Compile Include="Views\OverviewView.cs" />
     <Compile Include="Views\Adapters\SessionListAdapter.cs" />
     <Compile Include="Views\SessionView.cs" />
@@ -144,6 +146,10 @@
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\Layout\Session.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\Sessions.axml" />
+    <AndroidResource Include="Resources\Layout\Speaker.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -164,6 +170,8 @@
     <AndroidResource Include="Resources\Menu\RefreshMenu.xml" />
     <AndroidResource Include="Resources\Drawable\Refresh.png" />
     <AndroidResource Include="Resources\Drawable\Menu.png" />
+    <AndroidResource Include="Resources\Drawable\Calendar.png" />
+    <AndroidResource Include="Resources\Drawable\Email.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\CodeCamp.Core\src\CodeCamp.Core.Droid\CodeCamp.Core.Droid.csproj">
