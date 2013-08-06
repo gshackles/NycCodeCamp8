@@ -27,7 +27,7 @@ namespace CodeCamp.Core.ViewModels
         public async Task Init(NavigationParameters parameters)
         {
             bool successful = await SafeOperation(
-                Task.Run(async () => Session = await _campService.GetSession(parameters.Id)));
+                Task.Factory.StartNew(async () => Session = await _campService.GetSession(parameters.Id)));
 
             FinishedLoading(successful);
         }

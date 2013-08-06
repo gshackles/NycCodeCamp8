@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NET", ".NET", "{F9651FBD-9AD2-4639-830A-A2D5CF9E74DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeCamp.Core", "CodeCamp.Core\src\CodeCamp.Core\CodeCamp.Core.csproj", "{5CC09BE4-AB6C-476D-9A9F-96A3B452C1C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeCamp.Core.WindowsPhone", "CodeCamp.Core\src\CodeCamp.Core.WindowsPhone\CodeCamp.Core.WindowsPhone.csproj", "{02BB8A82-4E2D-4862-A8CF-5D8C9CFB7D60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CC09BE4-AB6C-476D-9A9F-96A3B452C1C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CC09BE4-AB6C-476D-9A9F-96A3B452C1C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CC09BE4-AB6C-476D-9A9F-96A3B452C1C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CC09BE4-AB6C-476D-9A9F-96A3B452C1C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02BB8A82-4E2D-4862-A8CF-5D8C9CFB7D60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02BB8A82-4E2D-4862-A8CF-5D8C9CFB7D60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02BB8A82-4E2D-4862-A8CF-5D8C9CFB7D60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02BB8A82-4E2D-4862-A8CF-5D8C9CFB7D60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5CC09BE4-AB6C-476D-9A9F-96A3B452C1C4} = {F9651FBD-9AD2-4639-830A-A2D5CF9E74DE}
+	EndGlobalSection
+EndGlobal

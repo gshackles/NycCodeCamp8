@@ -56,7 +56,7 @@ namespace CodeCamp.Core.ViewModels
         public async Task Init(NavigationParameters parameters)
         {
             bool successful = await SafeOperation(
-                Task.Run(async () =>
+                Task.Factory.StartNew(async () =>
                                    {
                                        Speaker = await _campService.GetSpeaker(parameters.Id);
                                        Sessions = await _campService.ListSessionsBySpeaker(parameters.Id);

@@ -29,7 +29,7 @@ namespace CodeCamp.Core.ViewModels
         public async Task Init()
         {
             bool successful = await SafeOperation(
-                Task.Run(async () => TimeSlots = await _campService.ListSessions()));
+                Task.Factory.StartNew(async () => TimeSlots = await _campService.ListSessions()));
 
             FinishedLoading(successful);
         }
@@ -43,7 +43,7 @@ namespace CodeCamp.Core.ViewModels
             }
         }
 
-        public event EventHandler<bool> DataRefreshComplete;
+        public event EventHandler DataRefreshComplete;
 
         private bool _isRefreshing;
         public bool IsRefreshing
@@ -58,14 +58,14 @@ namespace CodeCamp.Core.ViewModels
             {
                 return new MvxCommand(async () =>
                 {
-                    bool successful = await SafeOperation(Task.Run(async () => 
+                    bool successful = await SafeOperation(Task.Factory.StartNew(async () => 
                     {
                         await _campService.RefreshData();
                         TimeSlots = await _campService.ListSessions();
                     }), () => IsRefreshing);
 
-                    if (DataRefreshComplete != null)
-                        DataRefreshComplete.Invoke(this, successful);
+                    if (successful && DataRefreshComplete != null)
+                        DataRefreshComplete.Invoke(this, EventArgs.Empty);
                 });
             }
         }

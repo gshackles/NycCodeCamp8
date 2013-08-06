@@ -30,7 +30,7 @@ namespace CodeCamp.Core.ViewModels
         public async Task Init(NavigationParameters parameters)
         {
             bool successful = await SafeOperation(
-                Task.Run(async () => Sponsor = await _campService.GetSponsor(parameters.Id)));
+                Task.Factory.StartNew(async () => Sponsor = await _campService.GetSponsor(parameters.Id)));
 
             FinishedLoading(successful);
         }

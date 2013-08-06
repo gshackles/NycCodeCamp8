@@ -137,7 +137,7 @@ namespace CodeCamp.Core.Services
             if (await RefreshData())
                 return _campData;
 
-            throw new ApplicationException("There was a problem refreshing the data");
+            throw new Exception("There was a problem refreshing the data");
         }
 
         private CampData LoadCachedCampData()

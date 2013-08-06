@@ -25,7 +25,7 @@ namespace CodeCamp.Core.ViewModels
         }
 
         public IMvxMessenger Messenger { get; private set; }
-        public event EventHandler<bool> LoadingComplete;
+        public event EventHandler LoadingComplete;
 
         private bool _isLoading;
         public bool IsLoading
@@ -39,7 +39,7 @@ namespace CodeCamp.Core.ViewModels
             IsLoading = false;
 
             if (LoadingComplete != null)
-                LoadingComplete.Invoke(this, successful);
+                LoadingComplete.Invoke(this, EventArgs.Empty);
         }
 
         protected async Task<bool> SafeOperation(Task operation, Expression<Func<bool>> operationFlag = null)
