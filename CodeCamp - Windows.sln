@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeCamp.Core", "CodeCamp.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeCamp.Core.WindowsPhone", "CodeCamp.Core\src\CodeCamp.Core.WindowsPhone\CodeCamp.Core.WindowsPhone.csproj", "{02BB8A82-4E2D-4862-A8CF-5D8C9CFB7D60}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeCamp.App.WindowsPhone", "Apps\CodeCamp.App.WindowsPhone\CodeCamp.App.WindowsPhone.csproj", "{55FCA235-45D0-4EC9-813B-0B31C1D629CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,12 @@ Global
 		{02BB8A82-4E2D-4862-A8CF-5D8C9CFB7D60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02BB8A82-4E2D-4862-A8CF-5D8C9CFB7D60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02BB8A82-4E2D-4862-A8CF-5D8C9CFB7D60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55FCA235-45D0-4EC9-813B-0B31C1D629CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55FCA235-45D0-4EC9-813B-0B31C1D629CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55FCA235-45D0-4EC9-813B-0B31C1D629CE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{55FCA235-45D0-4EC9-813B-0B31C1D629CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55FCA235-45D0-4EC9-813B-0B31C1D629CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55FCA235-45D0-4EC9-813B-0B31C1D629CE}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -32,7 +32,11 @@ namespace CodeCamp.Core
 
             _errorToken = messenger.Subscribe<ErrorMessage>(error => errorReporter.ReportError(error.Message));
 
+#if !WINDOWS_PHONE
             RegisterAppStart<OverviewViewModel>();
+#else
+            RegisterAppStart<CodeCamp.Core.WindowsPhone.ViewModels.PivotViewModel>();
+#endif
         }
     }
 }

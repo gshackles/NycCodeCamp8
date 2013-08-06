@@ -198,6 +198,7 @@
     <Compile Include="..\CodeCamp.Core\Extensions\DateTimeExtensions.cs">
       <Link>Extensions\DateTimeExtensions.cs</Link>
     </Compile>
+    <Compile Include="ViewModels\PivotViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
