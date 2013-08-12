@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Cirrious.MvvmCross.Plugins.Messenger;
 using Cirrious.MvvmCross.ViewModels;
@@ -59,28 +60,23 @@ namespace CodeCamp.Core.WindowsPhone.ViewModels
             set { _sponsorsViewModel = value; RaisePropertyChanged(() => SponsorsViewModel); }
         }
 
-        private bool _isRefreshing;
-        public bool IsRefreshing
-        {
-            get { return _isRefreshing; }
-            set { _isRefreshing = value; RaisePropertyChanged(() => IsRefreshing); }
-        }
-
         public ICommand RefreshDataCommand
         {
             get
             {
                 return new MvxCommand(async () =>
                 {
-                    bool successful = await SafeOperation(Task.Factory.StartNew(async () =>
-                    {
-                        await _campService.RefreshData();
-                    }), () => IsRefreshing);
-
+                    bool successful = await SafeOperation(_campService.RefreshData(), () => IsLoading);
+                    
                     if (successful)
                         reinitializeChildViewModels();
                 });
             }
+        }
+
+        public ICommand ViewMapCommand
+        {
+            get { return new MvxCommand(() => ShowViewModel<MapViewModel>()); }
         }
 
         private void reinitializeChildViewModels()

@@ -11,6 +11,7 @@
     xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
     xmlns:Commands="clr-namespace:Cirrious.MvvmCross.WindowsPhone.Commands;assembly=Cirrious.MvvmCross.WindowsPhone"
     xmlns:system="clr-namespace:System;assembly=mscorlib"
+    xmlns:coding4fun="clr-namespace:Coding4Fun.Toolkit.Controls;assembly=Coding4Fun.Toolkit.Controls"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -141,9 +142,29 @@
                     </ListBox.ItemTemplate>
                 </ListBox>
             </controls:PivotItem>
+            <controls:PivotItem Header="facility map">
+                <StackPanel Margin="0,0,-12,0">
+                    <TextBlock Text="Tap to view full map"></TextBlock>
+                    <Image Source="../Images/microsoftmap-thumb.jpg">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Tap">
+                                <Commands:MvxEventToCommand Command="{Binding ViewMapCommand}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Image>
+                </StackPanel>
+            </controls:PivotItem>
         </controls:Pivot>
 
-        <ProgressBar Width="480" Height="20" IsIndeterminate="True" Visibility="{Binding IsLoading, Converter={StaticResource Visibility}}" />
+        <coding4fun:ProgressOverlay Visibility="{Binding IsLoading, Converter={StaticResource Visibility}}">
+            <Grid Name="LayoutGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Rectangle Fill="Black" Opacity=".8" />
+                <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Center" >
+                    <ProgressBar Width="480" Height="20" IsIndeterminate="True" />
+                    <TextBlock Text="Loading" HorizontalAlignment="Center" Style="{StaticResource PhoneTextNormalStyle}" />
+                </StackPanel>
+            </Grid>
+        </coding4fun:ProgressOverlay>
     </Grid>
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsMenuEnabled="True">

@@ -61,7 +61,7 @@ namespace CodeCamp.Core.Services
                 catch {}
 
                 _campData = data;
-
+                
                 return true;
             }
             catch(Exception ex)

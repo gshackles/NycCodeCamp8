@@ -116,6 +116,15 @@
     <Reference Include="mscorlib.extensions" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\CodeCamp.Core\Converters\SessionDetailsConverter.cs">
+      <Link>Converters\SessionDetailsConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\Converters\StringFormatValueConverter.cs">
+      <Link>Converters\StringFormatValueConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\Converters\TimeValueConverter.cs">
+      <Link>Converters\TimeValueConverter.cs</Link>
+    </Compile>
     <Compile Include="..\CodeCamp.Core\Data\IFileManager.cs">
       <Link>Data\IFileManager.cs</Link>
     </Compile>

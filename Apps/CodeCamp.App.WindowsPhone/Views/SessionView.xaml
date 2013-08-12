@@ -1,0 +1,79 @@
+﻿<views:MvxPhonePage
+    x:Class="CodeCamp.App.WindowsPhone.Views.SessionView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="clr-namespace:Cirrious.MvvmCross.WindowsPhone.Views;assembly=Cirrious.MvvmCross.WindowsPhone"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent" DataContext="{Binding Session}">
+        <ScrollViewer HorizontalAlignment="Stretch" VerticalScrollBarVisibility="Auto">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0,15,0,15">
+                    <TextBlock x:Name="SessionTitle" Text="{Binding Title}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextExtraLargeStyle}" TextWrapping="Wrap">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                </StackPanel>
+
+                <StackPanel x:Name="DetailsPanel" Grid.Row="1" Margin="0,15,0,15">
+                    <TextBlock x:Name="SpeakerName" Text="{Binding SpeakerName}" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{StaticResource PhoneSubtleColor}"/>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="15,0,0,0" Text="{Binding StartTime, Converter={StaticResource Time}}" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap">
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{StaticResource PhoneSubtleColor}"/>
+                            </TextBlock.Foreground>
+                        </TextBlock>
+                        <TextBlock Margin="5,0,5,0" Text="-" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}">
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{StaticResource PhoneSubtleColor}"/>
+                            </TextBlock.Foreground>
+                        </TextBlock>
+                        <TextBlock Margin="0,0,0,0" Text="{Binding EndTime, Converter={StaticResource Time}}" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap">
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{StaticResource PhoneSubtleColor}"/>
+                            </TextBlock.Foreground>
+                        </TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="15,0,0,0" Text="Room:" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}">
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{StaticResource PhoneSubtleColor}"/>
+                            </TextBlock.Foreground>
+                        </TextBlock>
+                        <TextBlock Margin="5,0,0,0" Text="{Binding RoomName}" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap">
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{StaticResource PhoneSubtleColor}"/>
+                            </TextBlock.Foreground>
+                        </TextBlock>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Margin="0,15,0,15">
+                    <TextBlock Text="{Binding Abstract}" TextWrapping="Wrap" Style="{StaticResource PhoneTextNormalStyle}" />
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</views:MvxPhonePage>
