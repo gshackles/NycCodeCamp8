@@ -21,13 +21,12 @@ namespace CodeCamp.Core.WindowsPhone.ViewModels
         public async Task Init()
         {
             bool successful = await SafeOperation(
-                Task.Factory.StartNew(
-                    async () =>
-                              {
-                                  await _campService.ListSessions();
+                TaskEx.Run(async () =>
+                                     {
+                                         await _campService.ListSessions();
 
-                                  reinitializeChildViewModels();
-                              }));
+                                         reinitializeChildViewModels();
+                                     }));
 
             FinishedLoading(successful);
         }
