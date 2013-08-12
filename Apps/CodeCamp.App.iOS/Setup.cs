@@ -33,6 +33,7 @@ namespace CodeCamp.App.iOS
             registry.AddOrOverwrite("StringFormat", new StringFormatValueConverter());
             registry.AddOrOverwrite("Time", new TimeValueConverter());
             registry.AddOrOverwrite("SessionDetails", new SessionDetailsConverter());
+            registry.AddOrOverwrite("MultiLine", new MultiLineTextValueConverter());
         }
     }
 }

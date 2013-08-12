@@ -26,7 +26,7 @@ namespace CodeCamp.App.iOS
         {
             var headerView = new UIView(new RectangleF(0, 0, UIScreen.MainScreen.Bounds.Width, ListHeaderHeight))
             {
-                BackgroundColor = style == UITableViewStyle.Grouped ? UIColor.Clear : UIColor.Black
+                BackgroundColor = style == UITableViewStyle.Grouped ? UIColor.Clear : DefaultBackgroundImage
             };
             var label = new UILabel(new RectangleF(15, 0, UIScreen.MainScreen.Bounds.Width - 15, ListHeaderHeight))
             {

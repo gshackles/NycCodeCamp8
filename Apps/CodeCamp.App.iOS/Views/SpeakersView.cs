@@ -22,10 +22,9 @@ namespace CodeCamp.App.iOS.Views
             base.ViewDidLoad();
 
             ViewModel.BindLoadingMessage(View, model => model.IsRefreshing, "Refreshing...");
-            ViewModel.DataRefreshComplete += (s, successful) => 
+            ViewModel.DataRefreshComplete += (s, a) => 
             {
-                if (successful)
-                    loadSpeakers();
+                loadSpeakers();
 
                 ReloadComplete();
             };

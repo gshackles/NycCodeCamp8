@@ -82,6 +82,7 @@
     <Folder Include="Services\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Properties\" />
+    <Folder Include="Converters\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -166,6 +167,18 @@
     </Compile>
     <Compile Include="..\CodeCamp.Core\Extensions\DateTimeExtensions.cs">
       <Link>Extensions\DateTimeExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\Converters\MultiLineTextValueConverter.cs">
+      <Link>Converters\MultiLineTextValueConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\Converters\SessionDetailsConverter.cs">
+      <Link>Converters\SessionDetailsConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\Converters\StringFormatValueConverter.cs">
+      <Link>Converters\StringFormatValueConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\CodeCamp.Core\Converters\TimeValueConverter.cs">
+      <Link>Converters\TimeValueConverter.cs</Link>
     </Compile>
   </ItemGroup>
 </Project>

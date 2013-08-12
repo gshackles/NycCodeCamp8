@@ -42,7 +42,8 @@ namespace CodeCamp.App.iOS.Views
                 },
                 new Section
                 {
-                    new TransparentMultilineElement().Bind(bindings, el => el.Caption, vm => vm.Sponsor.Description)
+                    new TransparentMultilineElement()
+                        .Bind(bindings, el => el.Caption, vm => vm.Sponsor.Description, "MultiLine")
                 }
             };
         }
