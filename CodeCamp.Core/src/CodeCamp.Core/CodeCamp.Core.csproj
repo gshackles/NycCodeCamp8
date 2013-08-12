@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Converters\MultiLineTextValueConverter.cs" />
     <Compile Include="Data\Entities\CampData.cs" />
     <Compile Include="Data\Entities\Session.cs" />
     <Compile Include="Data\Entities\Speaker.cs" />
