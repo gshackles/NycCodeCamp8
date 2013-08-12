@@ -20,5 +20,11 @@
 	<string>com.gregshackles.nyccodecamp8</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>Icon@2x</string>
+		<string>Icon</string>
+		<string>Icon-72</string>
+	</array>
 </dict>
 </plist>

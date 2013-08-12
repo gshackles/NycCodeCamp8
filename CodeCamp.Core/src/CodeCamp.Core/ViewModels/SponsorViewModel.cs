@@ -5,6 +5,9 @@ using Cirrious.MvvmCross.Plugins.WebBrowser;
 using Cirrious.MvvmCross.ViewModels;
 using CodeCamp.Core.Data.Entities;
 using CodeCamp.Core.Services;
+#if !WINDOWS_PHONE
+using TaskEx = System.Threading.Tasks.Task;
+#endif
 
 namespace CodeCamp.Core.ViewModels
 {
@@ -30,7 +33,7 @@ namespace CodeCamp.Core.ViewModels
         public async Task Init(NavigationParameters parameters)
         {
             bool successful = await SafeOperation(
-                Task.Factory.StartNew(async () => Sponsor = await _campService.GetSponsor(parameters.Id)));
+                TaskEx.Run(async () => Sponsor = await _campService.GetSponsor(parameters.Id)));
 
             FinishedLoading(successful);
         }

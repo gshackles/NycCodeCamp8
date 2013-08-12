@@ -4,6 +4,9 @@ using Cirrious.MvvmCross.Plugins.Messenger;
 using Cirrious.MvvmCross.ViewModels;
 using CodeCamp.Core.Data.Entities;
 using CodeCamp.Core.Services;
+#if !WINDOWS_PHONE
+using TaskEx = System.Threading.Tasks.Task;
+#endif
 
 namespace CodeCamp.Core.ViewModels
 {
@@ -27,7 +30,7 @@ namespace CodeCamp.Core.ViewModels
         public async Task Init(NavigationParameters parameters)
         {
             bool successful = await SafeOperation(
-                Task.Factory.StartNew(async () => Session = await _campService.GetSession(parameters.Id)));
+                TaskEx.Run(async () => Session = await _campService.GetSession(parameters.Id)));
 
             FinishedLoading(successful);
         }

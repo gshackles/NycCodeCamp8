@@ -6,6 +6,9 @@ using Cirrious.MvvmCross.Plugins.Messenger;
 using Cirrious.MvvmCross.ViewModels;
 using CodeCamp.Core.Data.Entities;
 using CodeCamp.Core.Services;
+#if !WINDOWS_PHONE
+using TaskEx = System.Threading.Tasks.Task;
+#endif
 
 namespace CodeCamp.Core.ViewModels
 {
@@ -29,7 +32,7 @@ namespace CodeCamp.Core.ViewModels
         public async Task Init()
         {
             bool successful = await SafeOperation(
-                Task.Factory.StartNew(async () => TimeSlots = await _campService.ListSessions()));
+                TaskEx.Run(async () => TimeSlots = await _campService.ListSessions()));
 
             FinishedLoading(successful);
         }
@@ -58,7 +61,7 @@ namespace CodeCamp.Core.ViewModels
             {
                 return new MvxCommand(async () =>
                 {
-                    bool successful = await SafeOperation(Task.Factory.StartNew(async () => 
+                    bool successful = await SafeOperation(TaskEx.Run(async () => 
                     {
                         await _campService.RefreshData();
                         TimeSlots = await _campService.ListSessions();

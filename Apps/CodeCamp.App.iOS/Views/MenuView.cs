@@ -56,13 +56,15 @@ namespace CodeCamp.App.iOS.Views
                 }
             };
 
-            TableView.TableHeaderView = new UILabel(new RectangleF(0, 0, View.Frame.Width, 60))
+            var headerView = new UIView(new RectangleF(0, 0, View.Frame.Width, 60));
+            headerView.Add(new UILabel(new RectangleF(15, 0, headerView.Frame.Width - 15, headerView.Frame.Height))
             {
                 Text = "NYC Code Camp 8",
                 Font = UIFont.FromName("HelveticaNeue-Bold", 18),
                 BackgroundColor = UIColor.Clear,
                 TextColor = AppStyles.StandardTextColor
-            };
+            });
+            TableView.TableHeaderView = headerView;
 
             binder.Apply();
         }
