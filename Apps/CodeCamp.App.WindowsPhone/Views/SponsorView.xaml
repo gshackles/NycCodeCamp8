@@ -36,7 +36,7 @@
                 </StackPanel>
 
                 <StackPanel Grid.Row="2" Margin="0,15,0,15">
-                    <TextBlock Text="{Binding Description}" TextWrapping="Wrap" Style="{StaticResource PhoneTextNormalStyle}" />
+                    <TextBlock Text="{Binding Description, Converter={StaticResource MultiLine}}" TextWrapping="Wrap" Style="{StaticResource PhoneTextNormalStyle}" />
                 </StackPanel>
             </Grid>
         </ScrollViewer>

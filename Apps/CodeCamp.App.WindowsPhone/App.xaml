@@ -11,6 +11,7 @@
     <Application.Resources>
         <converter:NativeVisibility x:Key="Visibility" />
         <converter:NativeTime x:Key="Time" />
+        <converter:MultiLineTextValueConverter x:Key="MultiLine" />
 
         <Style x:Key="TransitionPageStyle" TargetType="views:MvxPhonePage">
             <Setter Property="toolkit:TransitionService.NavigationInTransition">

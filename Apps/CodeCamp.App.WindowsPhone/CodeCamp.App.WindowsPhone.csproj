@@ -160,6 +160,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Bootstrap\Plugins.cs" />
+    <Compile Include="Converters\MultiLineTextValueConverter.cs" />
     <Compile Include="Converters\NativeTime.cs" />
     <Compile Include="Converters\NativeVisibility.cs" />
     <Compile Include="ErrorReporter.cs" />
