@@ -50,6 +50,8 @@ namespace CodeCamp.App.iOS
             var navController = new SlidingPanelsNavigationViewController(viewController);
             navController.CanSwipeToShowPanel =
                 _ => !navController.TopViewController.HasAttribute<DisableMenuGestureAttribute>();
+            navController.View.Layer.ShadowRadius = 0;
+
             _rootViewController = new UIViewController();
 
             return navController;

@@ -1,13 +1,13 @@
+using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
+using CodeCamp.Core.Data.Entities;
+using CodeCamp.Core.Extensions;
 using CodeCamp.Core.ViewModels;
 using CrossUI.Touch.Dialog.Elements;
 using MonoTouch.UIKit;
 using CodeCamp.App.iOS.Extensions;
 using CodeCamp.App.iOS.Views.Elements;
-using CodeCamp.Core.Extensions;
-using System.Collections.Generic;
-using CodeCamp.Core.Data.Entities;
-using System.Drawing;
 
 namespace CodeCamp.App.iOS.Views
 {
