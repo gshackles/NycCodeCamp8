@@ -39,7 +39,11 @@ namespace CodeCamp.Core.ViewModels
         {
             get
             {
-                return new MvxCommand(() => ShowViewModel<SpeakerViewModel>(new SpeakerViewModel.NavigationParameters(Session.SpeakerId)));
+                return new MvxCommand(() => 
+                {
+                    if (Session.SpeakerId.HasValue)
+                        ShowViewModel<SpeakerViewModel>(new SpeakerViewModel.NavigationParameters(Session.SpeakerId.Value));
+                });
             }
         }
 

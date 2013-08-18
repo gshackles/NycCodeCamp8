@@ -39,17 +39,13 @@ namespace CodeCamp.App.iOS.Views
                         Font = AppStyles.ListTitleFont
                     }.Bind(bindings, el => el.SelectedCommand, vm => vm.EmailSpeakerCommand)
                 },
-                new CommandBindableSection<SessionElement>("", ViewModel.ViewSessionCommand)
-                {
-                    HeaderView = AppStyles.CreateListHeader("Sessions", UITableViewStyle.Grouped)
-                }.Bind(bindings, element => element.ItemsSource, vm => vm.Sessions),
-
                 new Section
                 {
                     new TransparentMultilineElement()
                         .Bind(bindings, el => el.Caption, vm => vm.Speaker.Bio, "MultiLine")
                 }
             };
+            Root.UnevenRows = true;
         }
 
         private new SpeakerViewModel ViewModel

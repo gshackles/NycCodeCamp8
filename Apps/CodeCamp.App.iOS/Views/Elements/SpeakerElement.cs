@@ -1,3 +1,4 @@
+using System.Drawing;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using CodeCamp.Core.Data.Entities;
 using CrossUI.Touch.Dialog.Elements;
@@ -43,7 +44,10 @@ namespace CodeCamp.App.iOS.Views.Elements
 
         public float GetHeight(UITableView tableView, MonoTouch.Foundation.NSIndexPath indexPath)
         {
-            return 54;
+            var size = new SizeF(280, float.MaxValue);
+            var titleHeight = tableView.StringSize(Caption, Font, size, UILineBreakMode.WordWrap).Height;
+
+            return titleHeight + 20;
         }
     }
 }

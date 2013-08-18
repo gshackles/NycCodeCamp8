@@ -14,6 +14,7 @@ namespace CodeCamp.App.iOS.Views
             : base(UITableViewStyle.Plain)
         {
             Root = new RootElement("Schedule");
+            Root.UnevenRows = true;
 
             RefreshRequested += (s, e) => ViewModel.RefreshDataCommand.Execute(null);
         }

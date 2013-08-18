@@ -13,7 +13,9 @@ namespace CodeCamp.Core.Converters
 
             var session = (Session)value;
 
-            return string.Format("{0}, {1}", session.RoomName, session.SpeakerName);
+            return session.SpeakerId.HasValue 
+                ? string.Format("{0}, {1}", session.RoomName, session.SpeakerName)
+                : session.RoomName;
         }
     }
 }

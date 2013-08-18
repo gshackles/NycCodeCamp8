@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using CodeCamp.Core.Extensions;
 using CodeCamp.Core.ViewModels;
@@ -20,37 +21,44 @@ namespace CodeCamp.App.iOS.Views
 
             var bindings = this.CreateInlineBindingTarget<SessionViewModel>();
 
-            Root = new RootElement("Session Info")
+            var sections = new List<Section>();
+            sections.Add(new Section
             {
-                new Section
+                new TransparentStringElement
                 {
-                    new TransparentStringElement
-                    {
-                        Font = AppStyles.EntityTitleFont
-                    }.Bind(bindings, el => el.Caption, vm => vm.Session.Title),
-                    new TransparentStringElement(ViewModel.Session.StartTime.FormatTime() + " - " + ViewModel.Session.EndTime.FormatTime()),
-                    new TransparentStringElement().Bind(bindings, el => el.Caption, vm => vm.Session.RoomName)
-                },
+                    Font = AppStyles.EntityTitleFont
+                }.Bind(bindings, el => el.Caption, vm => vm.Session.Title),
+                new TransparentStringElement(ViewModel.Session.StartTime.FormatTime() + " - " + ViewModel.Session.EndTime.FormatTime()),
+                new TransparentStringElement().Bind(bindings, el => el.Caption, vm => vm.Session.RoomName)
+            });
 
-                new Section
+            if (ViewModel.Session.SpeakerId.HasValue)
+            {
+                sections.Add(new Section
                 {
-                    new StyledStringElement 
+                    new StyledMultilineElement 
                     { 
                         Accessory = UITableViewCellAccessory.DisclosureIndicator,
                         BackgroundColor = AppStyles.SemiTransparentCellBackgroundColor,
                         TextColor = AppStyles.ListTitleColor,
                         Font = AppStyles.ListTitleFont
                     }
-                        .Bind(bindings, el => el.Caption, vm => vm.Session.SpeakerName)
-                        .Bind(bindings, el => el.SelectedCommand, vm => vm.ViewSpeakerCommand),
-                },
+                    .Bind(bindings, el => el.Caption, vm => vm.Session.SpeakerName)
+                    .Bind(bindings, el => el.SelectedCommand, vm => vm.ViewSpeakerCommand),
+                });
+            }
 
-                new Section
-                {
-                    new TransparentMultilineElement()
-                        .Bind(bindings, el => el.Caption, vm => vm.Session.Abstract, "MultiLine")
-                }
+            sections.Add(new Section
+            {
+                new TransparentMultilineElement()
+                    .Bind(bindings, el => el.Caption, vm => vm.Session.Abstract, "MultiLine")
+            });
+
+            Root = new RootElement("Session Info")
+            {
+                sections
             };
+            Root.UnevenRows = true;
         }
 
         private new SessionViewModel ViewModel

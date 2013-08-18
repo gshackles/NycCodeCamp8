@@ -46,7 +46,6 @@ namespace CodeCamp.Core.Services
                 {
                     var speaker = data.Speakers.FirstOrDefault(s => s.Id == session.SpeakerId);
 
-                    // shouldn't happen, but just in case...
                     if (speaker == null)
                         continue;
 
@@ -80,7 +79,7 @@ namespace CodeCamp.Core.Services
                                    StartTime = slot.Key.StartTime,
                                    EndTime = slot.Key.EndTime,
                                    Sessions = slot.OrderBy(session => session.Title).ToList()
-                               }).ToList();
+            }).OrderBy(slot => slot.StartTime).ThenBy(slot => slot.EndTime).ToList();
         }
 
         public async Task<IList<Session>> ListSessionsBySpeaker(int speakerId)

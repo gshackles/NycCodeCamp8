@@ -17,6 +17,7 @@ namespace CodeCamp.App.iOS.Views
             : base(UITableViewStyle.Plain)
         {
             Root = new RootElement("NYC Code Camp");
+//            Root.UnevenRows = true;
 
             RefreshRequested += (s, e) => ViewModel.RefreshDataCommand.Execute(null);
         }

@@ -90,7 +90,7 @@ namespace CodeCamp.Core.Tests.ServiceTests
                               };
             var campData = new CampData
             {
-                Speakers = new List<Speaker> { new Speaker { Id = session.SpeakerId } },
+                Speakers = new List<Speaker> { new Speaker { Id = session.SpeakerId.Value } },
                 Sessions = new List<Session> { session }
             };
             _mockDataClient.GetDataBody = () => Task.FromResult(campData);
