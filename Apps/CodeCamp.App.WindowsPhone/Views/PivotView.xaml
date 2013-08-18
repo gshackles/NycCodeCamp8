@@ -20,79 +20,84 @@
     shell:SystemTray.IsVisible="True">
 
     <Grid x:Name="LayoutRoot" Background="Transparent">
-        <controls:Pivot Title="NYC Code Camp 8">
+        <controls:Pivot Title="NYC Code Camp 8" x:Name="Pivot">
             <controls:PivotItem Header="overview" DataContext="{Binding OverviewViewModel}">
-                <ListBox x:Name="Overview" Margin="0,0,-12,0" ItemsSource="{Binding TimeSlots}">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Margin="0,0,0,17">
-                                <TextBlock Text="{Binding}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}">
-                                    <TextBlock.Foreground>
-                                        <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
-                                    </TextBlock.Foreground>
-                                </TextBlock>
+                <ScrollViewer>
+                    <StackPanel>
+                        <ListBox x:Name="Overview" Margin="0,0,-12,0" ItemsSource="{Binding TimeSlots}" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Margin="0,0,0,17">
+                                        <TextBlock Text="{Binding}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}">
+                                            <TextBlock.Foreground>
+                                                <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+                                            </TextBlock.Foreground>
+                                        </TextBlock>
 
-                                <ListBox x:Name="OverviewSlot" Margin="0,0,-12,0" ItemsSource="{Binding Sessions}" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                                    <ListBox.ItemTemplate>
-                                        <DataTemplate>
-                                            <StackPanel Margin="0,10,0,10">
-                                                <TextBlock Text="{Binding Title}" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}"/>
-                                                <TextBlock Text="{Binding SpeakerName}" TextWrapping="Wrap" Margin="12,0,12,0" 
-                                                           Style="{StaticResource PhoneTextSmallStyle}" />
-                                                <StackPanel Orientation="Horizontal" Margin="12,0,12,0">
-                                                    <TextBlock Text="Room:" TextWrapping="Wrap" Margin="0,0,5,0" Style="{StaticResource PhoneTextSmallStyle}"/>
-                                                    <TextBlock Text="{Binding RoomName}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSmallStyle}"/>
-                                                </StackPanel>
-                                                <i:Interaction.Triggers>
-                                                    <i:EventTrigger EventName="Tap">
-                                                        <Commands:MvxEventToCommand Command="{Binding ElementName=Overview,Path=DataContext.ViewSessionCommand}" CommandParameter="{Binding}" />
-                                                    </i:EventTrigger>
-                                                </i:Interaction.Triggers>
-                                            </StackPanel>
-                                        </DataTemplate>
-                                    </ListBox.ItemTemplate>
-                                </ListBox>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
+                                        <ListBox x:Name="OverviewSlot" Margin="0,0,-12,0" ItemsSource="{Binding Sessions}" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                            <ListBox.ItemTemplate>
+                                                <DataTemplate>
+                                                    <StackPanel Margin="0,10,0,10">
+                                                        <TextBlock Text="{Binding Title}" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}"/>
+                                                        <TextBlock Text="{Binding SpeakerName}" TextWrapping="Wrap" Margin="12,0,12,0" 
+                                                            Style="{StaticResource PhoneTextSmallStyle}" />
+                                                        <StackPanel Orientation="Horizontal" Margin="12,0,12,0">
+                                                            <TextBlock Text="Room:" TextWrapping="Wrap" Margin="0,0,5,0" Style="{StaticResource PhoneTextSmallStyle}"/>
+                                                            <TextBlock Text="{Binding RoomName}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSmallStyle}"/>
+                                                        </StackPanel>
+                                                        <i:Interaction.Triggers>
+                                                            <i:EventTrigger EventName="Tap">
+                                                                <Commands:MvxEventToCommand Command="{Binding ElementName=Overview,Path=DataContext.ViewSessionCommand}" CommandParameter="{Binding}" />
+                                                            </i:EventTrigger>
+                                                        </i:Interaction.Triggers>
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </ListBox.ItemTemplate>
+                                        </ListBox>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                        <TextBlock Text="View full schedule" Padding="10" FontSize="{StaticResource PhoneFontSizeLarge}" Tap="ViewFullSchedule"></TextBlock>
+                    </StackPanel>
+                </ScrollViewer>
             </controls:PivotItem>
 
             <controls:PivotItem Header="sessions" DataContext="{Binding SessionsViewModel}">
-                <ListBox x:Name="Sessions" Margin="0,0,-12,0" ItemsSource="{Binding TimeSlots}">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Margin="0,0,0,17">
-                                <TextBlock Text="{Binding}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}">
-                                    <TextBlock.Foreground>
-                                        <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
-                                    </TextBlock.Foreground>
-                                </TextBlock>
+                    <ListBox x:Name="Sessions" Margin="0,0,-12,0" ItemsSource="{Binding TimeSlots}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="0,0,0,17">
+                                    <TextBlock Text="{Binding}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}">
+                                        <TextBlock.Foreground>
+                                            <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+                                        </TextBlock.Foreground>
+                                    </TextBlock>
 
-                                <ListBox x:Name="SessionsSlot" Margin="0,0,-12,0" ItemsSource="{Binding Sessions}" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                                    <ListBox.ItemTemplate>
-                                        <DataTemplate>
-                                            <StackPanel Margin="0,10,0,10">
-                                                <TextBlock Text="{Binding Title}" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}"/>
-                                                <TextBlock Text="{Binding SpeakerName}" TextWrapping="Wrap" Margin="12,0,12,0" 
-                                                           Style="{StaticResource PhoneTextSmallStyle}" />
-                                                <StackPanel Orientation="Horizontal" Margin="12,0,12,0">
-                                                    <TextBlock Text="Room:" TextWrapping="Wrap" Margin="0,0,5,0" Style="{StaticResource PhoneTextSmallStyle}"/>
-                                                    <TextBlock Text="{Binding RoomName}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSmallStyle}"/>
+                                    <ListBox x:Name="SessionsSlot" Margin="0,0,-12,0" ItemsSource="{Binding Sessions}" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                        <ListBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Margin="0,10,0,10">
+                                                    <TextBlock Text="{Binding Title}" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}"/>
+                                                    <TextBlock Text="{Binding SpeakerName}" TextWrapping="Wrap" Margin="12,0,12,0" 
+                                                               Style="{StaticResource PhoneTextSmallStyle}" />
+                                                    <StackPanel Orientation="Horizontal" Margin="12,0,12,0">
+                                                        <TextBlock Text="Room:" TextWrapping="Wrap" Margin="0,0,5,0" Style="{StaticResource PhoneTextSmallStyle}"/>
+                                                        <TextBlock Text="{Binding RoomName}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSmallStyle}"/>
+                                                    </StackPanel>
+                                                    <i:Interaction.Triggers>
+                                                        <i:EventTrigger EventName="Tap">
+                                                            <Commands:MvxEventToCommand Command="{Binding ElementName=Sessions,Path=DataContext.ViewSessionCommand}" CommandParameter="{Binding}" />
+                                                        </i:EventTrigger>
+                                                    </i:Interaction.Triggers>
                                                 </StackPanel>
-                                                <i:Interaction.Triggers>
-                                                    <i:EventTrigger EventName="Tap">
-                                                        <Commands:MvxEventToCommand Command="{Binding ElementName=Sessions,Path=DataContext.ViewSessionCommand}" CommandParameter="{Binding}" />
-                                                    </i:EventTrigger>
-                                                </i:Interaction.Triggers>
-                                            </StackPanel>
-                                        </DataTemplate>
-                                    </ListBox.ItemTemplate>
-                                </ListBox>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
+                                            </DataTemplate>
+                                        </ListBox.ItemTemplate>
+                                    </ListBox>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
             </controls:PivotItem>
 
             <controls:PivotItem Header="speakers" DataContext="{Binding SpeakersViewModel}">
@@ -145,7 +150,7 @@
             <controls:PivotItem Header="facility map">
                 <StackPanel Margin="0,0,-12,0">
                     <TextBlock Text="Tap to view full map"></TextBlock>
-                    <Image Source="../Images/microsoftmap-thumb.jpg">
+                    <Image Source="../Images/microsoftmap-thumb.png">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Tap">
                                 <Commands:MvxEventToCommand Command="{Binding ViewMapCommand}" />

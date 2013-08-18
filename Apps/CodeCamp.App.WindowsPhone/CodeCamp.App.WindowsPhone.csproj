@@ -190,22 +190,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\AppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\WMAppManifest.xml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="appicon.png" />
-    <Content Include="ApplicationIcon.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Background.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Images\appbar.feature.email.rest.png" />
     <Content Include="Images\appbar.gotoaddressbar.rest.png" />
     <Content Include="Images\appbar.refresh.rest.png" />
-    <Content Include="Images\microsoftmap-thumb.jpg" />
-    <Content Include="Images\microsoftmap.jpg" />
+    <Content Include="Images\microsoftmap-thumb.png" />
+    <Content Include="Images\microsoftmap.png" />
     <Content Include="README_FIRST.txt" />
     <Content Include="SplashScreenImage.jpg" />
     <Content Include="tileicon.png" />
