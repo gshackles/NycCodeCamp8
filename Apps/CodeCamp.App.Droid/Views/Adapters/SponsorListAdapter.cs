@@ -44,10 +44,18 @@ namespace CodeCamp.App.Droid.Views.Adapters
 
             var view = base.GetBindableView(convertView, source, templateId);
 
-            if (source is Sponsor && convertView == null)
-                view.Click += (sender, args) => _itemClickCommand.Execute(source);
+            view.Click -= ViewClicked;
+            view.Click += ViewClicked;
 
             return view;
+        }
+
+        private void ViewClicked(object sender, EventArgs eventArgs)
+        {
+            var context = ((MvxBaseListItemView)sender).DataContext;
+
+            if (context is Sponsor)
+                _itemClickCommand.Execute(context);
         }
     }
 }

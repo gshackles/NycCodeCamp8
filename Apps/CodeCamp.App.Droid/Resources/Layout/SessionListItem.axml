@@ -3,12 +3,18 @@
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:padding="10dip">
+    <TextView
+        android:text="Title"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        local:MvxBind="Text Title" />
     <TextView
         android:text="Title"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/Title"
-        local:MvxBind="Text Title" />
+        local:MvxBind="Text .,Converter=SessionDetails" />
 </LinearLayout>

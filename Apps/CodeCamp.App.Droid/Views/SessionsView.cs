@@ -8,7 +8,7 @@ using CodeCamp.Core.ViewModels;
 
 namespace CodeCamp.App.Droid.Views
 {
-    [Activity(Label = "Sessions")]
+    [Activity(Label = "Full Schedule")]
     public class SessionsView : ActivityBase
     {
         protected override void OnViewModelSet()

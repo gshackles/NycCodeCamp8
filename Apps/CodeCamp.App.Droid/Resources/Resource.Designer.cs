@@ -26,198 +26,198 @@ namespace CodeCamp.App.Droid
 		
 		public static void UpdateIdValues()
 		{
-			CodeCamp.Core.Droid.Resource.String.ApplicationName = CodeCamp.App.Droid.Resource.String.ApplicationName;
-			CodeCamp.Core.Droid.Resource.String.Hello = CodeCamp.App.Droid.Resource.String.Hello;
-			LegacyBar.Library.Resource.Attribute.background = CodeCamp.App.Droid.Resource.Attribute.background;
-			LegacyBar.Library.Resource.Attribute.background_item = CodeCamp.App.Droid.Resource.Attribute.background_item;
-			LegacyBar.Library.Resource.Attribute.is_bottom = CodeCamp.App.Droid.Resource.Attribute.is_bottom;
-			LegacyBar.Library.Resource.Attribute.light_icons = CodeCamp.App.Droid.Resource.Attribute.light_icons;
-			LegacyBar.Library.Resource.Attribute.separator = CodeCamp.App.Droid.Resource.Attribute.separator;
-			LegacyBar.Library.Resource.Attribute.theme = CodeCamp.App.Droid.Resource.Attribute.theme;
-			LegacyBar.Library.Resource.Attribute.title = CodeCamp.App.Droid.Resource.Attribute.title;
-			LegacyBar.Library.Resource.Attribute.title_color = CodeCamp.App.Droid.Resource.Attribute.title_color;
-			LegacyBar.Library.Resource.Color.Red = CodeCamp.App.Droid.Resource.Color.Red;
-			LegacyBar.Library.Resource.Color.actionbar_accentcolor_black = CodeCamp.App.Droid.Resource.Color.actionbar_accentcolor_black;
-			LegacyBar.Library.Resource.Color.actionbar_accentcolor_blue = CodeCamp.App.Droid.Resource.Color.actionbar_accentcolor_blue;
-			LegacyBar.Library.Resource.Color.actionbar_accentcolor_darkgray = CodeCamp.App.Droid.Resource.Color.actionbar_accentcolor_darkgray;
-			LegacyBar.Library.Resource.Color.actionbar_accentcolor_lightgray = CodeCamp.App.Droid.Resource.Color.actionbar_accentcolor_lightgray;
-			LegacyBar.Library.Resource.Color.actionbar_background_end = CodeCamp.App.Droid.Resource.Color.actionbar_background_end;
-			LegacyBar.Library.Resource.Color.actionbar_background_end_alt = CodeCamp.App.Droid.Resource.Color.actionbar_background_end_alt;
-			LegacyBar.Library.Resource.Color.actionbar_background_item_pressed_end = CodeCamp.App.Droid.Resource.Color.actionbar_background_item_pressed_end;
-			LegacyBar.Library.Resource.Color.actionbar_background_item_pressed_end_alt = CodeCamp.App.Droid.Resource.Color.actionbar_background_item_pressed_end_alt;
-			LegacyBar.Library.Resource.Color.actionbar_background_item_pressed_start = CodeCamp.App.Droid.Resource.Color.actionbar_background_item_pressed_start;
-			LegacyBar.Library.Resource.Color.actionbar_background_item_pressed_start_alt = CodeCamp.App.Droid.Resource.Color.actionbar_background_item_pressed_start_alt;
-			LegacyBar.Library.Resource.Color.actionbar_background_start = CodeCamp.App.Droid.Resource.Color.actionbar_background_start;
-			LegacyBar.Library.Resource.Color.actionbar_background_start_alt = CodeCamp.App.Droid.Resource.Color.actionbar_background_start_alt;
-			LegacyBar.Library.Resource.Color.actionbar_maincolor_black = CodeCamp.App.Droid.Resource.Color.actionbar_maincolor_black;
-			LegacyBar.Library.Resource.Color.actionbar_maincolor_blue = CodeCamp.App.Droid.Resource.Color.actionbar_maincolor_blue;
-			LegacyBar.Library.Resource.Color.actionbar_maincolor_darkgray = CodeCamp.App.Droid.Resource.Color.actionbar_maincolor_darkgray;
-			LegacyBar.Library.Resource.Color.actionbar_maincolor_lightgray = CodeCamp.App.Droid.Resource.Color.actionbar_maincolor_lightgray;
-			LegacyBar.Library.Resource.Color.actionbar_pressedcolor_black = CodeCamp.App.Droid.Resource.Color.actionbar_pressedcolor_black;
-			LegacyBar.Library.Resource.Color.actionbar_pressedcolor_blue = CodeCamp.App.Droid.Resource.Color.actionbar_pressedcolor_blue;
-			LegacyBar.Library.Resource.Color.actionbar_pressedcolor_darkgray = CodeCamp.App.Droid.Resource.Color.actionbar_pressedcolor_darkgray;
-			LegacyBar.Library.Resource.Color.actionbar_pressedcolor_lightgray = CodeCamp.App.Droid.Resource.Color.actionbar_pressedcolor_lightgray;
-			LegacyBar.Library.Resource.Color.actionbar_separator = CodeCamp.App.Droid.Resource.Color.actionbar_separator;
-			LegacyBar.Library.Resource.Color.actionbar_separator_alt = CodeCamp.App.Droid.Resource.Color.actionbar_separator_alt;
-			LegacyBar.Library.Resource.Color.actionbar_separator_black = CodeCamp.App.Droid.Resource.Color.actionbar_separator_black;
-			LegacyBar.Library.Resource.Color.actionbar_separator_blue = CodeCamp.App.Droid.Resource.Color.actionbar_separator_blue;
-			LegacyBar.Library.Resource.Color.actionbar_separator_darkgray = CodeCamp.App.Droid.Resource.Color.actionbar_separator_darkgray;
-			LegacyBar.Library.Resource.Color.actionbar_separator_lightgray = CodeCamp.App.Droid.Resource.Color.actionbar_separator_lightgray;
-			LegacyBar.Library.Resource.Color.actionbar_title = CodeCamp.App.Droid.Resource.Color.actionbar_title;
-			LegacyBar.Library.Resource.Color.actionbar_title_alt = CodeCamp.App.Droid.Resource.Color.actionbar_title_alt;
-			LegacyBar.Library.Resource.Color.actionbar_title_black = CodeCamp.App.Droid.Resource.Color.actionbar_title_black;
-			LegacyBar.Library.Resource.Color.actionbar_title_blue = CodeCamp.App.Droid.Resource.Color.actionbar_title_blue;
-			LegacyBar.Library.Resource.Color.actionbar_title_darkgray = CodeCamp.App.Droid.Resource.Color.actionbar_title_darkgray;
-			LegacyBar.Library.Resource.Color.actionbar_title_lightgray = CodeCamp.App.Droid.Resource.Color.actionbar_title_lightgray;
-			LegacyBar.Library.Resource.Color.black = CodeCamp.App.Droid.Resource.Color.black;
-			LegacyBar.Library.Resource.Color.blue = CodeCamp.App.Droid.Resource.Color.blue;
-			LegacyBar.Library.Resource.Color.bottomactionbar_background_end = CodeCamp.App.Droid.Resource.Color.bottomactionbar_background_end;
-			LegacyBar.Library.Resource.Color.bottomactionbar_background_item_pressed_end = CodeCamp.App.Droid.Resource.Color.bottomactionbar_background_item_pressed_end;
-			LegacyBar.Library.Resource.Color.bottomactionbar_background_item_pressed_start = CodeCamp.App.Droid.Resource.Color.bottomactionbar_background_item_pressed_start;
-			LegacyBar.Library.Resource.Color.bottomactionbar_background_start = CodeCamp.App.Droid.Resource.Color.bottomactionbar_background_start;
-			LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_black = CodeCamp.App.Droid.Resource.Color.bottomactionbar_maincolor_black;
-			LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_blue = CodeCamp.App.Droid.Resource.Color.bottomactionbar_maincolor_blue;
-			LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_darkgray = CodeCamp.App.Droid.Resource.Color.bottomactionbar_maincolor_darkgray;
-			LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_lightgray = CodeCamp.App.Droid.Resource.Color.bottomactionbar_maincolor_lightgray;
-			LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_black = CodeCamp.App.Droid.Resource.Color.bottomactionbar_pressedcolor_black;
-			LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_blue = CodeCamp.App.Droid.Resource.Color.bottomactionbar_pressedcolor_blue;
-			LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_darkgray = CodeCamp.App.Droid.Resource.Color.bottomactionbar_pressedcolor_darkgray;
-			LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_lightgray = CodeCamp.App.Droid.Resource.Color.bottomactionbar_pressedcolor_lightgray;
-			LegacyBar.Library.Resource.Color.bottomactionbar_separator = CodeCamp.App.Droid.Resource.Color.bottomactionbar_separator;
-			LegacyBar.Library.Resource.Color.bottomactionbar_title = CodeCamp.App.Droid.Resource.Color.bottomactionbar_title;
-			LegacyBar.Library.Resource.Color.green = CodeCamp.App.Droid.Resource.Color.green;
-			LegacyBar.Library.Resource.Color.grey = CodeCamp.App.Droid.Resource.Color.grey;
-			LegacyBar.Library.Resource.Color.pager_black = CodeCamp.App.Droid.Resource.Color.pager_black;
-			LegacyBar.Library.Resource.Color.pager_blue = CodeCamp.App.Droid.Resource.Color.pager_blue;
-			LegacyBar.Library.Resource.Color.pager_darkgray = CodeCamp.App.Droid.Resource.Color.pager_darkgray;
-			LegacyBar.Library.Resource.Color.pager_lightgray = CodeCamp.App.Droid.Resource.Color.pager_lightgray;
-			LegacyBar.Library.Resource.Color.red = CodeCamp.App.Droid.Resource.Color.red;
-			LegacyBar.Library.Resource.Color.white = CodeCamp.App.Droid.Resource.Color.white;
-			LegacyBar.Library.Resource.Color.yellow = CodeCamp.App.Droid.Resource.Color.yellow;
-			LegacyBar.Library.Resource.Dimension.actionbar_accentheight = CodeCamp.App.Droid.Resource.Dimension.actionbar_accentheight;
-			LegacyBar.Library.Resource.Dimension.actionbar_height = CodeCamp.App.Droid.Resource.Dimension.actionbar_height;
-			LegacyBar.Library.Resource.Dimension.actionbar_home_item_width = CodeCamp.App.Droid.Resource.Dimension.actionbar_home_item_width;
-			LegacyBar.Library.Resource.Dimension.actionbar_item_height = CodeCamp.App.Droid.Resource.Dimension.actionbar_item_height;
-			LegacyBar.Library.Resource.Dimension.actionbar_item_height_over = CodeCamp.App.Droid.Resource.Dimension.actionbar_item_height_over;
-			LegacyBar.Library.Resource.Dimension.actionbar_item_height_overflow = CodeCamp.App.Droid.Resource.Dimension.actionbar_item_height_overflow;
-			LegacyBar.Library.Resource.Dimension.actionbar_item_width = CodeCamp.App.Droid.Resource.Dimension.actionbar_item_width;
-			LegacyBar.Library.Resource.Drawable.actionbar_back_indicator = CodeCamp.App.Droid.Resource.Drawable.actionbar_back_indicator;
-			LegacyBar.Library.Resource.Drawable.actionbar_back_indicator_dark = CodeCamp.App.Droid.Resource.Drawable.actionbar_back_indicator_dark;
-			LegacyBar.Library.Resource.Drawable.actionbar_background = CodeCamp.App.Droid.Resource.Drawable.actionbar_background;
-			LegacyBar.Library.Resource.Drawable.actionbar_background_alt = CodeCamp.App.Droid.Resource.Drawable.actionbar_background_alt;
-			LegacyBar.Library.Resource.Drawable.actionbar_background_black = CodeCamp.App.Droid.Resource.Drawable.actionbar_background_black;
-			LegacyBar.Library.Resource.Drawable.actionbar_background_blue = CodeCamp.App.Droid.Resource.Drawable.actionbar_background_blue;
-			LegacyBar.Library.Resource.Drawable.actionbar_background_darkgray = CodeCamp.App.Droid.Resource.Drawable.actionbar_background_darkgray;
-			LegacyBar.Library.Resource.Drawable.actionbar_background_lightgray = CodeCamp.App.Droid.Resource.Drawable.actionbar_background_lightgray;
-			LegacyBar.Library.Resource.Drawable.actionbar_btn = CodeCamp.App.Droid.Resource.Drawable.actionbar_btn;
-			LegacyBar.Library.Resource.Drawable.actionbar_btn_alt = CodeCamp.App.Droid.Resource.Drawable.actionbar_btn_alt;
-			LegacyBar.Library.Resource.Drawable.actionbar_btn_black = CodeCamp.App.Droid.Resource.Drawable.actionbar_btn_black;
-			LegacyBar.Library.Resource.Drawable.actionbar_btn_blue = CodeCamp.App.Droid.Resource.Drawable.actionbar_btn_blue;
-			LegacyBar.Library.Resource.Drawable.actionbar_btn_darkgray = CodeCamp.App.Droid.Resource.Drawable.actionbar_btn_darkgray;
-			LegacyBar.Library.Resource.Drawable.actionbar_btn_lightgray = CodeCamp.App.Droid.Resource.Drawable.actionbar_btn_lightgray;
-			LegacyBar.Library.Resource.Drawable.actionbar_btn_normal = CodeCamp.App.Droid.Resource.Drawable.actionbar_btn_normal;
-			LegacyBar.Library.Resource.Drawable.actionbar_btn_normal_alt = CodeCamp.App.Droid.Resource.Drawable.actionbar_btn_normal_alt;
-			LegacyBar.Library.Resource.Drawable.actionbar_btn_pressed = CodeCamp.App.Droid.Resource.Drawable.actionbar_btn_pressed;
-			LegacyBar.Library.Resource.Drawable.actionbar_btn_pressed_alt = CodeCamp.App.Droid.Resource.Drawable.actionbar_btn_pressed_alt;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_background = CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_background;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_background_black = CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_background_black;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_background_blue = CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_background_blue;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_background_darkgray = CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_background_darkgray;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_background_lightgray = CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_background_lightgray;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_btn = CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_btn;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_black = CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_btn_black;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_blue = CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_btn_blue;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_darkgray = CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_btn_darkgray;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_lightgray = CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_btn_lightgray;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_normal = CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_btn_normal;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_pressed = CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_btn_pressed;
-			LegacyBar.Library.Resource.Drawable.dropdown_btn_holo_dark = CodeCamp.App.Droid.Resource.Drawable.dropdown_btn_holo_dark;
-			LegacyBar.Library.Resource.Drawable.dropdown_btn_holo_light = CodeCamp.App.Droid.Resource.Drawable.dropdown_btn_holo_light;
-			LegacyBar.Library.Resource.Drawable.dropdown_disabled_holo_dark = CodeCamp.App.Droid.Resource.Drawable.dropdown_disabled_holo_dark;
-			LegacyBar.Library.Resource.Drawable.dropdown_disabled_holo_light = CodeCamp.App.Droid.Resource.Drawable.dropdown_disabled_holo_light;
-			LegacyBar.Library.Resource.Drawable.dropdown_focused_holo_dark = CodeCamp.App.Droid.Resource.Drawable.dropdown_focused_holo_dark;
-			LegacyBar.Library.Resource.Drawable.dropdown_focused_holo_light = CodeCamp.App.Droid.Resource.Drawable.dropdown_focused_holo_light;
-			LegacyBar.Library.Resource.Drawable.dropdown_normal_holo_dark = CodeCamp.App.Droid.Resource.Drawable.dropdown_normal_holo_dark;
-			LegacyBar.Library.Resource.Drawable.dropdown_normal_holo_light = CodeCamp.App.Droid.Resource.Drawable.dropdown_normal_holo_light;
-			LegacyBar.Library.Resource.Drawable.dropdown_pressed_holo_dark = CodeCamp.App.Droid.Resource.Drawable.dropdown_pressed_holo_dark;
-			LegacyBar.Library.Resource.Drawable.dropdown_pressed_holo_light = CodeCamp.App.Droid.Resource.Drawable.dropdown_pressed_holo_light;
-			LegacyBar.Library.Resource.Drawable.ic_action_overflow = CodeCamp.App.Droid.Resource.Drawable.ic_action_overflow;
-			LegacyBar.Library.Resource.Drawable.ic_action_overflow_dark = CodeCamp.App.Droid.Resource.Drawable.ic_action_overflow_dark;
-			LegacyBar.Library.Resource.Id.actionbar_actions = CodeCamp.App.Droid.Resource.Id.actionbar_actions;
-			LegacyBar.Library.Resource.Id.actionbar_home = CodeCamp.App.Droid.Resource.Id.actionbar_home;
-			LegacyBar.Library.Resource.Id.actionbar_home_bg = CodeCamp.App.Droid.Resource.Id.actionbar_home_bg;
-			LegacyBar.Library.Resource.Id.actionbar_home_btn = CodeCamp.App.Droid.Resource.Id.actionbar_home_btn;
-			LegacyBar.Library.Resource.Id.actionbar_home_is_back = CodeCamp.App.Droid.Resource.Id.actionbar_home_is_back;
-			LegacyBar.Library.Resource.Id.actionbar_home_logo = CodeCamp.App.Droid.Resource.Id.actionbar_home_logo;
-			LegacyBar.Library.Resource.Id.actionbar_item = CodeCamp.App.Droid.Resource.Id.actionbar_item;
-			LegacyBar.Library.Resource.Id.actionbar_progress = CodeCamp.App.Droid.Resource.Id.actionbar_progress;
-			LegacyBar.Library.Resource.Id.actionbar_spinner = CodeCamp.App.Droid.Resource.Id.actionbar_spinner;
-			LegacyBar.Library.Resource.Id.actionbar_title = CodeCamp.App.Droid.Resource.Id.actionbar_title;
-			LegacyBar.Library.Resource.Id.actionbar_title_layout = CodeCamp.App.Droid.Resource.Id.actionbar_title_layout;
-			LegacyBar.Library.Resource.Id.custom = CodeCamp.App.Droid.Resource.Id.custom;
-			LegacyBar.Library.Resource.Id.holo_black = CodeCamp.App.Droid.Resource.Id.holo_black;
-			LegacyBar.Library.Resource.Id.holo_blue = CodeCamp.App.Droid.Resource.Id.holo_blue;
-			LegacyBar.Library.Resource.Id.holo_gray = CodeCamp.App.Droid.Resource.Id.holo_gray;
-			LegacyBar.Library.Resource.Id.holo_light = CodeCamp.App.Droid.Resource.Id.holo_light;
-			LegacyBar.Library.Resource.Id.overflow_spinner = CodeCamp.App.Droid.Resource.Id.overflow_spinner;
-			LegacyBar.Library.Resource.Id.screen = CodeCamp.App.Droid.Resource.Id.screen;
-			LegacyBar.Library.Resource.Layout.actionbar = CodeCamp.App.Droid.Resource.Layout.actionbar;
-			LegacyBar.Library.Resource.Layout.actionbar_item = CodeCamp.App.Droid.Resource.Layout.actionbar_item;
-			LegacyBar.Library.Resource.Layout.blankspinner = CodeCamp.App.Droid.Resource.Layout.blankspinner;
-			LegacyBar.Library.Resource.Layout.overflowactionbar_item = CodeCamp.App.Droid.Resource.Layout.overflowactionbar_item;
-			LegacyBar.Library.Resource.Layout.spinneritem = CodeCamp.App.Droid.Resource.Layout.spinneritem;
-			LegacyBar.Library.Resource.String.actionbar_activity_not_found = CodeCamp.App.Droid.Resource.String.actionbar_activity_not_found;
-			LegacyBar.Library.Resource.Style.actionbar = CodeCamp.App.Droid.Resource.Style.actionbar;
-			LegacyBar.Library.Resource.Style.actionbarhomeitem = CodeCamp.App.Droid.Resource.Style.actionbarhomeitem;
-			LegacyBar.Library.Resource.Style.actionbarhomelogo = CodeCamp.App.Droid.Resource.Style.actionbarhomelogo;
-			LegacyBar.Library.Resource.Style.actionbaritem = CodeCamp.App.Droid.Resource.Style.actionbaritem;
-			LegacyBar.Library.Resource.Style.actionbarprogressbar = CodeCamp.App.Droid.Resource.Style.actionbarprogressbar;
-			LegacyBar.Library.Resource.Style.clearbutton = CodeCamp.App.Droid.Resource.Style.clearbutton;
-			LegacyBar.Library.Resource.Styleable.actionbar = CodeCamp.App.Droid.Resource.Styleable.actionbar;
-			LegacyBar.Library.Resource.Styleable.actionbar_background = CodeCamp.App.Droid.Resource.Styleable.actionbar_background;
-			LegacyBar.Library.Resource.Styleable.actionbar_background_item = CodeCamp.App.Droid.Resource.Styleable.actionbar_background_item;
-			LegacyBar.Library.Resource.Styleable.actionbar_is_bottom = CodeCamp.App.Droid.Resource.Styleable.actionbar_is_bottom;
-			LegacyBar.Library.Resource.Styleable.actionbar_light_icons = CodeCamp.App.Droid.Resource.Styleable.actionbar_light_icons;
-			LegacyBar.Library.Resource.Styleable.actionbar_separator = CodeCamp.App.Droid.Resource.Styleable.actionbar_separator;
-			LegacyBar.Library.Resource.Styleable.actionbar_theme = CodeCamp.App.Droid.Resource.Styleable.actionbar_theme;
-			LegacyBar.Library.Resource.Styleable.actionbar_title = CodeCamp.App.Droid.Resource.Styleable.actionbar_title;
-			LegacyBar.Library.Resource.Styleable.actionbar_title_color = CodeCamp.App.Droid.Resource.Styleable.actionbar_title_color;
-			SlidingMenuSharp.Resource.Attribute.behindOffset = CodeCamp.App.Droid.Resource.Attribute.behindOffset;
-			SlidingMenuSharp.Resource.Attribute.behindScrollScale = CodeCamp.App.Droid.Resource.Attribute.behindScrollScale;
-			SlidingMenuSharp.Resource.Attribute.behindWidth = CodeCamp.App.Droid.Resource.Attribute.behindWidth;
-			SlidingMenuSharp.Resource.Attribute.fadeDegree = CodeCamp.App.Droid.Resource.Attribute.fadeDegree;
-			SlidingMenuSharp.Resource.Attribute.fadeEnabled = CodeCamp.App.Droid.Resource.Attribute.fadeEnabled;
-			SlidingMenuSharp.Resource.Attribute.mode = CodeCamp.App.Droid.Resource.Attribute.mode;
-			SlidingMenuSharp.Resource.Attribute.selectorDrawable = CodeCamp.App.Droid.Resource.Attribute.selectorDrawable;
-			SlidingMenuSharp.Resource.Attribute.selectorEnabled = CodeCamp.App.Droid.Resource.Attribute.selectorEnabled;
-			SlidingMenuSharp.Resource.Attribute.shadowDrawable = CodeCamp.App.Droid.Resource.Attribute.shadowDrawable;
-			SlidingMenuSharp.Resource.Attribute.shadowWidth = CodeCamp.App.Droid.Resource.Attribute.shadowWidth;
-			SlidingMenuSharp.Resource.Attribute.touchModeAbove = CodeCamp.App.Droid.Resource.Attribute.touchModeAbove;
-			SlidingMenuSharp.Resource.Attribute.touchModeBehind = CodeCamp.App.Droid.Resource.Attribute.touchModeBehind;
-			SlidingMenuSharp.Resource.Attribute.viewAbove = CodeCamp.App.Droid.Resource.Attribute.viewAbove;
-			SlidingMenuSharp.Resource.Attribute.viewBehind = CodeCamp.App.Droid.Resource.Attribute.viewBehind;
-			SlidingMenuSharp.Resource.Id.fullscreen = CodeCamp.App.Droid.Resource.Id.fullscreen;
-			SlidingMenuSharp.Resource.Id.left = CodeCamp.App.Droid.Resource.Id.left;
-			SlidingMenuSharp.Resource.Id.margin = CodeCamp.App.Droid.Resource.Id.margin;
-			SlidingMenuSharp.Resource.Id.right = CodeCamp.App.Droid.Resource.Id.right;
-			SlidingMenuSharp.Resource.Id.selected_view = CodeCamp.App.Droid.Resource.Id.selected_view;
-			SlidingMenuSharp.Resource.Id.slidingmenumain = CodeCamp.App.Droid.Resource.Id.slidingmenumain;
-			SlidingMenuSharp.Resource.Layout.slidingmenumain = CodeCamp.App.Droid.Resource.Layout.slidingmenumain;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_behindOffset = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_behindOffset;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_behindScrollScale = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_behindScrollScale;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_behindWidth = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_behindWidth;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_fadeDegree = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_fadeDegree;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_fadeEnabled = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_fadeEnabled;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_mode = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_mode;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_selectorDrawable = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_selectorDrawable;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_selectorEnabled = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_selectorEnabled;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_shadowDrawable = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_shadowDrawable;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_shadowWidth = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_shadowWidth;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_touchModeAbove = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_touchModeAbove;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_touchModeBehind = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_touchModeBehind;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_viewAbove = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_viewAbove;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_viewBehind = CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_viewBehind;
+			global::CodeCamp.Core.Droid.Resource.String.ApplicationName = global::CodeCamp.App.Droid.Resource.String.ApplicationName;
+			global::CodeCamp.Core.Droid.Resource.String.Hello = global::CodeCamp.App.Droid.Resource.String.Hello;
+			global::LegacyBar.Library.Resource.Attribute.background = global::CodeCamp.App.Droid.Resource.Attribute.background;
+			global::LegacyBar.Library.Resource.Attribute.background_item = global::CodeCamp.App.Droid.Resource.Attribute.background_item;
+			global::LegacyBar.Library.Resource.Attribute.is_bottom = global::CodeCamp.App.Droid.Resource.Attribute.is_bottom;
+			global::LegacyBar.Library.Resource.Attribute.light_icons = global::CodeCamp.App.Droid.Resource.Attribute.light_icons;
+			global::LegacyBar.Library.Resource.Attribute.separator = global::CodeCamp.App.Droid.Resource.Attribute.separator;
+			global::LegacyBar.Library.Resource.Attribute.theme = global::CodeCamp.App.Droid.Resource.Attribute.theme;
+			global::LegacyBar.Library.Resource.Attribute.title = global::CodeCamp.App.Droid.Resource.Attribute.title;
+			global::LegacyBar.Library.Resource.Attribute.title_color = global::CodeCamp.App.Droid.Resource.Attribute.title_color;
+			global::LegacyBar.Library.Resource.Color.Red = global::CodeCamp.App.Droid.Resource.Color.Red;
+			global::LegacyBar.Library.Resource.Color.actionbar_accentcolor_black = global::CodeCamp.App.Droid.Resource.Color.actionbar_accentcolor_black;
+			global::LegacyBar.Library.Resource.Color.actionbar_accentcolor_blue = global::CodeCamp.App.Droid.Resource.Color.actionbar_accentcolor_blue;
+			global::LegacyBar.Library.Resource.Color.actionbar_accentcolor_darkgray = global::CodeCamp.App.Droid.Resource.Color.actionbar_accentcolor_darkgray;
+			global::LegacyBar.Library.Resource.Color.actionbar_accentcolor_lightgray = global::CodeCamp.App.Droid.Resource.Color.actionbar_accentcolor_lightgray;
+			global::LegacyBar.Library.Resource.Color.actionbar_background_end = global::CodeCamp.App.Droid.Resource.Color.actionbar_background_end;
+			global::LegacyBar.Library.Resource.Color.actionbar_background_end_alt = global::CodeCamp.App.Droid.Resource.Color.actionbar_background_end_alt;
+			global::LegacyBar.Library.Resource.Color.actionbar_background_item_pressed_end = global::CodeCamp.App.Droid.Resource.Color.actionbar_background_item_pressed_end;
+			global::LegacyBar.Library.Resource.Color.actionbar_background_item_pressed_end_alt = global::CodeCamp.App.Droid.Resource.Color.actionbar_background_item_pressed_end_alt;
+			global::LegacyBar.Library.Resource.Color.actionbar_background_item_pressed_start = global::CodeCamp.App.Droid.Resource.Color.actionbar_background_item_pressed_start;
+			global::LegacyBar.Library.Resource.Color.actionbar_background_item_pressed_start_alt = global::CodeCamp.App.Droid.Resource.Color.actionbar_background_item_pressed_start_alt;
+			global::LegacyBar.Library.Resource.Color.actionbar_background_start = global::CodeCamp.App.Droid.Resource.Color.actionbar_background_start;
+			global::LegacyBar.Library.Resource.Color.actionbar_background_start_alt = global::CodeCamp.App.Droid.Resource.Color.actionbar_background_start_alt;
+			global::LegacyBar.Library.Resource.Color.actionbar_maincolor_black = global::CodeCamp.App.Droid.Resource.Color.actionbar_maincolor_black;
+			global::LegacyBar.Library.Resource.Color.actionbar_maincolor_blue = global::CodeCamp.App.Droid.Resource.Color.actionbar_maincolor_blue;
+			global::LegacyBar.Library.Resource.Color.actionbar_maincolor_darkgray = global::CodeCamp.App.Droid.Resource.Color.actionbar_maincolor_darkgray;
+			global::LegacyBar.Library.Resource.Color.actionbar_maincolor_lightgray = global::CodeCamp.App.Droid.Resource.Color.actionbar_maincolor_lightgray;
+			global::LegacyBar.Library.Resource.Color.actionbar_pressedcolor_black = global::CodeCamp.App.Droid.Resource.Color.actionbar_pressedcolor_black;
+			global::LegacyBar.Library.Resource.Color.actionbar_pressedcolor_blue = global::CodeCamp.App.Droid.Resource.Color.actionbar_pressedcolor_blue;
+			global::LegacyBar.Library.Resource.Color.actionbar_pressedcolor_darkgray = global::CodeCamp.App.Droid.Resource.Color.actionbar_pressedcolor_darkgray;
+			global::LegacyBar.Library.Resource.Color.actionbar_pressedcolor_lightgray = global::CodeCamp.App.Droid.Resource.Color.actionbar_pressedcolor_lightgray;
+			global::LegacyBar.Library.Resource.Color.actionbar_separator = global::CodeCamp.App.Droid.Resource.Color.actionbar_separator;
+			global::LegacyBar.Library.Resource.Color.actionbar_separator_alt = global::CodeCamp.App.Droid.Resource.Color.actionbar_separator_alt;
+			global::LegacyBar.Library.Resource.Color.actionbar_separator_black = global::CodeCamp.App.Droid.Resource.Color.actionbar_separator_black;
+			global::LegacyBar.Library.Resource.Color.actionbar_separator_blue = global::CodeCamp.App.Droid.Resource.Color.actionbar_separator_blue;
+			global::LegacyBar.Library.Resource.Color.actionbar_separator_darkgray = global::CodeCamp.App.Droid.Resource.Color.actionbar_separator_darkgray;
+			global::LegacyBar.Library.Resource.Color.actionbar_separator_lightgray = global::CodeCamp.App.Droid.Resource.Color.actionbar_separator_lightgray;
+			global::LegacyBar.Library.Resource.Color.actionbar_title = global::CodeCamp.App.Droid.Resource.Color.actionbar_title;
+			global::LegacyBar.Library.Resource.Color.actionbar_title_alt = global::CodeCamp.App.Droid.Resource.Color.actionbar_title_alt;
+			global::LegacyBar.Library.Resource.Color.actionbar_title_black = global::CodeCamp.App.Droid.Resource.Color.actionbar_title_black;
+			global::LegacyBar.Library.Resource.Color.actionbar_title_blue = global::CodeCamp.App.Droid.Resource.Color.actionbar_title_blue;
+			global::LegacyBar.Library.Resource.Color.actionbar_title_darkgray = global::CodeCamp.App.Droid.Resource.Color.actionbar_title_darkgray;
+			global::LegacyBar.Library.Resource.Color.actionbar_title_lightgray = global::CodeCamp.App.Droid.Resource.Color.actionbar_title_lightgray;
+			global::LegacyBar.Library.Resource.Color.black = global::CodeCamp.App.Droid.Resource.Color.black;
+			global::LegacyBar.Library.Resource.Color.blue = global::CodeCamp.App.Droid.Resource.Color.blue;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_background_end = global::CodeCamp.App.Droid.Resource.Color.bottomactionbar_background_end;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_background_item_pressed_end = global::CodeCamp.App.Droid.Resource.Color.bottomactionbar_background_item_pressed_end;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_background_item_pressed_start = global::CodeCamp.App.Droid.Resource.Color.bottomactionbar_background_item_pressed_start;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_background_start = global::CodeCamp.App.Droid.Resource.Color.bottomactionbar_background_start;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_black = global::CodeCamp.App.Droid.Resource.Color.bottomactionbar_maincolor_black;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_blue = global::CodeCamp.App.Droid.Resource.Color.bottomactionbar_maincolor_blue;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_darkgray = global::CodeCamp.App.Droid.Resource.Color.bottomactionbar_maincolor_darkgray;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_lightgray = global::CodeCamp.App.Droid.Resource.Color.bottomactionbar_maincolor_lightgray;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_black = global::CodeCamp.App.Droid.Resource.Color.bottomactionbar_pressedcolor_black;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_blue = global::CodeCamp.App.Droid.Resource.Color.bottomactionbar_pressedcolor_blue;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_darkgray = global::CodeCamp.App.Droid.Resource.Color.bottomactionbar_pressedcolor_darkgray;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_lightgray = global::CodeCamp.App.Droid.Resource.Color.bottomactionbar_pressedcolor_lightgray;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_separator = global::CodeCamp.App.Droid.Resource.Color.bottomactionbar_separator;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_title = global::CodeCamp.App.Droid.Resource.Color.bottomactionbar_title;
+			global::LegacyBar.Library.Resource.Color.green = global::CodeCamp.App.Droid.Resource.Color.green;
+			global::LegacyBar.Library.Resource.Color.grey = global::CodeCamp.App.Droid.Resource.Color.grey;
+			global::LegacyBar.Library.Resource.Color.pager_black = global::CodeCamp.App.Droid.Resource.Color.pager_black;
+			global::LegacyBar.Library.Resource.Color.pager_blue = global::CodeCamp.App.Droid.Resource.Color.pager_blue;
+			global::LegacyBar.Library.Resource.Color.pager_darkgray = global::CodeCamp.App.Droid.Resource.Color.pager_darkgray;
+			global::LegacyBar.Library.Resource.Color.pager_lightgray = global::CodeCamp.App.Droid.Resource.Color.pager_lightgray;
+			global::LegacyBar.Library.Resource.Color.red = global::CodeCamp.App.Droid.Resource.Color.red;
+			global::LegacyBar.Library.Resource.Color.white = global::CodeCamp.App.Droid.Resource.Color.white;
+			global::LegacyBar.Library.Resource.Color.yellow = global::CodeCamp.App.Droid.Resource.Color.yellow;
+			global::LegacyBar.Library.Resource.Dimension.actionbar_accentheight = global::CodeCamp.App.Droid.Resource.Dimension.actionbar_accentheight;
+			global::LegacyBar.Library.Resource.Dimension.actionbar_height = global::CodeCamp.App.Droid.Resource.Dimension.actionbar_height;
+			global::LegacyBar.Library.Resource.Dimension.actionbar_home_item_width = global::CodeCamp.App.Droid.Resource.Dimension.actionbar_home_item_width;
+			global::LegacyBar.Library.Resource.Dimension.actionbar_item_height = global::CodeCamp.App.Droid.Resource.Dimension.actionbar_item_height;
+			global::LegacyBar.Library.Resource.Dimension.actionbar_item_height_over = global::CodeCamp.App.Droid.Resource.Dimension.actionbar_item_height_over;
+			global::LegacyBar.Library.Resource.Dimension.actionbar_item_height_overflow = global::CodeCamp.App.Droid.Resource.Dimension.actionbar_item_height_overflow;
+			global::LegacyBar.Library.Resource.Dimension.actionbar_item_width = global::CodeCamp.App.Droid.Resource.Dimension.actionbar_item_width;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_back_indicator = global::CodeCamp.App.Droid.Resource.Drawable.actionbar_back_indicator;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_back_indicator_dark = global::CodeCamp.App.Droid.Resource.Drawable.actionbar_back_indicator_dark;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_background = global::CodeCamp.App.Droid.Resource.Drawable.actionbar_background;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_background_alt = global::CodeCamp.App.Droid.Resource.Drawable.actionbar_background_alt;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_background_black = global::CodeCamp.App.Droid.Resource.Drawable.actionbar_background_black;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_background_blue = global::CodeCamp.App.Droid.Resource.Drawable.actionbar_background_blue;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_background_darkgray = global::CodeCamp.App.Droid.Resource.Drawable.actionbar_background_darkgray;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_background_lightgray = global::CodeCamp.App.Droid.Resource.Drawable.actionbar_background_lightgray;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_btn = global::CodeCamp.App.Droid.Resource.Drawable.actionbar_btn;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_btn_alt = global::CodeCamp.App.Droid.Resource.Drawable.actionbar_btn_alt;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_btn_black = global::CodeCamp.App.Droid.Resource.Drawable.actionbar_btn_black;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_btn_blue = global::CodeCamp.App.Droid.Resource.Drawable.actionbar_btn_blue;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_btn_darkgray = global::CodeCamp.App.Droid.Resource.Drawable.actionbar_btn_darkgray;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_btn_lightgray = global::CodeCamp.App.Droid.Resource.Drawable.actionbar_btn_lightgray;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_btn_normal = global::CodeCamp.App.Droid.Resource.Drawable.actionbar_btn_normal;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_btn_normal_alt = global::CodeCamp.App.Droid.Resource.Drawable.actionbar_btn_normal_alt;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_btn_pressed = global::CodeCamp.App.Droid.Resource.Drawable.actionbar_btn_pressed;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_btn_pressed_alt = global::CodeCamp.App.Droid.Resource.Drawable.actionbar_btn_pressed_alt;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_background = global::CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_background;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_background_black = global::CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_background_black;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_background_blue = global::CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_background_blue;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_background_darkgray = global::CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_background_darkgray;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_background_lightgray = global::CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_background_lightgray;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_btn = global::CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_btn;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_black = global::CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_btn_black;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_blue = global::CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_btn_blue;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_darkgray = global::CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_btn_darkgray;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_lightgray = global::CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_btn_lightgray;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_normal = global::CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_btn_normal;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_pressed = global::CodeCamp.App.Droid.Resource.Drawable.bottomactionbar_btn_pressed;
+			global::LegacyBar.Library.Resource.Drawable.dropdown_btn_holo_dark = global::CodeCamp.App.Droid.Resource.Drawable.dropdown_btn_holo_dark;
+			global::LegacyBar.Library.Resource.Drawable.dropdown_btn_holo_light = global::CodeCamp.App.Droid.Resource.Drawable.dropdown_btn_holo_light;
+			global::LegacyBar.Library.Resource.Drawable.dropdown_disabled_holo_dark = global::CodeCamp.App.Droid.Resource.Drawable.dropdown_disabled_holo_dark;
+			global::LegacyBar.Library.Resource.Drawable.dropdown_disabled_holo_light = global::CodeCamp.App.Droid.Resource.Drawable.dropdown_disabled_holo_light;
+			global::LegacyBar.Library.Resource.Drawable.dropdown_focused_holo_dark = global::CodeCamp.App.Droid.Resource.Drawable.dropdown_focused_holo_dark;
+			global::LegacyBar.Library.Resource.Drawable.dropdown_focused_holo_light = global::CodeCamp.App.Droid.Resource.Drawable.dropdown_focused_holo_light;
+			global::LegacyBar.Library.Resource.Drawable.dropdown_normal_holo_dark = global::CodeCamp.App.Droid.Resource.Drawable.dropdown_normal_holo_dark;
+			global::LegacyBar.Library.Resource.Drawable.dropdown_normal_holo_light = global::CodeCamp.App.Droid.Resource.Drawable.dropdown_normal_holo_light;
+			global::LegacyBar.Library.Resource.Drawable.dropdown_pressed_holo_dark = global::CodeCamp.App.Droid.Resource.Drawable.dropdown_pressed_holo_dark;
+			global::LegacyBar.Library.Resource.Drawable.dropdown_pressed_holo_light = global::CodeCamp.App.Droid.Resource.Drawable.dropdown_pressed_holo_light;
+			global::LegacyBar.Library.Resource.Drawable.ic_action_overflow = global::CodeCamp.App.Droid.Resource.Drawable.ic_action_overflow;
+			global::LegacyBar.Library.Resource.Drawable.ic_action_overflow_dark = global::CodeCamp.App.Droid.Resource.Drawable.ic_action_overflow_dark;
+			global::LegacyBar.Library.Resource.Id.actionbar_actions = global::CodeCamp.App.Droid.Resource.Id.actionbar_actions;
+			global::LegacyBar.Library.Resource.Id.actionbar_home = global::CodeCamp.App.Droid.Resource.Id.actionbar_home;
+			global::LegacyBar.Library.Resource.Id.actionbar_home_bg = global::CodeCamp.App.Droid.Resource.Id.actionbar_home_bg;
+			global::LegacyBar.Library.Resource.Id.actionbar_home_btn = global::CodeCamp.App.Droid.Resource.Id.actionbar_home_btn;
+			global::LegacyBar.Library.Resource.Id.actionbar_home_is_back = global::CodeCamp.App.Droid.Resource.Id.actionbar_home_is_back;
+			global::LegacyBar.Library.Resource.Id.actionbar_home_logo = global::CodeCamp.App.Droid.Resource.Id.actionbar_home_logo;
+			global::LegacyBar.Library.Resource.Id.actionbar_item = global::CodeCamp.App.Droid.Resource.Id.actionbar_item;
+			global::LegacyBar.Library.Resource.Id.actionbar_progress = global::CodeCamp.App.Droid.Resource.Id.actionbar_progress;
+			global::LegacyBar.Library.Resource.Id.actionbar_spinner = global::CodeCamp.App.Droid.Resource.Id.actionbar_spinner;
+			global::LegacyBar.Library.Resource.Id.actionbar_title = global::CodeCamp.App.Droid.Resource.Id.actionbar_title;
+			global::LegacyBar.Library.Resource.Id.actionbar_title_layout = global::CodeCamp.App.Droid.Resource.Id.actionbar_title_layout;
+			global::LegacyBar.Library.Resource.Id.custom = global::CodeCamp.App.Droid.Resource.Id.custom;
+			global::LegacyBar.Library.Resource.Id.holo_black = global::CodeCamp.App.Droid.Resource.Id.holo_black;
+			global::LegacyBar.Library.Resource.Id.holo_blue = global::CodeCamp.App.Droid.Resource.Id.holo_blue;
+			global::LegacyBar.Library.Resource.Id.holo_gray = global::CodeCamp.App.Droid.Resource.Id.holo_gray;
+			global::LegacyBar.Library.Resource.Id.holo_light = global::CodeCamp.App.Droid.Resource.Id.holo_light;
+			global::LegacyBar.Library.Resource.Id.overflow_spinner = global::CodeCamp.App.Droid.Resource.Id.overflow_spinner;
+			global::LegacyBar.Library.Resource.Id.screen = global::CodeCamp.App.Droid.Resource.Id.screen;
+			global::LegacyBar.Library.Resource.Layout.actionbar = global::CodeCamp.App.Droid.Resource.Layout.actionbar;
+			global::LegacyBar.Library.Resource.Layout.actionbar_item = global::CodeCamp.App.Droid.Resource.Layout.actionbar_item;
+			global::LegacyBar.Library.Resource.Layout.blankspinner = global::CodeCamp.App.Droid.Resource.Layout.blankspinner;
+			global::LegacyBar.Library.Resource.Layout.overflowactionbar_item = global::CodeCamp.App.Droid.Resource.Layout.overflowactionbar_item;
+			global::LegacyBar.Library.Resource.Layout.spinneritem = global::CodeCamp.App.Droid.Resource.Layout.spinneritem;
+			global::LegacyBar.Library.Resource.String.actionbar_activity_not_found = global::CodeCamp.App.Droid.Resource.String.actionbar_activity_not_found;
+			global::LegacyBar.Library.Resource.Style.actionbar = global::CodeCamp.App.Droid.Resource.Style.actionbar;
+			global::LegacyBar.Library.Resource.Style.actionbarhomeitem = global::CodeCamp.App.Droid.Resource.Style.actionbarhomeitem;
+			global::LegacyBar.Library.Resource.Style.actionbarhomelogo = global::CodeCamp.App.Droid.Resource.Style.actionbarhomelogo;
+			global::LegacyBar.Library.Resource.Style.actionbaritem = global::CodeCamp.App.Droid.Resource.Style.actionbaritem;
+			global::LegacyBar.Library.Resource.Style.actionbarprogressbar = global::CodeCamp.App.Droid.Resource.Style.actionbarprogressbar;
+			global::LegacyBar.Library.Resource.Style.clearbutton = global::CodeCamp.App.Droid.Resource.Style.clearbutton;
+			global::LegacyBar.Library.Resource.Styleable.actionbar = global::CodeCamp.App.Droid.Resource.Styleable.actionbar;
+			global::LegacyBar.Library.Resource.Styleable.actionbar_background = global::CodeCamp.App.Droid.Resource.Styleable.actionbar_background;
+			global::LegacyBar.Library.Resource.Styleable.actionbar_background_item = global::CodeCamp.App.Droid.Resource.Styleable.actionbar_background_item;
+			global::LegacyBar.Library.Resource.Styleable.actionbar_is_bottom = global::CodeCamp.App.Droid.Resource.Styleable.actionbar_is_bottom;
+			global::LegacyBar.Library.Resource.Styleable.actionbar_light_icons = global::CodeCamp.App.Droid.Resource.Styleable.actionbar_light_icons;
+			global::LegacyBar.Library.Resource.Styleable.actionbar_separator = global::CodeCamp.App.Droid.Resource.Styleable.actionbar_separator;
+			global::LegacyBar.Library.Resource.Styleable.actionbar_theme = global::CodeCamp.App.Droid.Resource.Styleable.actionbar_theme;
+			global::LegacyBar.Library.Resource.Styleable.actionbar_title = global::CodeCamp.App.Droid.Resource.Styleable.actionbar_title;
+			global::LegacyBar.Library.Resource.Styleable.actionbar_title_color = global::CodeCamp.App.Droid.Resource.Styleable.actionbar_title_color;
+			global::SlidingMenuSharp.Resource.Attribute.behindOffset = global::CodeCamp.App.Droid.Resource.Attribute.behindOffset;
+			global::SlidingMenuSharp.Resource.Attribute.behindScrollScale = global::CodeCamp.App.Droid.Resource.Attribute.behindScrollScale;
+			global::SlidingMenuSharp.Resource.Attribute.behindWidth = global::CodeCamp.App.Droid.Resource.Attribute.behindWidth;
+			global::SlidingMenuSharp.Resource.Attribute.fadeDegree = global::CodeCamp.App.Droid.Resource.Attribute.fadeDegree;
+			global::SlidingMenuSharp.Resource.Attribute.fadeEnabled = global::CodeCamp.App.Droid.Resource.Attribute.fadeEnabled;
+			global::SlidingMenuSharp.Resource.Attribute.mode = global::CodeCamp.App.Droid.Resource.Attribute.mode;
+			global::SlidingMenuSharp.Resource.Attribute.selectorDrawable = global::CodeCamp.App.Droid.Resource.Attribute.selectorDrawable;
+			global::SlidingMenuSharp.Resource.Attribute.selectorEnabled = global::CodeCamp.App.Droid.Resource.Attribute.selectorEnabled;
+			global::SlidingMenuSharp.Resource.Attribute.shadowDrawable = global::CodeCamp.App.Droid.Resource.Attribute.shadowDrawable;
+			global::SlidingMenuSharp.Resource.Attribute.shadowWidth = global::CodeCamp.App.Droid.Resource.Attribute.shadowWidth;
+			global::SlidingMenuSharp.Resource.Attribute.touchModeAbove = global::CodeCamp.App.Droid.Resource.Attribute.touchModeAbove;
+			global::SlidingMenuSharp.Resource.Attribute.touchModeBehind = global::CodeCamp.App.Droid.Resource.Attribute.touchModeBehind;
+			global::SlidingMenuSharp.Resource.Attribute.viewAbove = global::CodeCamp.App.Droid.Resource.Attribute.viewAbove;
+			global::SlidingMenuSharp.Resource.Attribute.viewBehind = global::CodeCamp.App.Droid.Resource.Attribute.viewBehind;
+			global::SlidingMenuSharp.Resource.Id.fullscreen = global::CodeCamp.App.Droid.Resource.Id.fullscreen;
+			global::SlidingMenuSharp.Resource.Id.left = global::CodeCamp.App.Droid.Resource.Id.left;
+			global::SlidingMenuSharp.Resource.Id.margin = global::CodeCamp.App.Droid.Resource.Id.margin;
+			global::SlidingMenuSharp.Resource.Id.right = global::CodeCamp.App.Droid.Resource.Id.right;
+			global::SlidingMenuSharp.Resource.Id.selected_view = global::CodeCamp.App.Droid.Resource.Id.selected_view;
+			global::SlidingMenuSharp.Resource.Id.slidingmenumain = global::CodeCamp.App.Droid.Resource.Id.slidingmenumain;
+			global::SlidingMenuSharp.Resource.Layout.slidingmenumain = global::CodeCamp.App.Droid.Resource.Layout.slidingmenumain;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu = global::CodeCamp.App.Droid.Resource.Styleable.SlidingMenu;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_behindOffset = global::CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_behindOffset;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_behindScrollScale = global::CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_behindScrollScale;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_behindWidth = global::CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_behindWidth;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_fadeDegree = global::CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_fadeDegree;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_fadeEnabled = global::CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_fadeEnabled;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_mode = global::CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_mode;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_selectorDrawable = global::CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_selectorDrawable;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_selectorEnabled = global::CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_selectorEnabled;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_shadowDrawable = global::CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_shadowDrawable;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_shadowWidth = global::CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_shadowWidth;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_touchModeAbove = global::CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_touchModeAbove;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_touchModeBehind = global::CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_touchModeBehind;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_viewAbove = global::CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_viewAbove;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_viewBehind = global::CodeCamp.App.Droid.Resource.Styleable.SlidingMenu_viewBehind;
 		}
 		
 		public partial class Attribute
@@ -698,20 +698,17 @@ namespace CodeCamp.App.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f040020
-			public const int Abstract = 2130968608;
+			// aapt resource value: 0x7f04001f
+			public const int Abstract = 2130968607;
 			
 			// aapt resource value: 0x7f040017
 			public const int ActionBar = 2130968599;
 			
-			// aapt resource value: 0x7f040024
-			public const int Bio = 2130968612;
+			// aapt resource value: 0x7f040023
+			public const int Description = 2130968611;
 			
-			// aapt resource value: 0x7f040025
-			public const int Description = 2130968613;
-			
-			// aapt resource value: 0x7f040021
-			public const int HeaderText = 2130968609;
+			// aapt resource value: 0x7f040020
+			public const int HeaderText = 2130968608;
 			
 			// aapt resource value: 0x7f040018
 			public const int Map = 2130968600;
@@ -722,26 +719,23 @@ namespace CodeCamp.App.Droid
 			// aapt resource value: 0x7f04000a
 			public const int MvxBindingTagUnique = 2130968586;
 			
-			// aapt resource value: 0x7f040023
-			public const int Name = 2130968611;
+			// aapt resource value: 0x7f040022
+			public const int Name = 2130968610;
 			
-			// aapt resource value: 0x7f040027
-			public const int Refresh = 2130968615;
+			// aapt resource value: 0x7f040025
+			public const int Refresh = 2130968613;
 			
-			// aapt resource value: 0x7f04001e
-			public const int Room = 2130968606;
+			// aapt resource value: 0x7f04001d
+			public const int Room = 2130968605;
 			
 			// aapt resource value: 0x7f04001b
 			public const int SessionList = 2130968603;
 			
-			// aapt resource value: 0x7f04001f
-			public const int Speaker = 2130968607;
+			// aapt resource value: 0x7f04001e
+			public const int Speaker = 2130968606;
 			
-			// aapt resource value: 0x7f040026
-			public const int SponsorList = 2130968614;
-			
-			// aapt resource value: 0x7f04001d
-			public const int Time = 2130968605;
+			// aapt resource value: 0x7f040024
+			public const int SponsorList = 2130968612;
 			
 			// aapt resource value: 0x7f04001c
 			public const int Title = 2130968604;
@@ -815,8 +809,8 @@ namespace CodeCamp.App.Droid
 			// aapt resource value: 0x7f040004
 			public const int selected_view = 2130968580;
 			
-			// aapt resource value: 0x7f040022
-			public const int slidingmenumain = 2130968610;
+			// aapt resource value: 0x7f040021
+			public const int slidingmenumain = 2130968609;
 			
 			static Id()
 			{

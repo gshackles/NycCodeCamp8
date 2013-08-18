@@ -3,7 +3,10 @@
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:padding="5dip"
+    android:layout_marginTop="5dip"
+    android:layout_marginBottom="5dip">
     <TextView
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="fill_parent"

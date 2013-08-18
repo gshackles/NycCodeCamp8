@@ -3,7 +3,8 @@
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:padding="10dip">
     <legacybar.library.bar.LegacyBar
         android:id="@+id/ActionBar"
         style="@style/actionbar"
@@ -20,7 +21,6 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/Bio"
-        local:MvxBind="Text Speaker.Bio"
+        local:MvxBind="Text Speaker.Bio,Converter=MultiLine"
         android:paddingTop="10dip" />
 </LinearLayout>

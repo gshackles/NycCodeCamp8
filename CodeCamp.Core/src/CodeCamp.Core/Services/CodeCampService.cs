@@ -57,7 +57,10 @@ namespace CodeCamp.Core.Services
                 {
                     _fileManager.WriteFile(DataFileName, _jsonConverter.SerializeObject(data));
                 }
-                catch {}
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
 
                 _campData = data;
                 
