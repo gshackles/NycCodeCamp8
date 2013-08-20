@@ -27,7 +27,7 @@
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-                <Canvas x:Name="MapCanvas" Width="1179" Height="491">
+                <Canvas x:Name="MapCanvas" Width="1857" Height="773">
                     <Image Source="../Images/microsoftmap.png" />
                 </Canvas>
             </ScrollViewer>
