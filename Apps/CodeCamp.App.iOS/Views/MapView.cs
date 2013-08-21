@@ -16,7 +16,7 @@ namespace CodeCamp.App.iOS.Views
 
             Title = "Facility Map";
 
-            var mapImage = new UIImageView(UIImage.FromFile("microsoftmap.jpg"));
+            var mapImage = new UIImageView(UIImage.FromFile("microsoftmap.png"));
             _scrollView = new UIScrollView
             {
                 ContentSize = mapImage.Frame.Size,
