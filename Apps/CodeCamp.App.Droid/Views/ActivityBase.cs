@@ -45,7 +45,7 @@ namespace CodeCamp.App.Droid.Views
                     Mode = MenuMode.Left,
                     TouchModeAbove = DisableMenuSwipe ? TouchMode.None : TouchMode.Fullscreen,
                     BehindOffset = 50,
-                    BehindWidth = 200,
+                    BehindWidth = 400,
                     ShadowWidth = 20,
                     ShadowDrawableRes = Resource.Drawable.SlidingMenuShadow,
                     SecondaryShadowDrawableRes = Resource.Drawable.SlidingMenuShadowRight

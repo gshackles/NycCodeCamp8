@@ -13,7 +13,7 @@ namespace CodeCamp.Core.Network
 
     public class CampDataClient : ICampDataClient
     {
-        private const string DataUrl = "https://nyccodecamp8.azure-mobile.net/api/alldata";
+        private const string DataUrl = "http://nyccodecamp8.azure-mobile.net/api/alldata";
         private readonly IMvxJsonConverter _jsonConverter;
 
         public CampDataClient(IMvxJsonConverter jsonConverter)

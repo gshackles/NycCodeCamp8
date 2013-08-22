@@ -65,10 +65,10 @@ namespace CodeCamp.Core.ViewModels
 
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 ReportError("Something went wrong :(");
-
+                Console.WriteLine( ex);
                 return false;
             }
             finally
