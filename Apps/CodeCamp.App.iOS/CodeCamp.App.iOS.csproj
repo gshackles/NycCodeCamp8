@@ -66,7 +66,7 @@
     <CodesignKey>iPhone Distribution: Gregory Shackles (V3N7UQX99Z)</CodesignKey>
     <BuildIpa>true</BuildIpa>
     <ConsolePause>false</ConsolePause>
-    <CodesignProvision>1F08C9AE-6E4B-4146-9126-6BB82023A7A6</CodesignProvision>
+    <CodesignProvision>3E6DE290-CB9A-43DC-A81D-E529595B6E1C</CodesignProvision>
     <IpaPackageName />
     <MtouchI18n />
     <MtouchArch>ARMv7</MtouchArch>
@@ -77,9 +77,12 @@
     <OutputPath>bin\iPhone\AppStore</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignKey>iPhone Distribution: Gregory Shackles (V3N7UQX99Z)</CodesignKey>
     <ConsolePause>false</ConsolePause>
-    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignProvision>56627FC4-7EBE-4D56-A8A0-7A5B3DCDC738</CodesignProvision>
+    <IpaPackageName />
+    <MtouchI18n />
+    <MtouchArch>ARMv7</MtouchArch>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
