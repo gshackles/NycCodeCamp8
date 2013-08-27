@@ -1,4 +1,5 @@
 using System.Windows.Input;
+using Android.Graphics;
 using Cirrious.MvvmCross.Droid.Fragging;
 using CodeCamp.App.Droid.Extensions;
 using CodeCamp.App.Droid.Views.Fragments;
@@ -51,6 +52,7 @@ namespace CodeCamp.App.Droid.Views
                     SecondaryShadowDrawableRes = Resource.Drawable.SlidingMenuShadowRight
                 };
 
+                _slidingMenu.SetBackgroundColor(Color.Black);
                 _slidingMenu.AttachToActivity(this, SlideStyle.Content);
                 _slidingMenu.SetMenu(Resource.Layout.MenuFrame);
 

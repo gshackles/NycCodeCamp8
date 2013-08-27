@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.gregshackles.nyccodecamp8" android:versionCode="1" android:versionName="1">
 	<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="15" />
-	<application android:label="NYC Code Camp 8"></application>
+	<application android:label="NYC Code Camp 8" android:icon="@drawable/Icon"></application>
+	<uses-permission android:name="android.permission.INTERNET" />
 </manifest>

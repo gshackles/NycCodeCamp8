@@ -14,10 +14,10 @@
         <TextView
             android:text="Overview"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="8dp"
+            android:layout_margin="8dp"
             local:MvxBind="Click ShowOverviewCommand"
             android:textColor="#fff8f8f8" />
     </LinearLayout>
@@ -31,10 +31,10 @@
         <TextView
             android:text="Full Schedule"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="8dp"
+            android:layout_margin="8dp"
             local:MvxBind="Click ShowSessionsCommand"
             android:textColor="#fff8f8f8" />
     </LinearLayout>
@@ -48,10 +48,10 @@
         <TextView
             android:text="Speakers"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="8dp"
+            android:layout_margin="8dp"
             local:MvxBind="Click ShowSpeakersCommand"
             android:textColor="#fff8f8f8" />
     </LinearLayout>
@@ -65,10 +65,10 @@
         <TextView
             android:text="Sponsors"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="8dp"
+            android:layout_margin="8dp"
             local:MvxBind="Click ShowSponsorsCommand"
             android:textColor="#fff8f8f8" />
     </LinearLayout>
@@ -85,7 +85,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="8dp"
+            android:layout_margin="8dp"
             local:MvxBind="Click ShowMapCommand"
             android:textColor="#fff8f8f8" />
     </LinearLayout>
