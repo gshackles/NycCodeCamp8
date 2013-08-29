@@ -1,15 +1,20 @@
 [submodule "external/MvvmCross-Binaries"]
 	path = external/MvvmCross-Binaries
 	url = https://github.com/slodge/MvvmCross-Binaries.git
+	ignore = dirty
 [submodule "external/BTProgressHUD"]
 	path = external/BTProgressHUD
 	url = https://github.com/gshackles/BTProgressHUD.git
+	ignore = dirty
 [submodule "external/SlidingPanels.Touch"]
 	path = external/SlidingPanels.Touch
 	url = https://github.com/patbonecrusher/SlidingPanels.Touch.git
+	ignore = dirty
 [submodule "external/LegacyBar"]
 	path = external/LegacyBar
 	url = https://github.com/Cheesebaron/LegacyBar.git
+	ignore = dirty
 [submodule "external/SlidingMenuSharp"]
 	path = external/SlidingMenuSharp
 	url = https://github.com/Cheesebaron/SlidingMenuSharp.git
+	ignore = dirty
