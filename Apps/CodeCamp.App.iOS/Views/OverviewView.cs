@@ -17,7 +17,7 @@ namespace CodeCamp.App.iOS.Views
             : base(UITableViewStyle.Plain)
         {
             Root = new RootElement("NYC Code Camp");
-//            Root.UnevenRows = true;
+            Root.UnevenRows = true;
 
             RefreshRequested += (s, e) => ViewModel.RefreshDataCommand.Execute(null);
         }
@@ -29,14 +29,14 @@ namespace CodeCamp.App.iOS.Views
             ViewModel.BindLoadingMessage(View, model => model.IsRefreshing, "Refreshing...");
             ViewModel.DataRefreshComplete += (s, successful) => 
             {
+                loadData();
+
                 ReloadComplete();
             };
         }
 
-        protected override void OnLoadingComplete()
+        private void loadData()
         {
-            base.OnLoadingComplete();
-
             Root.Clear();
             Root.Add(
                 from slot in (ViewModel.TimeSlots ?? new List<TimeSlot>())
@@ -66,6 +66,13 @@ namespace CodeCamp.App.iOS.Views
             );
             Root.Add(fullScheduleSection);
             ReloadData();
+        }
+
+        protected override void OnLoadingComplete()
+        {
+            base.OnLoadingComplete();
+
+            loadData();
         }
 
         private new OverviewViewModel ViewModel

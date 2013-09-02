@@ -23,7 +23,7 @@ namespace CodeCamp.App.iOS.Views
             {
                 new Section
                 {
-                    new TransparentStringElement
+                    new TransparentMultilineElement
                     {
                         Font = AppStyles.EntityTitleFont
                     }.Bind(bindings, el => el.Caption, vm => vm.Sponsor.Name)

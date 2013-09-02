@@ -24,7 +24,7 @@ namespace CodeCamp.App.iOS.Views
             var sections = new List<Section>();
             sections.Add(new Section
             {
-                new TransparentStringElement
+                new TransparentMultilineElement
                 {
                     Font = AppStyles.EntityTitleFont
                 }.Bind(bindings, el => el.Caption, vm => vm.Session.Title),
