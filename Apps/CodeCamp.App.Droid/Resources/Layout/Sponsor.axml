@@ -8,19 +8,29 @@
         android:id="@+id/ActionBar"
         style="@style/actionbar"
         local:theme="holo_black" />
-    <TextView
-        android:text="Name"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+    <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        local:MvxBind="Text Sponsor.Name"
-        android:id="@+id/Name" />
-    <TextView
-        android:text="Bio"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/Description"
-        local:MvxBind="Text Sponsor.Description"
-        android:paddingTop="10dip" />
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="10dip">
+            <TextView
+                android:text="Name"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                local:MvxBind="Text Sponsor.Name"
+                android:id="@+id/Name" />
+            <TextView
+                android:text="Bio"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Description"
+                local:MvxBind="Text Sponsor.Description,Converter=MultiLine"
+                android:paddingTop="10dip" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

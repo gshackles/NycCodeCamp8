@@ -8,7 +8,7 @@ using CodeCamp.Core.ViewModels;
 
 namespace CodeCamp.App.Droid.Views
 {
-    [Activity(Label = "Sessions")]
+    [Activity(Label = "Sponsors")]
     public class SponsorsView : ActivityBase
     {
         protected override void OnViewModelSet()

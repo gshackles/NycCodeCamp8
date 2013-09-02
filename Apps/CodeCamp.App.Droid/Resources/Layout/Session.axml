@@ -3,60 +3,69 @@
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:padding="10dip">
+    android:layout_height="fill_parent">
     <legacybar.library.bar.LegacyBar
         android:id="@+id/ActionBar"
         style="@style/actionbar"
         local:theme="holo_black" />
-    <TextView
-        android:text="Title"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+    <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        local:MvxBind="Text Session.Title"
-        android:id="@+id/Title" />
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="10dip">
-        <TextView
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            local:MvxBind="Text Session.StartTime,Converter=Time" />
-        <TextView
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" - " />
-        <TextView
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            local:MvxBind="Text Session.EndTime,Converter=Time" />
-    </LinearLayout>
-    <TextView
-        android:text="Room"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        local:MvxBind="Text Session.RoomName"
-        android:id="@+id/Room" />
-    <TextView
-        android:text="Speaker Name"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        local:MvxBind="Text Session.SpeakerName; Click ViewSpeakerCommand; Visibility Visibility(SpeakerId)"
-        android:id="@+id/Speaker" />
-    <TextView
-        android:text="Abstract"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/Abstract"
-        local:MvxBind="Text Session.Abstract,Converter=MultiLine"
-        android:paddingTop="10dip" />
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="10dip">
+            <TextView
+                android:text="Title"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                local:MvxBind="Text Session.Title"
+                android:id="@+id/Title" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dip">
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    local:MvxBind="Text Session.StartTime,Converter=Time" />
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" - " />
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    local:MvxBind="Text Session.EndTime,Converter=Time" />
+            </LinearLayout>
+            <TextView
+                android:text="Room"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                local:MvxBind="Text Session.RoomName"
+                android:id="@+id/Room" />
+            <TextView
+                android:text="Speaker Name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                local:MvxBind="Text Session.SpeakerName; Click ViewSpeakerCommand; Visibility Visibility(SpeakerId)"
+                android:id="@+id/Speaker" />
+            <TextView
+                android:text="Abstract"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Abstract"
+                local:MvxBind="Text Session.Abstract,Converter=MultiLine"
+                android:paddingTop="10dip" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

@@ -5,7 +5,7 @@ using LegacyBar.Library.BarActions;
 
 namespace CodeCamp.App.Droid.Views
 {
-    [Activity(Label = "Session")]
+    [Activity(Label = "Speaker")]
     public class SpeakerView : ActivityBase
     {
         protected override void OnViewModelSet()

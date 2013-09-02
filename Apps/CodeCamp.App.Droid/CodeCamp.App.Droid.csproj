@@ -229,7 +229,9 @@
     <AndroidAsset Include="Assets\Map\tile29.png" />
     <AndroidAsset Include="Assets\Map\tile30.png" />
     <AndroidAsset Include="Assets\Map\tile31.png" />
-    <Content Include="Properties\AndroidManifest.xml" />
+    <Content Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <AndroidResource Include="Resources\Values\MvxBindingAttributes.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
